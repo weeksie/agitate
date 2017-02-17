@@ -19,8 +19,12 @@ defmodule Agitate.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Agitate do
-  #   pipe_through :api
-  # end
+
+  scope "/api" do
+    pipe_through :api
+
+    forward "/", Absinthe.Plug, schema: Agitate.Schema
+  end
+
+  forward "/graphql", Absinthe.Plug.GraphiQL, schema: Agitate.Schema
 end

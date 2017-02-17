@@ -4,8 +4,6 @@ defmodule Agitate.State do
   schema "states" do
     field :short, :string
     field :name, :string
-
-    timestamps()
   end
 
   @doc """
