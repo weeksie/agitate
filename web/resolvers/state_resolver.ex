@@ -6,15 +6,10 @@ defmodule Agitate.StateResolver do
   import Ecto.Query, only: [from: 2]
 
   def all(_args, _info) do
-    { :ok, Repo.all(State) }
+    { :ok, Repo.all(State, preload: :districts) }
   end
 
-  def by_district(%{ state_id: state_id }, _info) do
-    query = from s in State,
-      join: d in District,
-      where: s.id == d.state_id,
-      where: [ state_id: ^state_id ]
-
-    { :ok, Repo.all(query) }
+  def by_abbrev(%{ short: short }, _info) do
+    { :ok, Repo.get_by(State, short: short) }
   end
 end

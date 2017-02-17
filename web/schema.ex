@@ -7,5 +7,9 @@ defmodule Agitate.Schema do
       resolve &Agitate.StateResolver.all/2
     end
 
+    field :state, type: :state do
+      arg :short, non_null(:string)
+      resolve &Agitate.StateResolver.by_abbrev/2
+    end
   end
 end

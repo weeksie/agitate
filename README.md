@@ -1,5 +1,12 @@
 # Agitate
 
+First make sure your database is up to date
+
+```
+mix ecto.create
+mix ecto.migrate
+```
+
 Importing shapefiles. First download your districts zip from http://cdmaps.polisci.ucla.edu/
 
 ```
@@ -19,8 +26,7 @@ shp2pgsql districtShapes/districts114.shp district_geoms | psql -d agitate_dev
 Now run the sql scripts to seed your data:
 
 ```
-psql -d agitate_dev < priv/data/states.sql
-psql -d agitate_dev < priv/data/fix_shapefile_import.sql
+mix run priv/repo/seeds.exs
 ```
 
 et viola!

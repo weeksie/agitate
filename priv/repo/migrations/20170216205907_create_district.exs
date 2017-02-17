@@ -8,7 +8,6 @@ defmodule Agitate.Repo.Migrations.CreateDistrict do
       add :state_id, references(:states)
 
       add :name, :string
-      add :geom, :geometry
       
       add :congress_start, :string
       add :congress_end, :string

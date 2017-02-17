@@ -1,9 +1,11 @@
 defmodule Agitate.State do
   use Agitate.Web, :model
-
+  alias Agitate.District
+  
   schema "states" do
     field :short, :string
     field :name, :string
+    has_many :districts, District
   end
 
   @doc """

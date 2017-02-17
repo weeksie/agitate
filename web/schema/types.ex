@@ -7,7 +7,7 @@ defmodule Agitate.Schema.Types do
     field :short, :string
     field :name, :string
 
-    field :districts, list_of(:district)
+    field :districts, list_of(:district), resolve: assoc(:districts)
   end
 
   object :district do
