@@ -3,7 +3,6 @@ defmodule Agitate.District do
 
   schema "districts" do
     field :name, :string
-    field :geom, :string
     field :congress_start, :string
     field :congress_end, :string
 
@@ -17,7 +16,7 @@ defmodule Agitate.District do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:state_id, :name, :geom, :congress_start, :congress_end])
-    |> validate_required([:state_id, :name, :geom, :congress_start, :congress_end])
+    |> cast(params, [:state_id, :name, :congress_start, :congress_end])
+    |> validate_required([:state_id, :name, :congress_start, :congress_end])
   end
 end

@@ -23,10 +23,17 @@ erl_crash.dump
 # variables.
 /config/prod.secret.exs
 
-# Data import 
+# Data import / shapefiles
 /priv/data/districts114.zip
-/priv/data/output.sql
-
+*.cpg
+*.dbf
+*.prj
+*.shp
+*.shp.ea.iso.xml
+*.shp.iso.xml
+*.shp.xml
+*.shx
+*.zip
 
 # Emacs
 *~
