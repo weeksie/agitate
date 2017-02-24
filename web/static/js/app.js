@@ -19,3 +19,18 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+
+import React from 'react';
+import { render } from 'react-dom';
+
+import ApolloClient, { createNetworkInterface } from 'apollo-client';
+import { ApolloProvider } from 'react-apollo';
+
+import ZipMap from './map';
+
+const client = new ApolloClient({
+  networkInterface: createNetworkInterface({ uri: '/graphql' })
+});
+
+
+render(<ApolloProvider client={client}><ZipMap /></ApolloProvider>, document.getElementById('map'));

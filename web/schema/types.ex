@@ -9,14 +9,21 @@ defmodule Agitate.Schema.Types do
 
     field :districts, list_of(:district), resolve: assoc(:districts)
   end
-
+  
   object :district do
     field :id, :id
     field :name, :string
 
     field :congress_start, :string
     field :congress_end, :string
-
+    field :geom, :string
     field :state, :state, resolve: assoc(:state)
+  end
+
+  object :zip_code do
+    field :id, :id
+    field :lat, :float
+    field :lon, :float
+    field :districts, list_of(:district), resolve: &Agitate.DistrictResolver.by_zip/2
   end
 end

@@ -1,9 +1,9 @@
 defmodule Agitate.StateResolver do
   alias Agitate.State
-  alias Agitate.District
+  # alias Agitate.District
   alias Agitate.Repo
 
-  import Ecto.Query, only: [from: 2]
+  #import Ecto.Query, only: [from: 2]
 
   def all(_args, _info) do
     { :ok, Repo.all(State, preload: :districts) }

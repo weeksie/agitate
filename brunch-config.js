@@ -2,8 +2,9 @@ exports.config = {
   // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
-      joinTo: "js/app.js"
-
+      joinTo: "js/app.js",
+      joinTo: {'mapbox-gl/dist/mapbox-gl': /^web\/static\/vendor/},
+      
       // To use a separate vendor.js bundle, specify two files path
       // http://brunch.io/docs/config#-files-
       // joinTo: {
@@ -51,7 +52,14 @@ exports.config = {
 
   // Configure your plugins
   plugins: {
+    brunchTypescript: {
+      removeComments: true,
+      target: "es2015",
+      pattern: /.*\.js/ // /.*\.[tj]s(x)?$/
+    },
+
     babel: {
+      presets: [ "es2015", "react" ],
       // Do not use ES6 compiler in vendor code
       ignore: [/web\/static\/vendor/]
     }

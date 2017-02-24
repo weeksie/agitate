@@ -10,7 +10,7 @@ defmodule Agitate.District do
     
     timestamps()
   end
-
+  
   @doc """
   Builds a changeset based on the `struct` and `params`.
   """
