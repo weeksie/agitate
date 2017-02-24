@@ -27,6 +27,11 @@ query GetZip {
 `;
 
 
+const COLORS = [
+  '#F00',
+  '#0F0'
+];
+
 class Map extends React.Component {
   render() {
     const { loading, zipLatitude } = this.props.data;
@@ -35,35 +40,36 @@ class Map extends React.Component {
       return (<div>Loading. . .</div>);
     } else {
       const { lat, lon, districts } = zipLatitude;
-      let i = 0;
       return (
         <ReactMapboxGl
-        style={MAP_STYLE}
+            style={MAP_STYLE}
             accessToken={MAP_TOKEN}
             containerStyle={{ height: '100vh', width: '100vw' }}
             center={[lon, lat]}
-        zoom={[13]}>
-        <ScaleControl/>
-        <ZoomControl/>
-              <Layer
-                  type="symbol"
-                  id="marker"
-                  layout={{ "icon-image": "marker-15" }}>
-                  <Feature coordinates={[ lon, lat ]}/>
-              </Layer>
-              { districts.map( district => {
+            zoom={[13]}>
+            <ScaleControl/>
+            <ZoomControl/>
+            <Layer
+                type="symbol"
+                id="marker"
+                layout={{ "icon-image": "marker-15" }}>
+                <Feature coordinates={[ lon, lat ]}/>
+            </Layer>
+            {
+              districts.map( (district, i) => {
                 return <GeoJSONLayer
-                           key={i++}
+                           key={i}
+                           data={JSON.parse(district.geom)}
                            circlePaint={{ 'circle-opacity': 0 }}
                            linePaint={{ 'line-width': 2, 'line-color': '#300' }}
                            fillPaint={{
-                             'fill-color': '#F00',
+                             'fill-color': COLORS[i],
                              'fill-opacity': 0.3,
                              'fill-outline-color': '#F00'
-                           }}
-                           data={ JSON.parse(district.geom) } />;
-              })}
-          </ReactMapboxGl> 
+                           }} />;
+              })
+            }
+        </ReactMapboxGl> 
       );
     }
   }
@@ -76,6 +82,4 @@ Map.propTypes = {
   })
 };
 
-const ZipMap = graphql(ZipLat)(Map);
-
-export default ZipMap;
+export default graphql(ZipLat)(Map);

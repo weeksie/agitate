@@ -17,6 +17,8 @@ defmodule Agitate.Schema.Types do
     field :congress_start, :string
     field :congress_end, :string
     field :geom, :string
+    field :score, :float
+    
     field :state, :state, resolve: assoc(:state)
   end
 

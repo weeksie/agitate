@@ -14,13 +14,19 @@ defmodule Agitate.DistrictResolver do
       join: dg in "district_geometries", where: dg.district_id == d.id,
       join: zg in "zip_geoms", where: st_intersects(dg.geom, zg.geom),
       where: zg.code == ^code,
-      select: %{ id: d.id, name: d.name, geom: dg.geom }
+      select: %{ id: d.id, name: d.name, geom: dg.geom,
+                 convex_hull: d.convex_hull, efficiency_gap_r: d.efficiency_gap_r,
+                 efficiency_gap_d: d.efficiency_gap_d }
 
     
 
   { :ok, Enum.map( Repo.all(query), fn (district = %{ geom: geom })  ->
       geoJSON = Geo.JSON.encode(geom) |> Poison.encode!
-      Map.put district, :geom, geoJSON
+      score   = District.score district
+      
+      district
+      |> Map.put(:geom, geoJSON)
+      |> Map.put(:score, score)
     end)}
   end
 end
