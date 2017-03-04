@@ -27,6 +27,6 @@ defmodule Agitate.DistrictResolver do
       district
       |> Map.put(:geom, geoJSON)
       |> Map.put(:score, score)
-    end)}
+    end) }
   end
 end

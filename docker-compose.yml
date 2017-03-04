@@ -1,0 +1,34 @@
+version: '2'
+services:
+  db:
+    image: "postgres:9.6.2"
+    ports:
+      - 5432
+
+  dev:
+    build: .
+    environment:
+      - MIX_ENV=dev
+    links:
+      - db
+    volumes:
+      - ".:/app"
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+      
+  web:
+    build: .
+    environment:
+      - MIX_ENV=prod
+      - PG_USER=postgres
+      - PG_PASSWORD=postgres
+    links:
+      - db
+    volumes:
+      - ".:/app"
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db

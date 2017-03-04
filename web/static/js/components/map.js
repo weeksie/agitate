@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
-import { MAP_TOKEN, MAP_STYLE } from './config';
+import { MAP_TOKEN, MAP_STYLE } from '../config';
 
 import ReactMapboxGl, { GeoJSONLayer, Layer, Feature, ScaleControl, ZoomControl } from "react-mapbox-gl";
 
@@ -12,7 +12,7 @@ import ReactMapboxGl, { GeoJSONLayer, Layer, Feature, ScaleControl, ZoomControl 
 
 const ZipLat = gql`
 query GetZip {
-  zipLatitude(code:"10013") {
+  zipLatitude(code:"99504") {
     lat
     lon
     districts {
@@ -20,7 +20,8 @@ query GetZip {
         id
       }
       geom
-      name      
+      name
+      score      
     }    
   }
 }
@@ -33,6 +34,9 @@ const COLORS = [
 ];
 
 class Map extends React.Component {
+  handleMapClick(e) {
+    console.log('fnord?', e);
+  }
   render() {
     const { loading, zipLatitude } = this.props.data;
 
@@ -43,6 +47,7 @@ class Map extends React.Component {
       return (
         <ReactMapboxGl
             style={MAP_STYLE}
+            onClick={this.handleMapClick}
             accessToken={MAP_TOKEN}
             containerStyle={{ height: '100vh', width: '100vw' }}
             center={[lon, lat]}

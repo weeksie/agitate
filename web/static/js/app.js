@@ -25,12 +25,20 @@ import { render } from 'react-dom';
 
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
+import { Router, browserHistory } from 'react-router';
 
-import ZipMap from './map';
+
+import Map from './components/map';
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({ uri: '/graphql' })
 });
 
+const AppRoutes = {
+  path: '/',
+  component: Map
+}
 
-render(<ApolloProvider client={client}><ZipMap /></ApolloProvider>, document.getElementById('map'));
+render(<ApolloProvider client={client}>
+    <Router routes={AppRoutes} history={browserHistory} />
+</ApolloProvider>, document.getElementById('map'));
