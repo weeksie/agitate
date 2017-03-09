@@ -12,14 +12,15 @@ defmodule Agitate.Schema do
       resolve &Agitate.StateResolver.by_abbrev/2
     end
 
-    field :zip_latitude, type: :zip_code do
+    field :zip_by_code, type: :zip_code do
       arg :code, non_null(:string)
       resolve &Agitate.ZipCodeResolver.by_code/2
     end
     
-    field :districts_by_zip, list_of(:district) do
-      arg :code, non_null(:string)
-      resolve &Agitate.DistrictResolver.by_zip/2
+    field :district_by_coords, type: :district do
+      arg :lat, non_null(:float)
+      arg :lon, non_null(:float)
+      resolve &Agitate.DistrictResolver.by_coords/2
     end
   end
 end

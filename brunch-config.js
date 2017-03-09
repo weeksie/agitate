@@ -3,22 +3,7 @@ exports.config = {
   files: {
     javascripts: {
       joinTo: "js/app.js",
-      joinTo: {'mapbox-gl/dist/mapbox-gl': /^web\/static\/vendor/},
-      
-      // To use a separate vendor.js bundle, specify two files path
-      // http://brunch.io/docs/config#-files-
-      // joinTo: {
-      //  "js/app.js": /^(web\/static\/js)/,
-      //  "js/vendor.js": /^(web\/static\/vendor)|(deps)/
-      // }
-      //
-      // To change the order of concatenation of files, explicitly mention here
-      // order: {
-      //   before: [
-      //     "web/static/vendor/js/jquery-2.1.1.js",
-      //     "web/static/vendor/js/bootstrap.min.js"
-      //   ]
-      // }
+      // joinTo: { 'js/vendor.js': /^node_modules/ }
     },
     stylesheets: {
       joinTo: "css/app.css",
@@ -52,12 +37,9 @@ exports.config = {
 
   // Configure your plugins
   plugins: {
-    brunchTypescript: {
-      removeComments: true,
-      target: "es2015",
-      pattern: /.*\.js/ // /.*\.[tj]s(x)?$/
+    sass: {
+      mode: "native"
     },
-
     babel: {
       presets: [ "es2015", "react" ],
       // Do not use ES6 compiler in vendor code
@@ -72,6 +54,10 @@ exports.config = {
   },
 
   npm: {
-    enabled: true
+    enabled: true,
+    ///whitelist: [ "phoenix", "phoenix_html", "react", "react-dom" ],
+    styles: {
+      leaflet: ['dist/leaflet.css']
+    }
   }
 };

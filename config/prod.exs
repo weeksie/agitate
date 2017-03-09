@@ -13,7 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :agitate, Agitate.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "0.0.0.0", port: 80],
+  url: [host: {0,0,0,0}, port: 80],
   server: true,
   root: ".",
   cache_static_manifest: "priv/static/manifest.json"

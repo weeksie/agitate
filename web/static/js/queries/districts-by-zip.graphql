@@ -1,0 +1,21 @@
+query DistrictsByZip($zipCode: String!) {
+  zipByCode(code: $zipCode) {
+    id
+    lat
+    lon
+    districts {
+      id
+      name
+      representative
+      phone
+      geom
+      score      
+      lat
+      lon
+      state {
+        id
+        short
+      }
+    }
+  }
+}

@@ -57,7 +57,7 @@ CREATE_TABLE
         puts "#{gaps.map(&:to_s).join(',')}: #{average_gap}"
         @sql.puts <<EOSQL
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('#{s}', '#{d.to_i}', '#{party}', '#{sprintf('%0.2f', average_gap)}');
+       ('#{s}', '#{d}', '#{party}', '#{sprintf('%0.2f', average_gap)}');
 EOSQL
       end
     end

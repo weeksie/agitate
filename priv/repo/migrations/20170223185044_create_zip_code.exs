@@ -10,6 +10,6 @@ defmodule Agitate.Repo.Migrations.CreateZipCode do
 
       timestamps()
     end
-
+    create index :zip_codes, [:code]
   end
 end

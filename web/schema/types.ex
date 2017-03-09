@@ -13,12 +13,16 @@ defmodule Agitate.Schema.Types do
   object :district do
     field :id, :id
     field :name, :string
+    field :representative, :string
+    field :phone, :string
 
     field :congress_start, :string
     field :congress_end, :string
     field :geom, :string
     field :score, :float
-    
+    field :lat, :float
+    field :lon, :float
+
     field :state, :state, resolve: assoc(:state)
   end
 

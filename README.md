@@ -7,7 +7,9 @@ mix ecto.create
 mix ecto.migrate
 ```
 
-## Import Congressional District Shapefiles
+## Import Congressional District Shapefiles 
+
+!!!UPDATE FOR 5m shapefiles!!!!
 
 Importing shapefiles. First download your districts zip from http://cdmaps.polisci.ucla.edu/
 
@@ -25,6 +27,8 @@ really, you'll probably just do a `brew install postgis`. Then run the migration
 
 Download [zip shapes](http://www2.census.gov/geo/tiger/GENZ2015/shp/cb_2015_us_zcta510_500k.zip) from www2.census.gov
 
+Sure would like to get zip codes in 20m format but the only thing they seem to have is 500k.
+
 ```
 curl -O http://www2.census.gov/geo/tiger/GENZ2015/shp/cb_2015_us_zcta510_500k.zip
 mv cb_2015_us_zcta510_500k.zip priv/data
@@ -41,6 +45,8 @@ Now (from project root) run the sql scripts to seed your data:
 For non dev environments sub out the database name, e.g. `./priv/data/seeds.sh agitate_prod`
 
 et viola!
+
+Note: Congressional office phone numbers are from http://clerk.house.gov/member_info/ttd.aspx
 
 
 # About Phoenix

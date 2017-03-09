@@ -25,10 +25,14 @@ import { render } from 'react-dom';
 
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import { Router, browserHistory } from 'react-router';
 
+import AppStore from './reducers';
 
-import Map from './components/map';
+
+import Agitate from './components/agitate';
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({ uri: '/graphql' })
@@ -36,9 +40,11 @@ const client = new ApolloClient({
 
 const AppRoutes = {
   path: '/',
-  component: Map
+  component: Agitate
 }
 
 render(<ApolloProvider client={client}>
-    <Router routes={AppRoutes} history={browserHistory} />
+    <Provider store={createStore(AppStore)}>
+        <Router routes={AppRoutes} history={browserHistory} />
+    </Provider>
 </ApolloProvider>, document.getElementById('map'));

@@ -8,17 +8,20 @@
     <meta name="author" content="">
 
     <title>Hello Agitate!</title>
+
+    <!--link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /-->
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <!-- 
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet'>
--->
-  </head>
+    -->
 
+  </head>
   <body>
     <main role="main">
       <%= render @view_module, @view_template, assigns %>
     </main>
+    <script src="<%= static_path(@conn, "/js/vendor.js") %>"></script>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

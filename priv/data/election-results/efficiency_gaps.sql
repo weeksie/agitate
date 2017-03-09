@@ -1,137 +1,137 @@
 drop table if exists efficiency_gaps;
 create table efficiency_gaps (id serial, state varchar, district varchar, party varchar, gap float);
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '1', 'R', '0.25');
+       ('AL', '01', 'R', '0.25');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '2', 'R', '0.30');
+       ('AL', '02', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '2', 'D', '0.20');
+       ('AL', '02', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '3', 'R', '0.32');
+       ('AL', '03', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '3', 'D', '0.18');
+       ('AL', '03', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '4', 'R', '0.39');
+       ('AL', '04', 'R', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '4', 'D', '0.10');
+       ('AL', '04', 'D', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '5', 'R', '0.32');
+       ('AL', '05', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '5', 'D', '0.18');
+       ('AL', '05', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '6', 'R', '0.38');
+       ('AL', '06', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '6', 'D', '0.11');
+       ('AL', '06', 'D', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '7', 'D', '0.38');
+       ('AL', '07', 'D', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '7', 'R', '0.12');
+       ('AL', '07', 'R', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AK', '0', 'R', '0.33');
+       ('AK', '00', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AK', '0', 'D', '0.15');
+       ('AK', '00', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AS', '0', 'D', '0.33');
+       ('AS', '00', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AS', '0', 'IND', '0.02');
+       ('AS', '00', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AS', '0', 'R', '0.12');
+       ('AS', '00', 'R', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '1', 'D', '0.24');
+       ('AZ', '01', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '1', 'R', '0.23');
+       ('AZ', '01', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '2', 'D', '0.23');
+       ('AZ', '02', 'D', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '2', 'R', '0.27');
+       ('AZ', '02', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '3', 'D', '0.27');
+       ('AZ', '03', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '3', 'R', '0.21');
+       ('AZ', '03', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '4', 'R', '0.31');
+       ('AZ', '04', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '4', 'D', '0.17');
+       ('AZ', '04', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '5', 'R', '0.32');
+       ('AZ', '05', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '5', 'D', '0.18');
+       ('AZ', '05', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '6', 'R', '0.31');
+       ('AZ', '06', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '6', 'D', '0.16');
+       ('AZ', '06', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '7', 'D', '0.37');
+       ('AZ', '07', 'D', '0.37');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '7', 'R', '0.12');
+       ('AZ', '07', 'R', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '7', 'IND', '0.01');
+       ('AZ', '07', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '8', 'R', '0.30');
+       ('AZ', '08', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '8', 'D', '0.19');
+       ('AZ', '08', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '9', 'D', '0.24');
+       ('AZ', '09', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '9', 'R', '0.22');
+       ('AZ', '09', 'R', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '0', 'R', '0.26');
+       ('AZ', 'S', 'R', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AZ', '0', 'D', '0.22');
+       ('AZ', 'S', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AR', '1', 'R', '0.28');
+       ('AR', '01', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AR', '1', 'D', '0.20');
+       ('AR', '01', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AR', '2', 'R', '0.28');
+       ('AR', '02', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AR', '2', 'D', '0.20');
+       ('AR', '02', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AR', '2', 'IND', '0.00');
+       ('AR', '02', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AR', '3', 'R', '0.38');
+       ('AR', '03', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AR', '3', 'D', '0.06');
+       ('AR', '03', 'D', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AR', '4', 'R', '0.28');
+       ('AR', '04', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AR', '4', 'D', '0.20');
+       ('AR', '04', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '1', 'R', '0.26');
+       ('CA', '01', 'R', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '1', 'D', '0.24');
+       ('CA', '01', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '2', 'D', '0.33');
+       ('CA', '02', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '2', 'R', '0.17');
+       ('CA', '02', 'R', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '3', 'D', '0.26');
+       ('CA', '03', 'D', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '3', 'R', '0.23');
+       ('CA', '03', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '4', 'R', '0.31');
+       ('CA', '04', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '4', 'D', '0.19');
+       ('CA', '04', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '5', 'D', '0.37');
+       ('CA', '05', 'D', '0.37');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '5', 'R', '0.13');
+       ('CA', '05', 'R', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '6', 'D', '0.36');
+       ('CA', '06', 'D', '0.36');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '6', 'R', '0.13');
+       ('CA', '06', 'R', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '7', 'D', '0.27');
+       ('CA', '07', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '7', 'R', '0.23');
+       ('CA', '07', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '8', 'R', '0.39');
+       ('CA', '08', 'R', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '8', 'D', '0.22');
+       ('CA', '08', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '9', 'D', '0.31');
+       ('CA', '09', 'D', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '9', 'R', '0.18');
+       ('CA', '09', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('CA', '10', 'R', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -315,123 +315,123 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('CA', '53', 'R', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '0', 'D', '0.30');
+       ('CA', 'S', 'D', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CA', '0', 'R', '0.19');
+       ('CA', 'S', 'R', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '1', 'D', '0.34');
+       ('CO', '01', 'D', '0.34');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '1', 'R', '0.14');
+       ('CO', '01', 'R', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '2', 'D', '0.28');
+       ('CO', '02', 'D', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '2', 'R', '0.19');
+       ('CO', '02', 'R', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '3', 'R', '0.26');
+       ('CO', '03', 'R', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '3', 'D', '0.21');
+       ('CO', '03', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '4', 'R', '0.29');
+       ('CO', '04', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '4', 'D', '0.19');
+       ('CO', '04', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '5', 'R', '0.33');
+       ('CO', '05', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '5', 'D', '0.06');
+       ('CO', '05', 'D', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '6', 'R', '0.26');
+       ('CO', '06', 'R', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '6', 'D', '0.21');
+       ('CO', '06', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '7', 'D', '0.27');
+       ('CO', '07', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '7', 'R', '0.20');
+       ('CO', '07', 'R', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '1', 'R*', '0.11');
+       ('CT', '01', 'R*', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '1', 'D', '0.12');
+       ('CT', '01', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '1', 'R', '0.08');
+       ('CT', '01', 'R', '0.08');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '2', 'R*', '0.11');
+       ('CT', '02', 'R*', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '2', 'D', '0.13');
+       ('CT', '02', 'D', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '2', 'R', '0.09');
+       ('CT', '02', 'R', '0.09');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '3', 'R*', '0.10');
+       ('CT', '03', 'R*', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '3', 'D', '0.13');
+       ('CT', '03', 'D', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '3', 'R', '0.07');
+       ('CT', '03', 'R', '0.07');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '4', 'R*', '0.40');
+       ('CT', '04 ', 'R*', '0.40');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '4', 'D', '0.15');
+       ('CT', '04', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '4', 'R', '0.14');
+       ('CT', '04', 'R', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '5', 'D', '0.25');
+       ('CT', '05', 'D', '0.25');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '5', 'R*', '0.18');
+       ('CT', '05', 'R*', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '5', 'IND', '0.00');
+       ('CT', '05', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '5', 'R', '0.10');
+       ('CT', '05', 'R', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '0', 'R*', '0.16');
+       ('CT', 'S', 'R*', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '0', 'D', '0.11');
+       ('CT', 'S', 'D', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '0', 'D/IND', '0.00');
+       ('CT', 'S', 'D/IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CT', '0', 'R', '0.09');
+       ('CT', 'S', 'R', '0.09');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('DE', '0', 'D', '0.31');
+       ('DE', '00', 'D', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('DE', '0', 'R', '0.18');
+       ('DE', '00', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('DE', '0', 'D', '0.33');
+       ('DE', 'S', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('DE', '0', 'R', '0.14');
+       ('DE', 'S', 'R', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('DC', '0', 'D', '0.41');
+       ('DC', '00', 'D', '0.41');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('DC', '0', 'R', '0.01');
+       ('DC', '00', 'R', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '1', 'R', '0.36');
+       ('FL', '01', 'R', '0.36');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '1', 'D', '0.11');
+       ('FL', '01', 'D', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '2', 'R', '0.26');
+       ('FL', '02', 'R', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '2', 'D', '0.23');
+       ('FL', '02', 'D', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '3', 'R', '0.30');
+       ('FL', '03', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '3', 'D', '0.19');
+       ('FL', '03', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '4', 'R', '0.38');
+       ('FL', '04', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '5', 'D', '0.35');
+       ('FL', ' 05', 'D', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '5', 'R', '0.13');
+       ('FL', ' 05', 'R', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '6', 'R', '0.30');
+       ('FL', '06', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '6', 'D', '0.17');
+       ('FL', '06', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '7', 'R', '0.31');
+       ('FL', '07', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '7', 'D', '0.19');
+       ('FL', '07', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '8', 'R', '0.29');
+       ('FL', '08', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '8', 'D', '0.19');
+       ('FL', '08', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '9', 'D', '0.27');
+       ('FL', '09', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '9', 'R', '0.23');
+       ('FL', '09', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('FL', '10', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -505,63 +505,63 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('FL', '27', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '0', 'D', '0.24');
+       ('FL', 'S', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '0', 'R', '0.22');
+       ('FL', 'S', 'R', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '1', 'R', '0.25');
+       ('GA', '01', 'R', '0.25');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '1', 'D', '0.18');
+       ('GA', '01', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '1', 'R ', '0.14');
+       ('GA', '01', 'R ', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '2', 'D', '0.31');
+       ('GA', '02', 'D', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '2', 'R', '0.15');
+       ('GA', '02', 'R', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '2', 'R ', '0.10');
+       ('GA', '02', 'R ', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '3', 'R', '0.37');
+       ('GA', '03', 'R', '0.37');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '3', 'R ', '0.18');
+       ('GA', '03', 'R ', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '3', 'D', '0.08');
+       ('GA', '03', 'D', '0.08');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '4', 'D', '0.37');
+       ('GA', '04', 'D', '0.37');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '4', 'R', '0.11');
+       ('GA', '04', 'R', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '4', 'R ', '0.05');
+       ('GA', '04', 'R ', '0.05');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '5', 'D', '0.41');
+       ('GA', '05', 'D', '0.41');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '5', 'R', '0.06');
+       ('GA', '05', 'R', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '5', 'R ', '0.05');
+       ('GA', '05', 'R ', '0.05');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '6', 'R', '0.26');
+       ('GA', '06', 'R', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '6', 'D', '0.14');
+       ('GA', '06', 'D', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '6', 'R ', '0.20');
+       ('GA', '06', 'R ', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '7', 'R', '0.24');
+       ('GA', '07', 'R', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '7', 'D', '0.18');
+       ('GA', '07', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '7', 'R ', '0.16');
+       ('GA', '07', 'R ', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '8', 'R', '0.38');
+       ('GA', '08', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '8', 'R ', '0.13');
+       ('GA', '08', 'R ', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '8', 'D', '0.12');
+       ('GA', '08', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '9', 'R', '0.30');
+       ('GA', '09', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '9', 'D', '0.09');
+       ('GA', '09', 'D', '0.09');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '9', 'R ', '0.20');
+       ('GA', '09', 'R ', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('GA', '10', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -591,73 +591,73 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('GA', '14', 'D', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GU', '0', 'D', '0.31');
+       ('GU', '00', 'D', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GU', '0', 'R', '0.13');
+       ('GU', '00', 'R', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('HI', '1', 'D', '0.27');
+       ('HI', '01', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('HI', '1', 'R', '0.23');
+       ('HI', '01', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('HI', '2', 'D', '0.39');
+       ('HI', '02', 'D', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('HI', '2', 'R', '0.10');
+       ('HI', '02', 'R', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('HI', '0', 'D', '0.33');
+       ('HI', 'S', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('HI', '0', 'R', '0.17');
+       ('HI', 'S', 'R', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ID', '1', 'R', '0.30');
+       ('ID', '01', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ID', '1', 'D', '0.17');
+       ('ID', '01', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ID', '1', 'IND', '0.02');
+       ('ID', '01', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ID', '2', 'R', '0.33');
+       ('ID', '02', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ID', '2', 'D', '0.16');
+       ('ID', '02', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ID', '2', 'IND', '0.01');
+       ('ID', '02', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '1', 'D', '0.38');
+       ('IL', '01', 'D', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '1', 'R', '0.11');
+       ('IL', '01', 'R', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '2', 'D', '0.33');
+       ('IL', '02', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '2', 'R', '0.11');
+       ('IL', '02', 'R', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '2', 'IND', '0.05');
+       ('IL', '02', 'IND', '0.05');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '3', 'D', '0.34');
+       ('IL', '03', 'D', '0.34');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '3', 'R', '0.15');
+       ('IL', '03', 'R', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '4', 'D', '0.41');
+       ('IL', '04', 'D', '0.41');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '4', 'R', '0.02');
+       ('IL', '04', 'R', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '5', 'D', '0.33');
+       ('IL', '05', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '5', 'R', '0.14');
+       ('IL', '05', 'R', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '6', 'R', '0.30');
+       ('IL', '06', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '6', 'D', '0.20');
+       ('IL', '06', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '7', 'D', '0.42');
+       ('IL', '07', 'D', '0.42');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '7', 'R', '0.06');
+       ('IL', '07', 'R', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '7', 'IND', '0.02');
+       ('IL', '07', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '8', 'D', '0.27');
+       ('IL', '08', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '8', 'R', '0.23');
+       ('IL', '08', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '9', 'D', '0.33');
+       ('IL', '09', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '9', 'R', '0.17');
+       ('IL', '09', 'R', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('IL', '10', 'D', '0.25');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -697,303 +697,303 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('IL', '18', 'D', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '1', 'D', '0.33');
+       ('IN', '01', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '1', 'R', '0.17');
+       ('IN', '01', 'R', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '2', 'R', '0.24');
+       ('IN', '02', 'R', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '2', 'D', '0.24');
+       ('IN', '02', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '3', 'R', '0.34');
+       ('IN', '03', 'R', '0.34');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '3', 'D', '0.16');
+       ('IN', '03', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '4', 'R', '0.32');
+       ('IN', '04', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '4', 'D', '0.16');
+       ('IN', '04', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '5', 'R', '0.30');
+       ('IN', '05', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '5', 'D', '0.18');
+       ('IN', '05', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '5', 'IND', '0.01');
+       ('IN', '05', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '6', 'R', '0.30');
+       ('IN', '06', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '6', 'D', '0.17');
+       ('IN', '06', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '7', 'D', '0.31');
+       ('IN', '07', 'D', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '7', 'R', '0.19');
+       ('IN', '07', 'R', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '8', 'R', '0.27');
+       ('IN', '08', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '8', 'D', '0.21');
+       ('IN', '08', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '9', 'R', '0.27');
+       ('IN', '09', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '9', 'D', '0.22');
+       ('IN', '09', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '0', 'D', '0.24');
+       ('IN', 'S', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '0', 'R', '0.23');
+       ('IN', 'S', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IA', '1', 'D', '0.28');
+       ('IA', '01', 'D', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IA', '1', 'R', '0.21');
+       ('IA', '01', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IA', '2', 'D', '0.27');
+       ('IA', '02', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IA', '2', 'R', '0.22');
+       ('IA', '02', 'R', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IA', '3', 'R', '0.26');
+       ('IA', '03', 'R', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IA', '3', 'D', '0.22');
+       ('IA', '03', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IA', '4', 'R', '0.28');
+       ('IA', '04', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IA', '4', 'D', '0.21');
+       ('IA', '04', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '1', 'R', '0.38');
+       ('KS', '01', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '1', 'R ', '0.18');
+       ('KS', '01', 'R ', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '2', 'R', '0.23');
+       ('KS', '02', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '2', 'D', '0.15');
+       ('KS', '02', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '2', 'R ', '0.13');
+       ('KS', '02', 'R ', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '3', 'R', '0.27');
+       ('KS', '03', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '3', 'R ', '0.13');
+       ('KS', '03', 'R ', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '4', 'R', '0.24');
+       ('KS', '04', 'R', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '4', 'D', '0.12');
+       ('KS', '04', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '4', 'R ', '0.13');
+       ('KS', '04', 'R ', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '4', 'REF', '0.01');
+       ('KS', '04', 'REF', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '1', 'R', '0.35');
+       ('KY', '01', 'R', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '1', 'D', '0.15');
+       ('KY', '01', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '2', 'R', '0.33');
+       ('KY', '02', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '2', 'D', '0.16');
+       ('KY', '02', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '2', 'IND', '0.01');
+       ('KY', '02', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '3', 'D', '0.31');
+       ('KY', '03', 'D', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '3', 'R', '0.18');
+       ('KY', '03', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '3', 'IND', '0.01');
+       ('KY', '03', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '4', 'R', '0.31');
+       ('KY', '04 ', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '4', 'D', '0.17');
+       ('KY', '04 ', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '4', 'IND', '0.01');
+       ('KY', '04 ', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '4', 'R', '0.30');
+       ('KY', '04 ', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '4', 'D', '0.18');
+       ('KY', '04 ', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '4', 'IND', '0.02');
+       ('KY', '04 ', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '5', 'R', '0.39');
+       ('KY', '05', 'R', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '5', 'D', '0.11');
+       ('KY', '05', 'D', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '6', 'R', '0.25');
+       ('KY', '06', 'R', '0.25');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '6', 'D', '0.24');
+       ('KY', '06', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '6', 'IND', '0.01');
+       ('KY', '06', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '1', 'R', '0.38');
+       ('LA', '01', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '1', 'D', '0.10');
+       ('LA', '01', 'D', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '2', 'D', '0.39');
+       ('LA', '02', 'D', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '2', 'R', '0.10');
+       ('LA', '02', 'R', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '3', 'R', '0.37');
+       ('LA', '03', 'R', '0.37');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '3', 'D', '0.12');
+       ('LA', '03', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '4', 'R', '0.36');
+       ('LA', '04', 'R', '0.36');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '4', 'D', '0.07');
+       ('LA', '04', 'D', '0.07');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '5', 'R', '0.39');
+       ('LA', '05', 'R', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '6', 'R', '0.38');
+       ('LA', '06', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '6', 'D', '0.07');
+       ('LA', '06', 'D', '0.07');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ME', '1', 'D', '0.31');
+       ('ME', '01', 'D', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ME', '1', 'R', '0.18');
+       ('ME', '01', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ME', '2', 'D', '0.29');
+       ('ME', '02', 'D', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ME', '2', 'R', '0.21');
+       ('ME', '02', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ME', '0', 'R', '0.15');
+       ('ME', 'S', 'R', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ME', '0', 'D', '0.07');
+       ('ME', 'S', 'D', '0.07');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ME', '0', 'IND', '0.01');
+       ('ME', 'S', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '1', 'R', '0.31');
+       ('MD', '01', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '1', 'D', '0.15');
+       ('MD', '01', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '2', 'D', '0.33');
+       ('MD', '02', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '2', 'R', '0.16');
+       ('MD', '02', 'R', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '3', 'D', '0.33');
+       ('MD', '03', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '3', 'R', '0.15');
+       ('MD', '03', 'R', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '4', 'D', '0.39');
+       ('MD', '04', 'D', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '4', 'R', '0.10');
+       ('MD', '04', 'R', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '5', 'D', '0.34');
+       ('MD', '05', 'D', '0.34');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '5', 'R', '0.15');
+       ('MD', '05', 'R', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '6', 'D', '0.27');
+       ('MD', '06', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '6', 'R', '0.22');
+       ('MD', '06', 'R', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '7', 'D', '0.38');
+       ('MD', '07', 'D', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '7', 'R', '0.11');
+       ('MD', '07', 'R', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '7', 'R/W', '0.00');
+       ('MD', '07', 'R/W', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '8', 'D', '0.33');
+       ('MD', '08', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '8', 'R', '0.16');
+       ('MD', '08', 'R', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '0', 'D', '0.29');
+       ('MD', 'S', 'D', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MD', '0', 'R', '0.14');
+       ('MD', 'S', 'R', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '1', 'D', '0.45');
+       ('MA', '01', 'D', '0.45');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '1', 'R', '0.08');
+       ('MA', '01', 'R', '0.08');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '1', 'IND', '0.01');
+       ('MA', '01', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '2', 'D', '0.45');
+       ('MA', '02', 'D', '0.45');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '2', 'R', '0.10');
+       ('MA', '02', 'R', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '3', 'D', '0.32');
+       ('MA', '03', 'D', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '3', 'R', '0.18');
+       ('MA', '03', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '3', 'IND', '0.01');
+       ('MA', '03', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '4', 'D', '0.30');
+       ('MA', '04', 'D', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '4', 'R', '0.19');
+       ('MA', '04', 'R', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '4', 'IND', '0.01');
+       ('MA', '04', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '5', 'D', '0.36');
+       ('MA', '05', 'D', '0.36');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '5', 'R', '0.14');
+       ('MA', '05', 'R', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '6', 'D', '0.25');
+       ('MA', '06', 'D', '0.25');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '6', 'R', '0.23');
+       ('MA', '06', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '7', 'D', '0.40');
+       ('MA', '07', 'D', '0.40');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '7', 'IND', '0.06');
+       ('MA', '07', 'IND', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '7', 'R', '0.08');
+       ('MA', '07', 'R', '0.08');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '8', 'D', '0.40');
+       ('MA', '08', 'D', '0.40');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '8', 'R', '0.10');
+       ('MA', '08', 'R', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '9', 'D', '0.30');
+       ('MA', '09', 'D', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '9', 'R', '0.15');
+       ('MA', '09', 'R', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '9', 'IND', '0.04');
+       ('MA', '09', 'IND', '0.04');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '0', 'D', '0.27');
+       ('MA', 'S', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MA', '0', 'R', '0.23');
+       ('MA', 'S', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '1', 'R', '0.24');
+       ('MI', '01', 'R', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '1', 'D', '0.23');
+       ('MI', '01', 'D', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '2', 'R', '0.31');
+       ('MI', '02', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '2', 'W(D)/D', '0.14');
+       ('MI', '02', 'W(D)/D', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '2', 'D', '0.07');
+       ('MI', '02', 'D', '0.07');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '3', 'R', '0.27');
+       ('MI', '03', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '3', 'D', '0.21');
+       ('MI', '03', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '4', 'R', '0.32');
+       ('MI', '04', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '4', 'D', '0.16');
+       ('MI', '04', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '5', 'D', '0.31');
+       ('MI', '05', 'D', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '5', 'R', '0.17');
+       ('MI', '05', 'R', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '6', 'R', '0.28');
+       ('MI', '06', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '6', 'D', '0.20');
+       ('MI', '06', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '7', 'R', '0.26');
+       ('MI', '07', 'R', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '7', 'D', '0.22');
+       ('MI', '07', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '8', 'R', '0.30');
+       ('MI', '08', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '8', 'D', '0.15');
+       ('MI', '08', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '8', 'W(D)/D', '0.07');
+       ('MI', '08', 'W(D)/D', '0.07');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '9', 'D', '0.30');
+       ('MI', '09', 'D', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '9', 'R', '0.18');
+       ('MI', '09', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('MI', '10', 'R', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('MI', '10', 'D', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '11', 'R', '0.01');
+       ('MI', '11 ', 'R', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '11', 'D', '0.44');
+       ('MI', '11 ', 'D', '0.44');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('MI', '11', 'R', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('MI', '11', 'D', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '11', 'D', '0.24');
+       ('MI', '11 ', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '11', 'R', '0.23');
+       ('MI', '11 ', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('MI', '12', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -1007,221 +1007,221 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('MI', '14', 'R', '0.08');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '0', 'D', '0.29');
+       ('MI', 'S', 'D', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MI', '0', 'R', '0.19');
+       ('MI', 'S', 'R', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '1', 'R', '0.21');
+       ('MN', '01', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '2', 'R', '0.28');
+       ('MN', '02', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '3', 'R', '0.29');
+       ('MN', '03', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '4', 'R', '0.16');
+       ('MN', '04', 'R', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '4', 'R/W', '0.00');
+       ('MN', '04', 'R/W', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '5', 'R', '0.13');
+       ('MN', '05', 'R', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '5', 'IND', '0.01');
+       ('MN', '05', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '6', 'R', '0.25');
+       ('MN', '06', 'R', '0.25');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '6', 'IND', '0.00');
+       ('MN', '06', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '7', 'R', '0.18');
+       ('MN', '07', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '7', 'IND', '0.01');
+       ('MN', '07', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '8', 'R', '0.23');
+       ('MN', '08', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MN', '0', 'R', '0.15');
+       ('MN', 'S', 'R', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '1', 'R', '0.30');
+       ('MS', '01', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '1', 'D', '0.19');
+       ('MS', '01', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '1', 'REF', '0.00');
+       ('MS', '01', 'REF', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '1', 'IND', '0.01');
+       ('MS', '01', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '2', 'D', '0.33');
+       ('MS', '02', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '2', 'R', '0.16');
+       ('MS', '02', 'R', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '2', 'IND', '0.01');
+       ('MS', '02', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '2', 'REF', '0.00');
+       ('MS', '02', 'REF', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '3', 'R', '0.39');
+       ('MS', '03', 'R', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '3', 'REF', '0.08');
+       ('MS', '03', 'REF', '0.08');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '3', 'D', '0.06');
+       ('MS', '03', 'D', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '4', 'R', '0.31');
+       ('MS', '04', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '4', 'D', '0.16');
+       ('MS', '04', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '4', 'REF', '0.00');
+       ('MS', '04', 'REF', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '0', 'R', '0.29');
+       ('MS', 'S', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '0', 'D', '0.20');
+       ('MS', 'S', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MS', '0', 'REF', '0.01');
+       ('MS', 'S', 'REF', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '1', 'D', '0.39');
+       ('MO', '01', 'D', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '1', 'R', '0.09');
+       ('MO', '01', 'R', '0.09');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '2', 'R', '0.31');
+       ('MO', '02', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '2', 'D', '0.18');
+       ('MO', '02', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '3', 'R', '0.30');
+       ('MO', '03', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '3', 'D', '0.18');
+       ('MO', '03', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '4', 'R', '0.29');
+       ('MO', '04', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '4', 'D', '0.19');
+       ('MO', '04', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '5', 'D', '0.30');
+       ('MO', '05', 'D', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '5', 'R', '0.19');
+       ('MO', '05', 'R', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '6', 'R', '0.33');
+       ('MO', '06', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '6', 'D', '0.16');
+       ('MO', '06', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '7', 'R', '0.32');
+       ('MO', '07', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '7', 'D', '0.15');
+       ('MO', '07', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '8', 'R', '0.35');
+       ('MO', '08', 'R', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '8', 'D', '0.13');
+       ('MO', '08', 'D', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '8', 'IND', '0.01');
+       ('MO', '08', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '0', 'D', '0.26');
+       ('MO', 'S', 'D', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '0', 'R', '0.21');
+       ('MO', 'S', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MT', '0', 'R', '0.27');
+       ('MT', '00', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MT', '0', 'D', '0.20');
+       ('MT', '00', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MT', '0', 'D', '0.24');
+       ('MT', 'S', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MT', '0', 'R', '0.22');
+       ('MT', 'S', 'R', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NE', '1', 'R', '0.34');
+       ('NE', '01', 'R', '0.34');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NE', '1', 'D', '0.16');
+       ('NE', '01', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NE', '2', 'R', '0.26');
+       ('NE', '02', 'R', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NE', '2', 'D', '0.24');
+       ('NE', '02', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NE', '3', 'R', '0.37');
+       ('NE', '03', 'R', '0.37');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NE', '3', 'D', '0.12');
+       ('NE', '03', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NE', '0', 'R', '0.29');
+       ('NE', 'S', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NE', '0', 'D', '0.21');
+       ('NE', 'S', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '1', 'D', '0.32');
+       ('NV', '01', 'D', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '1', 'R', '0.16');
+       ('NV', '01', 'R', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '2', 'R', '0.30');
+       ('NV', '02', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '2', 'D', '0.18');
+       ('NV', '02', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '2', 'IND', '0.02');
+       ('NV', '02', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '3', 'R', '0.25');
+       ('NV', '03', 'R', '0.25');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '3', 'D', '0.22');
+       ('NV', '03', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '3', 'IND', '0.02');
+       ('NV', '03', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '4', 'D', '0.25');
+       ('NV', '04', 'D', '0.25');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '4', 'R', '0.21');
+       ('NV', '04', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '0', 'R', '0.23');
+       ('NV', 'S', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '0', 'D', '0.23');
+       ('NV', 'S', 'D', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NV', '0', 'IND', '0.00');
+       ('NV', 'S', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NH', '1', 'D', '0.24');
+       ('NH', '01', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NH', '1', 'R', '0.24');
+       ('NH', '01', 'R', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NH', '2', 'D', '0.25');
+       ('NH', '02', 'D', '0.25');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NH', '2', 'R', '0.23');
+       ('NH', '02', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NH', '2', 'IND', '0.01');
+       ('NH', '02', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '1', 'D', '0.34');
+       ('NJ', '01', 'D', '0.34');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '1', 'R', '0.15');
+       ('NJ', '01', 'R', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '1', 'REF', '0.00');
+       ('NJ', '01', 'REF', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '2', 'R', '0.30');
+       ('NJ', '02', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '2', 'D', '0.19');
+       ('NJ', '02', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '3', 'R', '0.26');
+       ('NJ', '03', 'R', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '3', 'D', '0.23');
+       ('NJ', '03', 'D', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '4', 'R', '0.32');
+       ('NJ', '04', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '4', 'D', '0.17');
+       ('NJ', '04', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '5', 'R', '0.28');
+       ('NJ', '05', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '5', 'D', '0.20');
+       ('NJ', '05', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '5', 'BD', '0.00');
+       ('NJ', '05', 'BD', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '6', 'D', '0.31');
+       ('NJ', '06', 'D', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '6', 'R', '0.18');
+       ('NJ', '06', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '6', 'IND', '0.00');
+       ('NJ', '06', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '6', 'REF', '0.00');
+       ('NJ', '06', 'REF', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '7', 'R', '0.29');
+       ('NJ', '07', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '7', 'D', '0.20');
+       ('NJ', '07', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '8', 'D', '0.37');
+       ('NJ', '08', 'D', '0.37');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '8', 'R', '0.11');
+       ('NJ', '08', 'R', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '8', 'RAP', '0.00');
+       ('NJ', '08', 'RAP', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '8', 'IND', '0.00');
+       ('NJ', '08', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '9', 'D', '0.36');
+       ('NJ', '09', 'D', '0.36');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '9', 'R', '0.14');
+       ('NJ', '09', 'R', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '10', 'D', '0.44');
+       ('NJ', '10 ', 'D', '0.44');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '10', 'R', '0.05');
+       ('NJ', '10 ', 'R', '0.05');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '10', 'D', '0.49');
+       ('NJ', '10 ', 'D', '0.49');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('NJ', '11', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -1233,71 +1233,71 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('NJ', '12', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '0', 'D', '0.29');
+       ('NJ', 'S', 'D', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '0', 'R', '0.20');
+       ('NJ', 'S', 'R', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '0', 'RFI', '0.00');
+       ('NJ', 'S', 'RFI', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NJ', '0', 'RN', '0.00');
+       ('NJ', 'S', 'RN', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NM', '1', 'D', '0.29');
+       ('NM', '01', 'D', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NM', '1', 'R', '0.21');
+       ('NM', '01', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NM', '2', 'R', '0.28');
+       ('NM', '02', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NM', '2', 'D', '0.22');
+       ('NM', '02', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NM', '3', 'D', '0.31');
+       ('NM', '03', 'D', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NM', '3', 'R', '0.19');
+       ('NM', '03', 'R', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NM', '0', 'D', '0.26');
+       ('NM', 'S', 'D', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NM', '0', 'R', '0.23');
+       ('NM', 'S', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '1', 'D', '0.24');
+       ('NY', '01', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '1', 'R', '0.19');
+       ('NY', '01', 'R', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '2', 'R/TRP', '0.19');
+       ('NY', '02', 'R/TRP', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '2', 'D', '0.21');
+       ('NY', '02', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '2', 'R', '0.07');
+       ('NY', '02', 'R', '0.07');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '3', 'D', '0.24');
+       ('NY', '03', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '3', 'R/TRP', '0.14');
+       ('NY', '03', 'R/TRP', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '3', 'R', '0.12');
+       ('NY', '03', 'R', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '4', 'D', '0.28');
+       ('NY', '04', 'D', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '4', 'R', '0.17');
+       ('NY', '04', 'R', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '5', 'D', '0.42');
+       ('NY', '05', 'D', '0.42');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '5', 'R', '0.07');
+       ('NY', '05', 'R', '0.07');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '5', 'R/TRP', '0.00');
+       ('NY', '05', 'R/TRP', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '6', 'D', '0.35');
+       ('NY', '06', 'D', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '6', 'R', '0.12');
+       ('NY', '06', 'R', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '7', 'D', '0.43');
+       ('NY', '07', 'D', '0.43');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '7', 'R', '0.03');
+       ('NY', '07', 'R', '0.03');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '8', 'D', '0.42');
+       ('NY', '08', 'D', '0.42');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '8', 'R', '0.05');
+       ('NY', '08', 'R', '0.05');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '9', 'D', '0.39');
+       ('NY', '09', 'D', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '9', 'R', '0.07');
+       ('NY', '09', 'R', '0.07');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('NY', '10', 'D', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -1373,51 +1373,51 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('NY', '27', 'D', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '0', 'D', '0.22');
+       ('NY', 'S', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '0', 'R/CRV Combined Parties', '0.09');
+       ('NY', 'S', 'R/CRV Combined Parties', '0.09');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '0', 'R', '0.08');
+       ('NY', 'S', 'R', '0.08');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '1', 'D', '0.36');
+       ('NC', '01', 'D', '0.36');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '1', 'R', '0.13');
+       ('NC', '01', 'R', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '2', 'R', '0.27');
+       ('NC', '02', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '2', 'D', '0.21');
+       ('NC', '02', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '3', 'R', '0.32');
+       ('NC', '03', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '3', 'D', '0.17');
+       ('NC', '03', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '4', 'D', '0.35');
+       ('NC', '04', 'D', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '4', 'R', '0.15');
+       ('NC', '04', 'R', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '5', 'R  ', '0.23');
+       ('NC', '05', 'R  ', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '5', 'D', '0.20');
+       ('NC', '05', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '5', 'R', '0.12');
+       ('NC', '05', 'R', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '6', 'R', '0.32');
+       ('NC', '06', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '6', 'D', '0.04');
+       ('NC', '06', 'D', '0.04');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '7', 'R', '0.25');
+       ('NC', '07', 'R', '0.25');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '7', 'D', '0.10');
+       ('NC', '07', 'D', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '8', 'R  ', '0.22');
+       ('NC', '08', 'R  ', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '8', 'D', '0.09');
+       ('NC', '08', 'D', '0.09');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '8', 'R', '0.08');
+       ('NC', '08', 'R', '0.08');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '9', 'R', '0.28');
+       ('NC', '09', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '9', 'D', '0.06');
+       ('NC', '09', 'D', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('NC', '10', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -1437,51 +1437,51 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('NC', '13', 'R', '0.08');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ND', '0', 'R', '0.27');
+       ('ND', '00', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ND', '0', 'R', '0.28');
+       ('ND', 'S', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MP', '0', 'IND', '0.35');
+       ('MP', '00', 'IND', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MP', '0', 'R', '0.10');
+       ('MP', '00', 'R', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MP', '0', 'D', '0.04');
+       ('MP', '00', 'D', '0.04');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '1', 'R', '0.28');
+       ('OH', '01', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '1', 'D', '0.20');
+       ('OH', '01', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '2', 'R', '0.29');
+       ('OH', '02', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '2', 'D', '0.20');
+       ('OH', '02', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '3', 'D', '0.30');
+       ('OH', '03', 'D', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '3', 'R', '0.18');
+       ('OH', '03', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '4', 'R', '0.30');
+       ('OH', '04', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '4', 'D', '0.17');
+       ('OH', '04', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '5', 'R', '0.30');
+       ('OH', '05', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '5', 'D', '0.18');
+       ('OH', '05', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '6', 'R', '0.26');
+       ('OH', '06', 'R', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '6', 'D', '0.23');
+       ('OH', '06', 'D', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '7', 'R', '0.29');
+       ('OH', '07', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '7', 'D', '0.21');
+       ('OH', '07', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '8', 'R', '0.46');
+       ('OH', '08', 'R', '0.46');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '8', 'D', '0.07');
+       ('OH', '08', 'D', '0.07');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '9', 'D', '0.35');
+       ('OH', '09', 'D', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '9', 'R', '0.13');
+       ('OH', '09', 'R', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('OH', '10', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -1511,107 +1511,107 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('OH', '16', 'D', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '0', 'D', '0.24');
+       ('OH', 'S', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '0', 'R', '0.24');
+       ('OH', 'S', 'R', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OH', '0', 'IND', '0.00');
+       ('OH', 'S', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '1', 'R', '0.33');
+       ('OK', '01', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '1', 'D', '0.13');
+       ('OK', '01', 'D', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '1', 'IND', '0.04');
+       ('OK', '01', 'IND', '0.04');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '2', 'R', '0.27');
+       ('OK', '02', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '2', 'D', '0.21');
+       ('OK', '02', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '2', 'IND', '0.02');
+       ('OK', '02', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '3', 'R', '0.38');
+       ('OK', '03', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '3', 'D', '0.10');
+       ('OK', '03', 'D', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '3', 'IND', '0.02');
+       ('OK', '03', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '4', 'R', '0.34');
+       ('OK', '04', 'R', '0.34');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '4', 'D', '0.14');
+       ('OK', '04', 'D', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '4', 'IND', '0.02');
+       ('OK', '04', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '5', 'R', '0.30');
+       ('OK', '05', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '5', 'D', '0.18');
+       ('OK', '05', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '5', 'IND', '0.02');
+       ('OK', '05', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '1', 'R', '0.18');
+       ('OR', '01', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '1', 'D', '0.13');
+       ('OR', '01', 'D', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '2', 'R', '0.35');
+       ('OR', '02', 'R', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '2', 'D', '0.06');
+       ('OR', '02', 'D', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '3', 'D', '0.37');
+       ('OR', '03', 'D', '0.37');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '3', 'R', '0.10');
+       ('OR', '03', 'R', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '4', 'R/CON', '0.15');
+       ('OR', '04', 'R/CON', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '4', 'R/CON/IP*', '0.10');
+       ('OR', '04', 'R/CON/IP*', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '5', 'D', '0.27');
+       ('OR', '05', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '5', 'R', '0.16');
+       ('OR', '05', 'R', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '5', 'R/IP*', '0.11');
+       ('OR', '05', 'R/IP*', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '1', 'D', '0.44');
+       ('PA', '01', 'D', '0.44');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '1', 'R', '0.06');
+       ('PA', '01', 'R', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '2', 'D', '0.45');
+       ('PA', '02', 'D', '0.45');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '2', 'R', '0.05');
+       ('PA', '02', 'R', '0.05');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '2', 'IND', '0.01');
+       ('PA', '02', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '3', 'R', '0.27');
+       ('PA', '03', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '3', 'D', '0.21');
+       ('PA', '03', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '3', 'IND', '0.02');
+       ('PA', '03', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '4', 'R', '0.29');
+       ('PA', '04', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '4', 'D', '0.19');
+       ('PA', '04', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '4', 'IND', '0.01');
+       ('PA', '04', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '5', 'R', '0.32');
+       ('PA', '05', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '5', 'D', '0.18');
+       ('PA', '05', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '6', 'R', '0.29');
+       ('PA', '06', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '6', 'D', '0.21');
+       ('PA', '06', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '7', 'R', '0.29');
+       ('PA', '07', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '7', 'D', '0.21');
+       ('PA', '07', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '8', 'R', '0.28');
+       ('PA', '08', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '8', 'D', '0.22');
+       ('PA', '08', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '9', 'R', '0.32');
+       ('PA', '09', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '9', 'W(D)/D', '0.15');
+       ('PA', '09', 'W(D)/D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '9', 'D', '0.06');
+       ('PA', '09', 'D', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('PA', '10', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -1651,159 +1651,159 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('PA', '18', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '0', 'D', '0.26');
+       ('PA', 'S', 'D', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PA', '0', 'R', '0.23');
+       ('PA', 'S', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('PR', '0', 'PPD', '0.24');
+       ('PR', '00', 'PPD', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('RI', '1', 'D', '0.26');
+       ('RI', '01', 'D', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('RI', '1', 'R', '0.21');
+       ('RI', '01', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('RI', '1', 'IND', '0.03');
+       ('RI', '01', 'IND', '0.03');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('RI', '2', 'D', '0.28');
+       ('RI', '02', 'D', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('RI', '2', 'R', '0.17');
+       ('RI', '02', 'R', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('RI', '2', 'IND', '0.04');
+       ('RI', '02', 'IND', '0.04');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('RI', '0', 'D', '0.32');
+       ('RI', 'S', 'D', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('RI', '0', 'R', '0.17');
+       ('RI', 'S', 'R', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '1', 'R', '0.31');
+       ('SC', '01', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '1', 'D', '0.16');
+       ('SC', '01', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '2', 'R', '0.42');
+       ('SC', '02', 'R', '0.42');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '2', 'D', '0.12');
+       ('SC', '02', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '3', 'R', '0.33');
+       ('SC', '03', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '3', 'D', '0.17');
+       ('SC', '03', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '4', 'R', '0.32');
+       ('SC', '04', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '4', 'D', '0.15');
+       ('SC', '04', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '5', 'R', '0.28');
+       ('SC', '05', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '5', 'D', '0.21');
+       ('SC', '05', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '6', 'D', '0.43');
+       ('SC', '06', 'D', '0.43');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '6', 'R', '0.08');
+       ('SC', '06', 'R', '0.08');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '7', 'R', '0.28');
+       ('SC', '07', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '7', 'D', '0.21');
+       ('SC', '07', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SD', '0', 'R', '0.28');
+       ('SD', '00', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SD', '0', 'D', '0.22');
+       ('SD', '00', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SD', '0', 'IND', '0.01');
+       ('SD', '00', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '1', 'R', '0.38');
+       ('TN', '01', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '1', 'D', '0.10');
+       ('TN', '01', 'D', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '1', 'IND', '0.01');
+       ('TN', '01', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '2', 'R', '0.38');
+       ('TN', '02', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '2', 'D', '0.10');
+       ('TN', '02', 'D', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '2', 'IND', '0.01');
+       ('TN', '02', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '3', 'R', '0.30');
+       ('TN', '03', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '3', 'D', '0.17');
+       ('TN', '03', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '3', 'IND', '0.03');
+       ('TN', '03', 'IND', '0.03');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '4', 'R', '0.28');
+       ('TN', '04', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '4', 'D', '0.21');
+       ('TN', '04', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '4', 'IND', '0.01');
+       ('TN', '04', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '5', 'D', '0.27');
+       ('TN', '05', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '5', 'R', '0.18');
+       ('TN', '05', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '5', 'IND', '0.00');
+       ('TN', '05', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '6', 'R', '0.37');
+       ('TN', '06', 'R', '0.37');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '6', 'IND', '0.06');
+       ('TN', '06', 'IND', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '6', 'D', '0.06');
+       ('TN', '06', 'D', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '7', 'R', '0.36');
+       ('TN', '07', 'R', '0.36');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '7', 'D', '0.12');
+       ('TN', '07', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '7', 'IND', '0.02');
+       ('TN', '07', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '8', 'R', '0.33');
+       ('TN', '08', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '8', 'D', '0.15');
+       ('TN', '08', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '8', 'IND', '0.02');
+       ('TN', '08', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '9', 'D', '0.37');
+       ('TN', '09', 'D', '0.37');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '9', 'R', '0.12');
+       ('TN', '09', 'R', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '9', 'IND', '0.01');
+       ('TN', '09', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '0', 'R', '0.32');
+       ('TN', 'S', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '0', 'D', '0.15');
+       ('TN', 'S', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '0', 'IND', '0.01');
+       ('TN', 'S', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '1', 'R', '0.37');
+       ('TX', '01', 'R', '0.37');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '1', 'D', '0.11');
+       ('TX', '01', 'D', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '2', 'R', '0.35');
+       ('TX', '02', 'R', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '2', 'D', '0.13');
+       ('TX', '02', 'D', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '3', 'R', '0.46');
+       ('TX', '03', 'R', '0.46');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '3', 'D', '0.07');
+       ('TX', '03', 'D', '0.07');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '4', 'R', '0.37');
+       ('TX', '04', 'R', '0.37');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '4', 'D', '0.12');
+       ('TX', '04', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '4', 'IND', '0.00');
+       ('TX', '04', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '5', 'R', '0.33');
+       ('TX', '05', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '5', 'D', '0.16');
+       ('TX', '05', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '6', 'R', '0.30');
+       ('TX', '06', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '6', 'D', '0.19');
+       ('TX', '06', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '7', 'R', '0.33');
+       ('TX', '07', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '7', 'D', '0.14');
+       ('TX', '07', 'D', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '8', 'R', '0.39');
+       ('TX', '08', 'R', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '8', 'D', '0.10');
+       ('TX', '08', 'D', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '9', 'D', '0.39');
+       ('TX', '09', 'D', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '9', 'R', '0.10');
+       ('TX', '09', 'R', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('TX', '10', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -1917,97 +1917,97 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('TX', '36', 'D', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '0', 'R', '0.28');
+       ('TX', 'S', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TX', '0', 'D', '0.20');
+       ('TX', 'S', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('UT', '1', 'R', '0.35');
+       ('UT', '01', 'R', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('UT', '1', 'D', '0.12');
+       ('UT', '01', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('UT', '2', 'R', '0.29');
+       ('UT', '02', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('UT', '2', 'D', '0.19');
+       ('UT', '02', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('UT', '3', 'R', '0.38');
+       ('UT', '03', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('UT', '3', 'D', '0.12');
+       ('UT', '03', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('UT', '4', 'D', '0.24');
+       ('UT', '04', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('UT', '4', 'R', '0.24');
+       ('UT', '04', 'R', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('UT', '0', 'R', '0.32');
+       ('UT', 'S', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('UT', '0', 'D', '0.15');
+       ('UT', 'S', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VT', '0', 'R', '0.13');
+       ('VT', '00', 'R', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VT', '0', 'IND', '0.01');
+       ('VT', '00', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VT', '0', 'D', '0.15');
+       ('VT', '00', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VT', '0', 'D/IND', '0.28');
+       ('VT', 'S', 'D/IND', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VT', '0', 'R', '0.13');
+       ('VT', 'S', 'R', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VT', '0', 'D', '0.14');
+       ('VT', 'S', 'D', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VT', '0', 'IND', '0.00');
+       ('VT', 'S', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VI', '0', 'D', '0.39');
+       ('VI', '00', 'D', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VI', '0', 'R', '0.06');
+       ('VI', '00', 'R', '0.06');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VI', '0', 'IND', '0.11');
+       ('VI', '00', 'IND', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '1', 'R', '0.29');
+       ('VA', '01', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '1', 'D', '0.20');
+       ('VA', '01', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '2', 'R', '0.27');
+       ('VA', '02', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '2', 'D', '0.23');
+       ('VA', '02', 'D', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '2', 'IND', '0.01');
+       ('VA', '02', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '3', 'D', '0.40');
+       ('VA', '03', 'D', '0.40');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '3', 'R', '0.10');
+       ('VA', '03', 'R', '0.10');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '3', 'IND', '0.00');
+       ('VA', '03', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '4', 'R', '0.33');
+       ('VA', '04', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '4', 'D', '0.18');
+       ('VA', '04', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '5', 'R', '0.27');
+       ('VA', '05', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '5', 'D', '0.22');
+       ('VA', '05', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '5', 'IND', '0.00');
+       ('VA', '05', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '6', 'R', '0.34');
+       ('VA', '06', 'R', '0.34');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '6', 'D', '0.14');
+       ('VA', '06', 'D', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '6', 'IND', '0.02');
+       ('VA', '06', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '7', 'R', '0.29');
+       ('VA', '07', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '7', 'D', '0.20');
+       ('VA', '07', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '8', 'D', '0.32');
+       ('VA', '08', 'D', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '8', 'R', '0.16');
+       ('VA', '08', 'R', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '8', 'IND', '0.01');
+       ('VA', '08', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '9', 'R', '0.30');
+       ('VA', '09', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '9', 'D', '0.20');
+       ('VA', '09', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '9', 'IND', '0.00');
+       ('VA', '09', 'IND', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('VA', '10', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -2021,207 +2021,207 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('VA', '11', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '0', 'D', '0.26');
+       ('VA', 'S', 'D', '0.26');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '0', 'R', '0.23');
+       ('VA', 'S', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '1', 'D', '0.27');
+       ('WA', '01 ', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '1', 'R', '0.23');
+       ('WA', '01 ', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '1', 'D', '0.30');
+       ('WA', '01 ', 'D', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '1', 'R', '0.20');
+       ('WA', '01 ', 'R', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '2', 'D', '0.29');
+       ('WA', '02', 'D', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '2', 'R', '0.21');
+       ('WA', '02', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '3', 'R', '0.29');
+       ('WA', '03', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '3', 'D', '0.21');
+       ('WA', '03', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '4', 'R', '0.33');
+       ('WA', '04', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '4', 'D', '0.17');
+       ('WA', '04', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '5', 'R', '0.31');
+       ('WA', '05', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '5', 'D', '0.19');
+       ('WA', '05', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '6', 'D', '0.29');
+       ('WA', '06', 'D', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '6', 'R', '0.21');
+       ('WA', '06', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '7', 'D', '0.40');
+       ('WA', '07', 'D', '0.40');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '7', 'R', '0.08');
+       ('WA', '07', 'R', '0.08');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '7', 'IND', '0.04');
+       ('WA', '07', 'IND', '0.04');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '8', 'R', '0.29');
+       ('WA', '08', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '8', 'D', '0.21');
+       ('WA', '08', 'D', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '9', 'D', '0.34');
+       ('WA', '09', 'D', '0.34');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '9', 'R', '0.16');
+       ('WA', '09', 'R', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('WA', '10', 'D', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('WA', '10', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '0', 'D', '0.29');
+       ('WA', 'S', 'D', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '0', 'R', '0.21');
+       ('WA', 'S', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WV', '1', 'R', '0.30');
+       ('WV', '01', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WV', '1', 'D', '0.20');
+       ('WV', '01', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WV', '2', 'R', '0.35');
+       ('WV', '02', 'R', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WV', '2', 'D', '0.15');
+       ('WV', '02', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WV', '3', 'D', '0.27');
+       ('WV', '03', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WV', '3', 'R', '0.23');
+       ('WV', '03', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WV', '0', 'D', '0.30');
+       ('WV', 'S', 'D', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WV', '0', 'R', '0.18');
+       ('WV', 'S', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '1', 'R', '0.29');
+       ('WI', '01', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '1', 'D', '0.20');
+       ('WI', '01', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '2', 'D', '0.33');
+       ('WI', '02', 'D', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '2', 'R', '0.17');
+       ('WI', '02', 'R', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '3', 'D', '0.31');
+       ('WI', '03', 'D', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '3', 'R', '0.19');
+       ('WI', '03', 'R', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '4', 'D', '0.36');
+       ('WI', '04', 'D', '0.36');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '4', 'R', '0.13');
+       ('WI', '04', 'R', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '4', 'IND', '0.01');
+       ('WI', '04', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '5', 'R', '0.34');
+       ('WI', '05', 'R', '0.34');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '5', 'D', '0.15');
+       ('WI', '05', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '5', 'IND', '0.01');
+       ('WI', '05', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '6', 'R', '0.32');
+       ('WI', '06', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '6', 'D', '0.18');
+       ('WI', '06', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '7', 'R', '0.28');
+       ('WI', '07', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '7', 'D', '0.22');
+       ('WI', '07', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '8', 'R', '0.28');
+       ('WI', '08', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '8', 'D', '0.22');
+       ('WI', '08', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '0', 'D', '0.25');
+       ('WI', 'S', 'D', '0.25');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WI', '0', 'R', '0.24');
+       ('WI', 'S', 'R', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WY', '0', 'R', '0.35');
+       ('WY', '00', 'R', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WY', '0', 'D', '0.12');
+       ('WY', '00', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WY', '0', 'R', '0.38');
+       ('WY', 'S', 'R', '0.38');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WY', '0', 'D', '0.11');
+       ('WY', 'S', 'D', '0.11');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '0', 'R', '0.33');
+       ('AL', 'S', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AL', '0', 'D', '0.17');
+       ('AL', 'S', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AK', '0', 'R/W***', '0.18');
+       ('AK', 'S', 'R/W***', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AK', '0', 'R', '0.18');
+       ('AK', 'S', 'R', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AK', '0', 'D', '0.12');
+       ('AK', 'S', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AR', '0', 'R', '0.29');
+       ('AR', 'S', 'R', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AR', '0', 'D', '0.18');
+       ('AR', 'S', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('AR', '0', 'IND', '0.02');
+       ('AR', 'S', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '0', 'D', '0.24');
+       ('CO', 'S', 'D', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('CO', '0', 'R', '0.23');
+       ('CO', 'S', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('DE', '0', 'D', '0.28');
+       ('DE', 'S ', 'D', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('DE', '0', 'R', '0.20');
+       ('DE', 'S ', 'R', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '5', 'R', '0.34');
+       ('FL', '05', 'R', '0.34');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('FL', '5', 'D', '0.16');
+       ('FL', '05', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '0', 'R ', '0.29');
+       ('GA', 'S', 'R ', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('GA', '0', 'D', '0.19');
+       ('GA', 'S', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ID', '0', 'R', '0.36');
+       ('ID', 'S', 'R', '0.36');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('ID', '0', 'D', '0.12');
+       ('ID', 'S', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('IL', '19', 'R', '0.36');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('IL', '19', 'D', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '0', 'R', '0.24');
+       ('IL', 'S ', 'R', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '0', 'D', '0.23');
+       ('IL', 'S ', 'D', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '0', 'R', '0.24');
+       ('IL', 'S ', 'R', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IL', '0', 'D', '0.23');
+       ('IL', 'S ', 'D', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '3', 'R', '0.31');
+       ('IN', '03 ', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '3', 'D', '0.17');
+       ('IN', '03 ', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '3', 'R', '0.31');
+       ('IN', '03 ', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IN', '3', 'D', '0.17');
+       ('IN', '03 ', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IA', '5', 'R', '0.33');
+       ('IA', '05', 'R', '0.33');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IA', '5', 'D', '0.16');
+       ('IA', '05', 'D', '0.16');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IA', '0', 'R', '0.32');
+       ('IA', 'S', 'R', '0.32');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('IA', '0', 'D', '0.17');
+       ('IA', 'S', 'D', '0.17');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '0', 'R ', '0.35');
+       ('KS', 'S', 'R ', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KS', '0', 'REF', '0.01');
+       ('KS', 'S', 'REF', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '4', 'R', '0.35');
+       ('KY', '04', 'R', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '4', 'D', '0.15');
+       ('KY', '04', 'D', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '0', 'R', '0.28');
+       ('KY', 'S', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('KY', '0', 'D', '0.22');
+       ('KY', 'S', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '7', 'R', 'NaN');
+       ('LA', '07', 'R', 'NaN');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '0', 'R', '0.28');
+       ('LA', 'S', 'R', '0.28');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '0', 'D', '0.19');
+       ('LA', 'S', 'D', '0.19');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('LA', '0', 'REF', '0.00');
+       ('LA', 'S', 'REF', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('MA', '10', 'D', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -2233,13 +2233,13 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('MI', '15', 'R', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('MO', '9', 'R', '0.39');
+       ('MO', '09', 'R', '0.39');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NH', '0', 'R', '0.30');
+       ('NH', 'S', 'R', '0.30');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NH', '0', 'D', '0.18');
+       ('NH', 'S', 'D', '0.18');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NH', '0', 'IND', '0.01');
+       ('NH', 'S', 'IND', '0.01');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('NJ', '10', 'D', '0.43');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -2253,27 +2253,27 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('NY', '28', 'R', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '29', 'R', '0.23');
+       ('NY', '29 ', 'R', '0.23');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '29', 'D', '0.20');
+       ('NY', '29 ', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '29', 'R', '0.24');
+       ('NY', '29 ', 'R', '0.24');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '29', 'D', '0.20');
+       ('NY', '29 ', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '0', 'D', '0.29');
+       ('NY', 'SFULL', 'D', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '0', 'R', '0.13');
+       ('NY', 'SFULL', 'R', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '0', 'D', '0.27');
+       ('NY', 'SUN', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '0', 'R', '0.15');
+       ('NY', 'SUN', 'R', '0.15');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NY', '0', 'RDH', '0.00');
+       ('NY', 'SUN', 'RDH', '0.00');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '0', 'R', '0.27');
+       ('NC', 'S', 'R', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('NC', '0', 'D', '0.22');
+       ('NC', 'S', 'D', '0.22');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('OH', '17', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
@@ -2285,37 +2285,37 @@ INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('OH', '18', 'D', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '0', 'R', '0.35');
+       ('OK', 'S', 'R', '0.35');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '0', 'D', '0.13');
+       ('OK', 'S', 'D', '0.13');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OK', '0', 'IND', '0.02');
+       ('OK', 'S', 'IND', '0.02');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '0', 'D', '0.29');
+       ('OR', 'S', 'D', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('OR', '0', 'R', '0.20');
+       ('OR', 'S', 'R', '0.20');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('PA', '19', 'R', '0.36');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
        ('PA', '19', 'D', '0.12');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '0', 'R', '0.31');
+       ('SC', 'S', 'R', '0.31');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SC', '0', 'D', '0.14');
+       ('SC', 'S', 'D', '0.14');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('SD', '0', 'R', '0.50');
+       ('SD', 'S', 'R', '0.50');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('TN', '5', 'D', '0.50');
+       ('TN', '05 ', 'D', '0.50');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('VA', '4', 'D', '0.50');
+       ('VA', '04 ', 'D', '0.50');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '1', 'D', '0.29');
+       ('WA', '01', 'D', '0.29');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WA', '1', 'R', '0.21');
+       ('WA', '01', 'R', '0.21');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WV', '0', 'D', '0.27');
+       ('WV', 'S ', 'D', '0.27');
 INSERT INTO efficiency_gaps (state, district, party, gap) VALUES
-       ('WV', '0', 'R', '0.22');
+       ('WV', 'S ', 'R', '0.22');
 
 UPDATE districts d
   SET efficiency_gap_r = eg.gap

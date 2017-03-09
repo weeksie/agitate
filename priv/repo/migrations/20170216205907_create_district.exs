@@ -6,6 +6,11 @@ defmodule Agitate.Repo.Migrations.CreateDistrict do
     
     create table(:districts) do
       add :name, :string
+
+      add :representative, :string
+      add :phone, :string
+      
+      # maybe remove these
       add :congress_start, :string
       add :congress_end, :string
 
@@ -16,6 +21,9 @@ defmodule Agitate.Repo.Migrations.CreateDistrict do
 
       add :efficiency_gap_r, :float
       add :efficiency_gap_d, :float
+
+      add :lat, :float
+      add :lon, :float
       
       add :state_id, references(:states)
       

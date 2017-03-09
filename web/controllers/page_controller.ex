@@ -6,4 +6,10 @@ defmodule Agitate.PageController do
     |> assign(:zip_code, zip_code)
     |> render("index.html")
   end
+
+  def index(conn, _params) do
+    conn
+    |> assign(:zip_code, nil)
+    |> render(:index)
+  end
 end

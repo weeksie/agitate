@@ -1,12 +1,21 @@
 #!/bin/bash
 
-shp2pgsql priv/data/districtShapes/districts114.shp district_geoms | psql -d "$1"
+shp2pgsql priv/data/cb_2015_us_cd114_5m.shp district_geoms | psql -d "$1"
 shp2pgsql priv/data/cb_2015_us_zcta510_500k.shp zip_geoms | psql -d "$1"
 
+echo "Seeding states"
 cat priv/data/seed_states.sql | psql -d "$1"
+echo "Seeding zip codes"
 cat priv/data/seed_zips.sql | psql -d "$1"
+echo "Seeding zipcode geolocations"
 cat priv/data/seed_zip_latitudes.sql | psql -d "$1"
+echo "Seeding districts"
 cat priv/data/seed_districts.sql | psql -d "$1"
+echo "Seeding district contact information"
+cat priv/data/seed_phone_numbers.sql | psql -d "$1"
+echo "Seeding district geometries"
 cat priv/data/seed_district_geometries.sql | psql -d "$1"
+echo "Calculating district compactness"
 cat priv/data/calculate_compactness.sql | psql -d "$1"
+echo "Calculating district efficiency gaps"
 cat priv/data/election-results/efficiency_gaps.sql | psql -d "$1"

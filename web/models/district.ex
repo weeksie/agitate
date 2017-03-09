@@ -3,9 +3,13 @@ defmodule Agitate.District do
 
   schema "districts" do
     field :name, :string
+    field :phone, :string
+    field :representative, :string
     field :congress_start, :string
     field :congress_end, :string
     field :convex_hull, :float
+    field :lat, :float
+    field :lon, :float
     field :efficiency_gap_r, :float
     field :efficiency_gap_d, :float
 
@@ -14,10 +18,16 @@ defmodule Agitate.District do
     
     timestamps()
   end
-
+  
+  @doc """
+  Dumb as a dumb thing right now. Averaging the efficiency gap with the convex_hull score.
+  """
   def score(%{ efficiency_gap_r: gap_r, efficiency_gap_d: gap_d, convex_hull: hull }) do
-    max = Enum.max [ gap_r, gap_d ]
     compactness = 1.0 - hull
+    max         = case Enum.max [ gap_r, gap_d ] do
+                    nil -> 0
+                    num -> num
+                  end
     (max + compactness) / 2.0
   end
   

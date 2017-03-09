@@ -1,4 +1,3 @@
-BEGIN;
 INSERT INTO zip_codes (code, zip_geom_id, updated_at, inserted_at)
   (SELECT zip_geoms.code as code, zip_geoms.id as zip_geom_id, now(), now() FROM zip_geoms);
 UPDATE zip_codes SET lat = 18.180555, lon =  -66.749961 WHERE code = '00601';
@@ -33145,4 +33144,4 @@ UPDATE zip_codes SET lat = 55.550204, lon = -132.945933 WHERE code = '99925';
 UPDATE zip_codes SET lat = 55.138352, lon = -131.470424 WHERE code = '99926';
 UPDATE zip_codes SET lat = 56.239062, lon = -133.457924 WHERE code = '99927';
 UPDATE zip_codes SET lat = 56.370751, lon = -131.693301 WHERE code = '99929';
-END;
+
