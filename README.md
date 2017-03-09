@@ -7,19 +7,6 @@ mix ecto.create
 mix ecto.migrate
 ```
 
-## Import Congressional District Shapefiles 
-
-!!!UPDATE FOR 5m shapefiles!!!!
-
-Importing shapefiles. First download your districts zip from http://cdmaps.polisci.ucla.edu/
-
-```
-curl -O http://cdmaps.polisci.ucla.edu/shp/districts114.zip
-mv districts114.zip priv/data
-cd priv/data
-unzip districts114.zip
-```
-
 Make sure PostGIS is installed (http://postgis.net/install/) but
 really, you'll probably just do a `brew install postgis`. Then run the migrations `mix ecto.migrate`
 
@@ -46,17 +33,18 @@ For non dev environments sub out the database name, e.g. `./priv/data/seeds.sh a
 
 et viola!
 
-Note: Congressional office phone numbers are from http://clerk.house.gov/member_info/ttd.aspx
 
+## Acknowledgements
 
-# About Phoenix
-To start your Phoenix app:
+I've been scraping data from anywhere and everywhere.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `npm install`
-  * Start Phoenix endpoint with `mix phoenix.server`
+* Congressional district shapefiles from http://www2.census.gov
+* Election results for calculating vote efficiency: http://www.fec.gov/pubrec/electionresults.shtml
+* Congressional office phone numbers are from http://clerk.house.gov/member_info/ttd.aspx
+* Legislator info https://github/unitedstates/congress-legislators
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Most of these have been munged and transformed through a series of
+very ad hoc ruby scripts peppered throughout the `priv/data` directory.
+
 
 

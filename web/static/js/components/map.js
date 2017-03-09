@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 import { MAP_TOKEN, MAP_STYLE } from '../config';
 
-import { Map, Marker, Popup, TileLayer, GeoJSON } from 'react-leaflet';
+import { Map, TileLayer, GeoJSON } from 'react-leaflet';
 
 const AMERICA        = [ 37.0902, -95.7129 ];
 const AMERICA_BOUNDS = [
@@ -37,17 +37,6 @@ class MapView extends React.Component {
       );
     });
   }
-  renderMarkers(districts) {
-    return flatten(districts).map( (district, i) => {
-      const { state, lon, lat, name } = district;
-      const score = Math.round(district.score * 100) / 100;
-      return (
-        <Marker key={distKey(district, 'mark')} position={[lon, lat]}>
-            <Popup><span>{ state.short + "/" + name + " - score: " + score }</span></Popup>
-        </Marker>
-      );
-    });
-  }
   render() {
     const { loading, lat, lon, districts, onClick, onLayerAdd } = this.props;
     
@@ -67,7 +56,6 @@ class MapView extends React.Component {
               />
               
               { this.renderDistricts(districts) }
-              { this.renderMarkers(districts) }
           </Map>
       </div>
     );
