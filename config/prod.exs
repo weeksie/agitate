@@ -13,10 +13,12 @@ use Mix.Config
 # which you typically run after static files are built.
 config :agitate, Agitate.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: {0,0,0,0}, port: 80],
+  url: [scheme: "https", host: "thawing-refuge-62351.herokuapp.com", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]]
   server: true,
   root: ".",
-  cache_static_manifest: "priv/static/manifest.json"
+  cache_static_manifest: "priv/static/manifest.json",
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
 
 # Do not print debug messages in production
 config :logger, level: :info
@@ -58,6 +60,9 @@ config :phoenix, :serve_endpoints, true
 #     config :agitate, Agitate.Endpoint, server: true
 #
 
-# Finally import the config/prod.secret.exs
-# which should be versioned separately.
-import_config "prod.secret.exs"
+config :agitate, Agitate.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  types: Agitate.PostgresTypes,
+  url: System.get_env("DATABASE_URL"),
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
+  ssl: true
