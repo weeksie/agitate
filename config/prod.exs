@@ -14,7 +14,7 @@ use Mix.Config
 config :agitate, Agitate.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [scheme: "https", host: "thawing-refuge-62351.herokuapp.com", port: 443],
-  force_ssl: [rewrite_on: [:x_forwarded_proto]]
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   server: true,
   root: ".",
   cache_static_manifest: "priv/static/manifest.json",
@@ -60,6 +60,7 @@ config :phoenix, :serve_endpoints, true
 #     config :agitate, Agitate.Endpoint, server: true
 #
 
+# postgresql-contoured-60002????
 config :agitate, Agitate.Repo,
   adapter: Ecto.Adapters.Postgres,
   types: Agitate.PostgresTypes,
