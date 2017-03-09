@@ -34,7 +34,7 @@
     "brunch": "2.7.4",
     "clean-css-brunch": "~2.0.0",
     "css-brunch": "~2.0.0",
-    "graphql-tag-brunch": "file:../forums/graphql-tag-brunch",
+    "graphql-tag-brunch": "0.1.0",
     "javascript-brunch": "~2.0.0",
     "jest": "^19.0.2",
     "sass-brunch": "^2.10.4",
