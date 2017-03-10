@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { RECEIVED_ZIP_CODE, QUERY_COORDS, PIN_COORDS } from './actions';
-import { SET_DISTRICT, SET_DISTRICTS } from './actions';
+import { SET_DISTRICT, SET_DISTRICTS, SET_CURRENT_STATE } from './actions';
 
 export function geo(state = {}, action) {
   switch(action.type) {
@@ -24,6 +24,10 @@ export function geo(state = {}, action) {
       return Object.assign({}, state, {
         queryLat: undefined,
         queryLon: undefined
+      });
+    case SET_CURRENT_STATE:
+      return Object.assign({}, state, {
+        state: action.state
       });
     default:
       return state;

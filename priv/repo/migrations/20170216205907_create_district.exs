@@ -7,10 +7,8 @@ defmodule Agitate.Repo.Migrations.CreateDistrict do
     create table(:districts) do
       add :name, :string
 
-      # maybe remove these
-      add :congress_start, :string
-      add :congress_end, :string
-
+      add :geom, :geometry
+      
       add :polsby_popper, :float
       add :schwartzberg, :float
       add :convex_hull, :float

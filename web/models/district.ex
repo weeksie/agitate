@@ -3,14 +3,13 @@ defmodule Agitate.District do
 
   schema "districts" do
     field :name, :string
-    field :congress_start, :string
-    field :congress_end, :string
+
     field :convex_hull, :float
     field :lat, :float
     field :lon, :float
     field :efficiency_gap_r, :float
     field :efficiency_gap_d, :float
-
+    field :geom, Geo.Geometry
     
     belongs_to :state, Agitate.State
     belongs_to :representative, Agitate.Representative

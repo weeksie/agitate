@@ -7,11 +7,16 @@ defmodule Agitate.Schema do
       resolve &Agitate.StateResolver.all/2
     end
 
-    field :state, type: :state do
+    field :state_by_abbrev, type: :state do
       arg :short, non_null(:string)
       resolve &Agitate.StateResolver.by_abbrev/2
     end
-
+    
+    field :state, type: :state do
+      arg :id, non_null(:integer)
+      resolve &Agitate.StateResolver.by_id/2
+    end
+    
     field :zip_by_code, type: :zip_code do
       arg :code, non_null(:string)
       resolve &Agitate.ZipCodeResolver.by_code/2

@@ -5,13 +5,15 @@ import { connect } from 'react-redux';
 import { graphql, compose } from 'react-apollo';
 
 import { DistrictByCoords, DistrictsByZip } from '../queries';
-import { setQueryCoords, setPinnedCoords, setDistrict, setDistricts, flyToDistrict } from '../actions';
+import { setQueryCoords, setPinnedCoords, setDistrict,
+         setDistricts, flyToDistrict, setCurrentState } from '../actions';
 
 import Map from './map';
 import ZipPrompt from './zip-prompt';
 import DistrictLabel from './district-label';
 import DistrictScore from './district-score';
 import Representative from './representative';
+
 
 class Agitate extends React.Component {
   constructor(props) {
@@ -45,7 +47,14 @@ class Agitate extends React.Component {
   }
   onDistrictAdd(map) {
     if(this.props.districts.length === 1 && map.layer.getBounds) {
-      map.layer._map.flyToBounds(map.layer.getBounds());
+      // TODO: wire this up with a redux call from _after_ the flyToBounds call to trigger
+      // rendering for InactiveDistricts
+      if(map.layer.options.attribution !== "inactive-districts") {
+        const { dispatch, districts } = this.props;
+        const { state }               = districts[0];
+        map.layer._map.flyToBounds(map.layer.getBounds());
+        map.layer._map.once('zoomend', () => dispatch(setCurrentState(state)));
+      }
     }
   }
   onMapClick(map) {

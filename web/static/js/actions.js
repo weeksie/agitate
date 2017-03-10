@@ -8,6 +8,8 @@ export const QUERY_COORDS         = 'QUERY_COORDS';
 export const PIN_COORDS           = 'PIN_COORDS';
 export const SET_DISTRICT         = 'SET_DISTRICT';
 export const SET_DISTRICTS        = 'SET_DISTRICTS';
+export const FLY_TO_DISTRICT      = 'FLY_TO_DISTRICT';
+export const SET_CURRENT_STATE = 'RENDER_INACTIVE_DISTRICT';
 
 export function promptForZipCode() {
   return { type: PROMPT_FOR_ZIP_CODE };
@@ -31,4 +33,9 @@ export function setDistricts(districts) {
 export function setDistrict(district) {
   return { type: SET_DISTRICT, district };
 }
-
+export function flyToDistrict(districtLayer) {
+  return { type: FLY_TO_DISTRICT, districtLayer };
+}
+export function setCurrentState(state) {
+  return { type: SET_CURRENT_STATE, state };
+}

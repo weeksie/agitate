@@ -1,0 +1,7 @@
+query StateById($id: Int!) {
+  state(id: $id) {
+    districts {
+      geom
+    }
+  }
+}

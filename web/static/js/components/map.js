@@ -4,8 +4,7 @@ import { MAP_TOKEN, MAP_STYLE } from '../config';
 
 import { Map, TileLayer, GeoJSON } from 'react-leaflet';
 
-import America from '../geo/states.json';
-import Districts from '../geo/districts.json';
+import InactiveDistricts from './inactive-districts';
 
 const AMERICA_CENTER = [ 37.0902, -95.7129 ];
 const AMERICA_BOUNDS = [
@@ -22,15 +21,26 @@ const COLORS   = [
   '#900',
 ];
 
-function flatten(districts) {
-  return districts[0] ? districts : [ districts ];
-}
 function distKey(district, suffix) {
   return `${district.name}${district.state.short}-${suffix}`;
 }
+
+
 class MapView extends React.Component {
+  renderInactiveDistricts(districts) {
+    /// set this up to take a flux call
+    if(districts[0]) {
+      const { id } = districts[0].state;
+      return (
+        <InactiveDistricts key={`inactive-${id}`} id={-1}/>
+      );
+    } else {
+      return <div />
+    }
+
+  }
   renderDistricts(districts) {
-    return flatten(districts).map( (district, i) => {
+    return districts.map( (district, i) => {
       return (
         <GeoJSON
             key={distKey(district, 'outline')}
@@ -51,30 +61,22 @@ class MapView extends React.Component {
                maxBounds={AMERICA_BOUNDS}
                onClick={onClick}
                onLayerAdd={onLayerAdd}>
-              <GeoJSON
-                  data={Districts}
-                  style={{
-                    color: "#CCC",
-                    weight: 1,
-                    opacity: 0.5,
-                    fillColor: "#EEE"
-                  }}
-              />
-              <GeoJSON
+              {/* 
+                  <GeoJSON
                   data={America}
                   style={{
-                    color: "#333",
-                    weight: 1,
-                    opacity: 0.5,
-                    fillColor: "#FFF"
-                  }}
+                  color: "#333",
+                  weight: 1,
+                  opacity: 0.5,
+                  fillColor: "#FFF"
+                  }} */}
               />
               <TileLayer
                   url={TILE_URL}
                   accessToken={MAP_TOKEN}
                   id="light-v9"
               />
-              
+              { this.renderInactiveDistricts(districts) }
               { this.renderDistricts(districts) }
           </Map>
       </div>

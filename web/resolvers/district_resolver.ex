@@ -7,6 +7,7 @@ defmodule Agitate.DistrictResolver do
   import Ecto.Query
   import Geo.PostGIS
 
+  # TODO: simplify this now that geo is on the districts table.
   def by_coords(%{ lat: lat, lon: lon}, _resolver) do
     query = from d in District,
       join: dg in "district_geometries", where: dg.district_id == d.id,
@@ -40,12 +41,16 @@ defmodule Agitate.DistrictResolver do
     nil
   end
   def to_schema(district = %{ state_id: state_id, geom: geom })  do
-    geoJSON = Geo.JSON.encode(geom) |> Poison.encode!
     score   = District.score district
 
-    district
-    |> Map.put(:geom, geoJSON)
+    to_schema_only_geom(district)
     |> Map.put(:score, score)
     |> Map.put(:state, Repo.get(State, state_id))
+  end
+
+  def to_schema_only_geom(district = %{ geom: geom }) do
+    geoJSON = Geo.JSON.encode(geom) |> Poison.encode!
+    district
+    |> Map.put(:geom, geoJSON)
   end
 end

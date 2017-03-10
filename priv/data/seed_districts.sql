@@ -1,5 +1,5 @@
-INSERT INTO districts (state_id, name, lat, lon, inserted_at, updated_at)
-  (SELECT states.id AS state_id, cd114fp AS name,
+INSERT INTO districts (state_id, name, geom, lat, lon, inserted_at, updated_at)
+  (SELECT states.id AS state_id, cd114fp AS name, geom,
           st_x(st_pointonsurface(geom)), st_y(st_pointonsurface(geom)),
           now(), now()
           FROM district_geoms
