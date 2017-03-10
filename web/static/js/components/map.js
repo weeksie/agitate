@@ -4,7 +4,10 @@ import { MAP_TOKEN, MAP_STYLE } from '../config';
 
 import { Map, TileLayer, GeoJSON } from 'react-leaflet';
 
-const AMERICA        = [ 37.0902, -95.7129 ];
+import America from '../geo/states.json';
+import Districts from '../geo/districts.json';
+
+const AMERICA_CENTER = [ 37.0902, -95.7129 ];
 const AMERICA_BOUNDS = [
   [5.499550, -167.276413], //Southwest
   [83.162102, -52.233040]  //Northeast
@@ -32,7 +35,7 @@ class MapView extends React.Component {
         <GeoJSON
             key={distKey(district, 'outline')}
             data={JSON.parse(district.geom)}
-            style={ {color: COLORS[i]} }
+            style={ {color: COLORS[i], weight: 1 } }
         />
       );
     });
@@ -48,7 +51,24 @@ class MapView extends React.Component {
                maxBounds={AMERICA_BOUNDS}
                onClick={onClick}
                onLayerAdd={onLayerAdd}>
-              
+              <GeoJSON
+                  data={Districts}
+                  style={{
+                    color: "#CCC",
+                    weight: 1,
+                    opacity: 0.5,
+                    fillColor: "#EEE"
+                  }}
+              />
+              <GeoJSON
+                  data={America}
+                  style={{
+                    color: "#333",
+                    weight: 1,
+                    opacity: 0.5,
+                    fillColor: "#FFF"
+                  }}
+              />
               <TileLayer
                   url={TILE_URL}
                   accessToken={MAP_TOKEN}
