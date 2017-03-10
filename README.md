@@ -41,10 +41,14 @@ I've been scraping data from anywhere and everywhere.
 * Congressional district shapefiles from http://www2.census.gov
 * Election results for calculating vote efficiency: http://www.fec.gov/pubrec/electionresults.shtml
 * Congressional office phone numbers are from http://clerk.house.gov/member_info/ttd.aspx
-* Legislator info https://github/unitedstates/congress-legislators
+* Legislator info https://github.com/unitedstates/congress-legislators
 
 Most of these have been munged and transformed through a series of
-very ad hoc ruby scripts peppered throughout the `priv/data` directory.
+very ad hoc ruby scripts peppered throughout the `priv/data`
+directory, outputting big sql scripts.
+
+Real fancy.
+
 
 
 

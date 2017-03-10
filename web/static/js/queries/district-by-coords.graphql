@@ -2,8 +2,6 @@ query DistrictByCoords($queryLat: Float!, $queryLon: Float!) {
   districtByCoords(lat: $queryLat, lon: $queryLon) {
     id
     name
-    representative
-    phone
     geom
     score      
     lat
@@ -11,6 +9,14 @@ query DistrictByCoords($queryLat: Float!, $queryLon: Float!) {
     state {
       id
       short
+    }
+    representative {
+      name
+      phone
+      twitter
+      facebook
+      termCount
+      upForReelection
     }
   }    
 }

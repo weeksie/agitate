@@ -106,9 +106,13 @@ html, body, main, #district-map {
   color: $orange;
 }
 
-.representative-phone a {
-  color: $orange;
-  font-weight: bold;
-  text-decoration: none;
+.representative-phone, .representative-fb, .representative-twitter {
+  display: inline-block;
+  margin-right: 0.5em;
+  a {
+    color: $orange;
+    font-weight: bold;
+    text-decoration: none;
+  }
 }
 

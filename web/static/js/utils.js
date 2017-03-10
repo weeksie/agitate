@@ -14,3 +14,4 @@ export function ordinal(num) {
   }
   return i + "th";
 }
+

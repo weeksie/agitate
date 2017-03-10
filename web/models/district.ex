@@ -3,8 +3,6 @@ defmodule Agitate.District do
 
   schema "districts" do
     field :name, :string
-    field :phone, :string
-    field :representative, :string
     field :congress_start, :string
     field :congress_end, :string
     field :convex_hull, :float
@@ -15,6 +13,7 @@ defmodule Agitate.District do
 
     
     belongs_to :state, Agitate.State
+    belongs_to :representative, Agitate.Representative
     
     timestamps()
   end

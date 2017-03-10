@@ -16,12 +16,11 @@ File.open 'seed_phone_numbers.sql', 'w' do |f|
     
     f.puts <<EOSQL
 
-UPDATE districts AS d
-SET representative = '#{representative}',
-    phone          = '#{phone}'
-FROM states as s
+UPDATE representatives AS r
+SET phone = '#{phone}'
+FROM districts as d, states as s
 WHERE
-  s.id = d.state_id AND d.name = '#{district}' AND s.short = '#{state}';
+  r.id = d.representative_id AND s.id = d.state_id AND d.name = '#{district}' AND s.short = '#{state}';
 EOSQL
   end
 end
