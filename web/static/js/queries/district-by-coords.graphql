@@ -12,6 +12,7 @@ query DistrictByCoords($queryLat: Float!, $queryLon: Float!) {
     }
     representative {
       name
+      party
       phone
       twitter
       facebook

@@ -9,16 +9,16 @@ export default (props) => {
     return (<div className="representative" />);
   }
   
-  const district                           = districts[0];
+  const district                                = districts[0];
   const { phone, name, twitter, facebook,
-          termCount, upForReelection   } = district.representative,
-        phoneLink                        = phone.replace(/[^0-9]/g,''),
-        reelectionFormatted              = moment(upForReelection, 'YYYY-MM-DD').format('MMM Do, YYYY');
+          termCount, upForReelection, party   } = district.representative,
+        phoneLink                               = phone.replace(/[^0-9]/g,''),
+        reelectionFormatted                     = moment(upForReelection, 'YYYY-MM-DD').format('MMM Do, YYYY');
 
   return (
     <div className="representative-contact">
         <p>
-            <span className="representative-name">{name}</span>
+            <span className="representative-name">{`${name} (${party})`}</span>
             <span className="representative-phone"><a href={`tel:${phoneLink}`}>{phone}</a></span>
             <span className="representative-fb">
                 <a href={`http://facebook.com/${facebook}`}>Facebook</a>
