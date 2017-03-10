@@ -31,6 +31,7 @@
     "babel-brunch": "~6.0.0",
     "babel-jest": "^19.0.0",
     "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-react": "^6.23.0",
     "brunch": "2.7.4",
     "clean-css-brunch": "~2.0.0",
