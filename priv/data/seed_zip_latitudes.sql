@@ -1,5 +1,15 @@
+BEGIN;
 INSERT INTO zip_codes (code, zip_geom_id, updated_at, inserted_at)
   (SELECT zip_geoms.code as code, zip_geoms.id as zip_geom_id, now(), now() FROM zip_geoms);
+
+INSERT INTO district_zip_codes (district_id, zip_code_id)
+  (SELECT d.id, z.id
+    FROM zip_codes AS z
+    JOIN zip_geoms AS zg ON zg.id = z.zip_geom_id
+    JOIN districts AS d ON ST_Intersects(d.geom, zg.geom));
+
+-- DROP TABLE zip_geoms;
+
 UPDATE zip_codes SET lat = 18.180555, lon =  -66.749961 WHERE code = '00601';
 UPDATE zip_codes SET lat = 18.361945, lon =  -67.175597 WHERE code = '00602';
 UPDATE zip_codes SET lat = 18.455183, lon =  -67.119887 WHERE code = '00603';
@@ -33144,4 +33154,4 @@ UPDATE zip_codes SET lat = 55.550204, lon = -132.945933 WHERE code = '99925';
 UPDATE zip_codes SET lat = 55.138352, lon = -131.470424 WHERE code = '99926';
 UPDATE zip_codes SET lat = 56.239062, lon = -133.457924 WHERE code = '99927';
 UPDATE zip_codes SET lat = 56.370751, lon = -131.693301 WHERE code = '99929';
-
+END;

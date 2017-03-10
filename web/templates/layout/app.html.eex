@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Agitate!</title>
+    <title>Agitate!</title>
 
     <!--link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /-->
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">

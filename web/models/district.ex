@@ -11,6 +11,7 @@ defmodule Agitate.District do
     field :efficiency_gap_d, :float
     field :geom, Geo.Geometry
     
+    many_to_many :zip_codes, Agitate.ZipCode, join_through: "district_zip_codes"
     belongs_to :state, Agitate.State
     belongs_to :representative, Agitate.Representative
     

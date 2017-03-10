@@ -7,8 +7,10 @@ defmodule Agitate.ZipCode do
     field :lon, :float
     field :zip_geom_id, :integer
 
+    many_to_many :districts, Agitate.District, join_through: "district_zip_codes"
     timestamps()
   end
+
   
   @doc """
   Builds a changeset based on the `struct` and `params`.

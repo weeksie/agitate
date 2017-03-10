@@ -20,8 +20,10 @@ defmodule Agitate.Schema.Types do
     field :lon, :float
     
     field :state, :state, resolve: assoc(:state)
-    
-    # okay, but why does the above work?
+
+    # Taken from the Absinthe Docs, which is fine but
+    # why does the above work?
+    #
     # field :representative, :representative, resolve: assoc(:representative)
     field :representative, :representative do
       resolve fn district, _, _ ->

@@ -52,24 +52,17 @@ class MapView extends React.Component {
   }
   render() {
     const { loading, lat, lon, districts, onClick, onLayerAdd } = this.props;
-    
+    // TODO: add bounds here so that the first thing can fly to the bounds?
+    // maybe. ////// don't want to cause a map re-render . . . ????
     return (
       <div>
           <Map center={[lat, lon]}
+               animate={true}
                zoom={10}
                useFlyTo={true}
                maxBounds={AMERICA_BOUNDS}
                onClick={onClick}
                onLayerAdd={onLayerAdd}>
-              {/* 
-                  <GeoJSON
-                  data={America}
-                  style={{
-                  color: "#333",
-                  weight: 1,
-                  opacity: 0.5,
-                  fillColor: "#FFF"
-                  }} */}
               />
               <TileLayer
                   url={TILE_URL}

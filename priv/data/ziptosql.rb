@@ -5,7 +5,15 @@ File.open 'seed_zip_latitudes.sql', 'w' do |f|
 BEGIN;
 INSERT INTO zip_codes (code, zip_geom_id, updated_at, inserted_at)
   (SELECT zip_geoms.code as code, zip_geoms.id as zip_geom_id, now(), now() FROM zip_geoms);
-CREATE INDEX IF NOT EXISTS ON zip_codes (code);
+
+INSERT INTO district_zip_codes (district_id, zip_code_id)
+  (SELECT d.id, z.id
+    FROM zip_codes AS z
+    JOIN zip_geoms AS zg ON zg.id = z.zip_geom_id
+    JOIN districts AS d ON ST_Intersects(d.geom, zg.geom));
+
+-- DROP TABLE zip_geoms;
+
 EOSQL
   
   CSV.foreach "zip-lat-lon.csv", headers: true, header_converters: :symbol do |row|

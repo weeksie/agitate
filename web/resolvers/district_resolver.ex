@@ -5,45 +5,32 @@ defmodule Agitate.DistrictResolver do
   alias Agitate.Repo
 
   import Ecto.Query
-  import Geo.PostGIS
 
-  # TODO: simplify this now that geo is on the districts table.
   def by_coords(%{ lat: lat, lon: lon}, _resolver) do
     query = from d in District,
-      join: dg in "district_geometries", where: dg.district_id == d.id,
-      where: fragment("st_contains(?, st_makepoint(?, ?))", dg.geom, ^lon, ^lat),
-      select: %{ id: d.id, name: d.name, geom: dg.geom, state_id: d.state_id,
+      where: fragment("st_contains(?, st_makepoint(?, ?))", d.geom, ^lon, ^lat),
+      select: %{ id: d.id, name: d.name, geom: d.geom, state_id: d.state_id,
                  lat: d.lat, lon: d.lon, representative_id: d.representative_id,
                  convex_hull: d.convex_hull, efficiency_gap_r: d.efficiency_gap_r,
                  efficiency_gap_d: d.efficiency_gap_d }
-    
     
     { :ok, to_schema(Repo.one(query)) }
   end
   
   def by_zip(_, %{ source: %{ id: id } }) do
-    zip   = Repo.get ZipCode, id
-    code  = zip.code
-
-    query = from d in District,
-      join: dg in "district_geometries", where: dg.district_id == d.id,
-      join: zg in "zip_geoms", where: st_intersects(dg.geom, zg.geom),
-      where: zg.code == ^code,
-      select: %{ id: d.id, name: d.name, geom: dg.geom, state_id: d.state_id,
-                 lat: d.lat, lon: d.lon, representative_id: d.representative_id,
-                 convex_hull: d.convex_hull, efficiency_gap_r: d.efficiency_gap_r,
-                 efficiency_gap_d: d.efficiency_gap_d }
-
-    { :ok, Enum.map(Repo.all(query), &to_schema/1) }
-  end
+    zip = Repo.get(ZipCode, id) |> Repo.preload(:districts)
+    
+    { :ok, Enum.map(zip.districts, &to_schema/1) }
+end
 
   def to_schema(nil)  do
     nil
   end
-  def to_schema(district = %{ state_id: state_id, geom: geom })  do
+  def to_schema(district = %{ state_id: state_id })  do
     score   = District.score district
 
-    to_schema_only_geom(district)
+    district
+    |> to_schema_only_geom()
     |> Map.put(:score, score)
     |> Map.put(:state, Repo.get(State, state_id))
   end
