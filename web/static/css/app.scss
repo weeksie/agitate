@@ -1,73 +1,56 @@
 /* This file is for your main application css. */
+@import "variables";
+@import "mixins";
+@import "vendor/media-queries";
 
-$narrow  : "(min-width: 0) and (max-width: 320px)";
-$mobile  : "(min-width: 321px) and (max-width: 570px)";
-$tablet  : "(min-width: 571px) and (max-width: 820px)";
-$desktop : "(min-width: 821px) and (max-width: 1070px)";
-$big     : "min-width: 1071px";
-
-
-$orange: #e6784a;
-$lt-grey: #a5a5a5;
-
-@mixin narrow {
-  @media #{$narrow} {
-    @content;
-  }
-}
-@mixin mobile {
-  @media #{mobile} {
-    @content;
-  }
-}
-@mixin tablet {
-  @media #{$tablet} {
-    @content;
-  }
-}
-@mixin desktop {
-  @media #{$desktop} {
-    @content;
-  }
-}
-@mixin big {
-  @media #{$big} {
-    @content;
-  }
-}
-
-@mixin gutters {
-  margin-left: 3.13%;
-  margin-right: 3.13%;
-}
-
-
-html, body, main, #district-map {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
 
-.leaflet-container {
-  position: absolute;
+main {
+  position: fixed;
   top: 0;
-  bottom: 30vh;
-  width: 100vw;
-  @include desktop {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+#app {
+  @media only screen and (min-width: 1024px) {
+    text-align: center;
+    margin: auto;
     width: 900px;
   }
-  @include big {
-    width: 1024px;
-  }
+}
+
+.agitate {
+  text-align: left;
+}
+
+
+.leaflet-container {
   border-bottom: 1px solid $orange;
+  height: 70vh;
+  @include mobile-portrait {
+    height: 45vh;
+  }
+  @include mobile-landscape {
+    height: 45vh;
+  }
 }
 
 .district-info {
+  padding-top: 1em;
   @include gutters;
-  position: absolute;
-  bottom: 0;
-  height: 27vh;
+  p {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
 }
 
 .zip-prompt {
@@ -95,15 +78,20 @@ html, body, main, #district-map {
   padding: 0.25em;
 }
 
+.district-label span {
+  font-weight: bold;
+}
+
 .district-label-state, .representative-name, .district-label-state, .district-label-name {
   display: inline-block;
-  margin-right: 0.5em;
+//  margin-right: 0.5em;
 }
 
 .district-score {
   font-weight: bold;
   font-size: 2em;
   color: $orange;
+  margin: 0;
 }
 
 .representative-phone, .representative-fb, .representative-twitter {

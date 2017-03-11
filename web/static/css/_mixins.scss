@@ -1,0 +1,43 @@
+
+
+@mixin narrow {
+  @media #{$narrow} {
+    @content;
+  }
+}
+@mixin mobile {
+  @media #{mobile} {
+    @content;
+  }
+}
+@mixin tablet {
+  @media #{$tablet} {
+    @content;
+  }
+}
+@mixin desktop {
+  @media #{$desktop} {
+    @content;
+  }
+}
+@mixin big {
+  @media #{$big} {
+    @content;
+  }
+}
+
+@mixin gutters {
+  margin-left: 3.13%;
+  margin-right: 3.13%;
+}
+
+@mixin mobile-portrait {
+  @include screen-height($iphone-5-height - 10, $iphone-6p-height + 10, $orientation: portrait) {
+    @content
+  }
+}
+@mixin mobile-landscape {
+  @include screen-height($iphone-5-width - 10, $iphone-6p-width + 10, $orientation: landscape) {
+    @content
+  }  
+}

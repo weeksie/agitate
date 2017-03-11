@@ -18,7 +18,7 @@ export default (props) => {
     return (
       <div className="district-label">
           <span className="district-label-state">{district.state.short}</span>
-          <span>At large congressional district</span>
+          <span> At large congressional district</span>
       </div>
     )
   }

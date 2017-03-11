@@ -55,7 +55,7 @@ class MapView extends React.Component {
     // TODO: add bounds here so that the first thing can fly to the bounds?
     // maybe. ////// don't want to cause a map re-render . . . ????
     return (
-      <div>
+
           <Map center={[lat, lon]}
                animate={true}
                zoom={10}
@@ -72,7 +72,7 @@ class MapView extends React.Component {
               { this.renderInactiveDistricts(districts) }
               { this.renderDistricts(districts) }
           </Map>
-      </div>
+
     );
   }
 }

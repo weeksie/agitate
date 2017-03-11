@@ -47,4 +47,4 @@ render(<ApolloProvider client={client}>
     <Provider store={createStore(AppStore)}>
         <Router routes={AppRoutes} history={browserHistory} />
     </Provider>
-</ApolloProvider>, document.getElementById('map'));
+</ApolloProvider>, document.getElementById('app'));

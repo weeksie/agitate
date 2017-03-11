@@ -77,7 +77,7 @@ class Agitate extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="agitate">
           { this.props.districts.length ? this.renderMap() : <ZipPrompt /> }
           <div className="district-info">
               <DistrictLabel {...this.props} />
