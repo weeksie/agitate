@@ -20,7 +20,7 @@ defmodule Agitate.Mixfile do
     [mod: {Agitate, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex, :geo, :absinthe, :absinthe_plug, :absinthe_ecto,
-                    :phoenix_haml ]]
+                    :phoenix_haml, :comeonin ]]
   end
 
   # Specifies which paths to compile per environment.
@@ -31,21 +31,33 @@ defmodule Agitate.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.2.1"},
-     {:phoenix_pubsub, "~> 1.0"},
-     {:phoenix_ecto, "~> 3.0"},
-     {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, "~> 2.6"},
-     {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"},
-     {:exrm, "~> 1.0"},
-     
-     {:geo, "~>1.3"},
-     {:phoenix_haml, "~> 0.2.1"},
-     {:absinthe, "~> 1.2.0"},
-     {:absinthe_plug, "~> 1.1"},
-     {:absinthe_ecto, git: "https://github.com/absinthe-graphql/absinthe_ecto.git"}
+    [
+      # Base deps
+      {:phoenix, "~> 1.2.1"},
+      {:phoenix_pubsub, "~> 1.0"},
+      {:phoenix_ecto, "~> 3.0"},
+      {:postgrex, ">= 0.0.0"},
+      {:phoenix_html, "~> 2.6"},
+      {:phoenix_live_reload, "~> 1.0", only: :dev},
+      {:gettext, "~> 0.11"},
+      {:cowboy, "~> 1.0"},
+      {:exrm, "~> 1.0"},
+      {:phoenix_haml, "~> 0.2.1"},
+
+      # REST API
+      {:cors_plug, "~> 1.2"},
+      {:comeonin, "~> 3.0"},
+
+      # Application 
+      {:geo, "~>1.3"},
+
+      # Application API/GraphQL
+      {:absinthe, "~> 1.2.0"},
+      {:absinthe_plug, "~> 1.1"},
+      {:absinthe_ecto, git: "https://github.com/absinthe-graphql/absinthe_ecto.git"},
+
+      # Testing
+      {:ex_machina, "~> 2.0", only: :test }
     ]
   end
 

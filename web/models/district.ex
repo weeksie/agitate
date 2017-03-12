@@ -4,11 +4,16 @@ defmodule Agitate.District do
   schema "districts" do
     field :name, :string
 
+    field :polsby_popper, :float
+    field :schwartzberg, :float
     field :convex_hull, :float
-    field :lat, :float
-    field :lon, :float
+    
     field :efficiency_gap_r, :float
     field :efficiency_gap_d, :float
+
+    field :lat, :float
+    field :lon, :float
+
     field :geom, Geo.Geometry
     
     many_to_many :zip_codes, Agitate.ZipCode, join_through: "district_zip_codes"
@@ -17,6 +22,7 @@ defmodule Agitate.District do
     
     timestamps()
   end
+
   
   @doc """
   Dumb as a dumb thing right now. Averaging the efficiency gap with the convex_hull score.

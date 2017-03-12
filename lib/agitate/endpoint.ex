@@ -38,5 +38,7 @@ defmodule Agitate.Endpoint do
     key: "_agitate_key",
     signing_salt: "SzJYLhbs"
 
+  plug CORSPlug
+  
   plug Agitate.Router
 end

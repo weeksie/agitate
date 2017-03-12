@@ -20,10 +20,10 @@ defmodule Agitate.Router do
   end
 
 
-  scope "/api" do
+  scope "/api", Agitate do
     pipe_through :api
 
-    forward "/", Absinthe.Plug, schema: Agitate.Schema
+    resources "/districts", DistrictsController, only: [ :index ]
   end
 
   forward "/graphql", Absinthe.Plug.GraphiQL, schema: Agitate.Schema

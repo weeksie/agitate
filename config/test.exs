@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :agitate, Agitate.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  types: Agitate.PostgresTypes,
+  username: "weeksie",
   database: "agitate_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

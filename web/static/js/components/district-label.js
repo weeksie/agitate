@@ -26,8 +26,9 @@ export default (props) => {
   return (
     <div className="district-label">
         <span className="district-label-state">{district.state.short}</span>
+        <span>{' '}</span>
         <span className="district-label-name">{utils.ordinal(district.name)}</span>
-        <span>congressional district</span>
+        <span> congressional district</span>
     </div>
   );
 }

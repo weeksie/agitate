@@ -7,7 +7,7 @@ defmodule Agitate.Schema.Types do
     field :short, :string
     field :name, :string
 
-    field :districts, list_of(:district), resolve: assoc(:districts)
+    field :districts, list_of(:district)# , resolve: assoc(:districts)
   end
   
   object :district do
@@ -19,20 +19,21 @@ defmodule Agitate.Schema.Types do
     field :lat, :float
     field :lon, :float
     
-    field :state, :state, resolve: assoc(:state)
+    field :state, :state# , resolve: assoc(:state)
 
     # Taken from the Absinthe Docs, which is fine but
     # why does the above work?
     #
     # field :representative, :representative, resolve: assoc(:representative)
-    field :representative, :representative do
-      resolve fn district, _, _ ->
-        rep_id = district.representative_id
-        batch({Agitate.Schema.Helpers, :by_id, Agitate.Representative}, rep_id, fn batch_results ->
-          { :ok, Map.get(batch_results, rep_id) }
-        end)
-      end
-    end
+    field :representative, :representative
+    #   do
+    #   resolve fn district, _, _ ->
+    #     rep_id = district.representative_id
+    #     batch({Agitate.Schema.Helpers, :by_id, Agitate.Representative}, rep_id, fn batch_results ->
+    #       { :ok, Map.get(batch_results, rep_id) }
+    #     end)
+    #   end
+    # end
   end
 
   object :representative do
@@ -52,6 +53,6 @@ defmodule Agitate.Schema.Types do
     field :id, :id
     field :lat, :float
     field :lon, :float
-    field :districts, list_of(:district), resolve: &Agitate.DistrictResolver.by_zip/2
+    field :districts, list_of(:district)# , resolve: &Agitate.DistrictResolver.by_zip/2
   end
 end

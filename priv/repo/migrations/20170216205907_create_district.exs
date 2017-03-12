@@ -12,7 +12,6 @@ defmodule Agitate.Repo.Migrations.CreateDistrict do
       add :polsby_popper, :float
       add :schwartzberg, :float
       add :convex_hull, :float
-      add :reock, :float
 
       add :efficiency_gap_r, :float
       add :efficiency_gap_d, :float

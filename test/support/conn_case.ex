@@ -24,9 +24,10 @@ defmodule Agitate.ConnCase do
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-
+      
       import Agitate.Router.Helpers
-
+      import Agitate.Factory
+      
       # The default endpoint for testing
       @endpoint Agitate.Endpoint
     end
