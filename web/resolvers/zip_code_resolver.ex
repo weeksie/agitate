@@ -1,8 +1,9 @@
 defmodule Agitate.ZipCodeResolver do
-  alias Agitate.ZipCode
-  alias Agitate.Repo
+  alias Agitate.ZipQuery
+  alias Agitate.ZipsView
 
   def by_code(%{ code: code }, _info) do
-    { :ok, Repo.get_by(ZipCode, code: code) }
+    { :ok, zip_code } = ZipQuery.by_code code
+    { :ok, ZipsView.json(zip_code) }
   end
 end

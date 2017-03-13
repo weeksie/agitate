@@ -5,6 +5,12 @@ defmodule Agitate.DistrictsControllerTest do
   alias Agitate.Endpoint
   alias Agitate.DistrictsView
 
+  test "GET /districts", %{ conn: conn } do
+    conn = get conn, districts_path(Endpoint, :index)
+    assert json_response(conn, 200) == %{
+      "__actions" => district_actions()
+    }
+  end
   
   test "GET /districts?zip_code=XXXXX", %{ conn: conn } do
     district = insert :district
@@ -52,5 +58,12 @@ defmodule Agitate.DistrictsControllerTest do
         "years_in_office" => rep.years_in_office
       }
     }    
+  end
+  
+  def district_actions() do
+    %{
+      "by_zip_code" => URI.decode(districts_url(Endpoint, :index, zip_code: "${zip_code}")),
+      "by_coords" => URI.decode(districts_url(Endpoint, :index, lat: "${lat}", lon: "${lon}"))
+    }
   end
 end

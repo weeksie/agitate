@@ -10,8 +10,9 @@ defmodule Agitate.StatesView do
     state
     |> Map.take([ :id, :short, :name ])
   end
-  def json(state = %{ disricts: districts }) do
+  
+  def json(state) do
     shallow_json(state)
-    |> Map.put(:districts, Enum.map(districts, &DistrictsView.shallow_json/1 ))
+    |> Map.put(:districts, Enum.map(state.districts, &DistrictsView.shallow_json/1 ))
   end
 end

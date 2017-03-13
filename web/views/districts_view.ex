@@ -7,12 +7,18 @@ defmodule Agitate.DistrictsView do
   alias Agitate.Endpoint
 
   import Agitate.Router.Helpers
+
   
   def render("index.json", %{ districts: districts }) do
     %{ districts: render_many(districts, __MODULE__, "show.json") }
   end
 
-  # I find this odd that I have to use a plural key here.
+  def render("index.json", %{ actions: actions } ) do
+    %{ "__actions" => api_actions(actions)  }
+  end
+
+  # I find it odd that I have to use a plural key here. Not sure what
+  # magic is forcing that.
   def render("show.json", %{ districts: district }) do
     json district
   end
@@ -42,12 +48,27 @@ defmodule Agitate.DistrictsView do
     Geo.JSON.encode(geom) |> Poison.encode!
   end
 
-  # not sure if views are the places to put these but for now it'll do
-  def actions() do
-    %{ __actions: %{
-         by_zip_code: districts_path(Endpoint, :index, zip_code: "${zip_code}"),
-         by_coords: districts_path(Endpoint, :index, lat: "${lat}", lon: "${lon}")
-       }
-    }
+  # These should be abstracted somewhere and shared among views
+  def api_actions(actions) when is_list(actions) do
+    Enum.into Enum.map(actions, &api_action/1), %{ }
+  end
+  
+  def api_action([ action | tail ]) do
+    [ name | args ] = tail
+    { name, api_path(action, api_vars(args)) }
+  end
+
+  def api_vars(args) do
+    Enum.reduce args, %{}, fn(arg, map) ->
+      Map.put map, arg, api_var(arg)
+    end
+  end
+  
+  def api_var(arg) do
+    Enum.join [ "${", arg, "}" ]
+  end
+  
+  def api_path(path, vars) do
+    URI.decode districts_url(Endpoint, path, vars)
   end
 end
