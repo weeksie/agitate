@@ -9,7 +9,6 @@ defmodule Agitate.User do
     field :password, :string, virtual: true
 
     has_many :applications, Agitate.Application
-    has_many :sessions, Agitate.Session
     timestamps()
   end
 

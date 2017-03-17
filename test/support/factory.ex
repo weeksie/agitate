@@ -9,7 +9,6 @@ defmodule Agitate.Factory do
   alias Agitate.ZipCode
   alias Agitate.User
   alias Agitate.Application
-  alias Agitate.Session
   
   def state_factory do
     %State{
@@ -77,12 +76,6 @@ defmodule Agitate.Factory do
     %Application{
       name: "Ratfucker",
       token: "ABCDE"
-    }
-  end
-
-  def session_factory do
-    %Session{
-      token: "ZZZZZZ"
     }
   end
 end
