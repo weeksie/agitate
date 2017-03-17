@@ -1,0 +1,15 @@
+= if @user do
+  h1 Welcome
+- else
+  h1 Sign up or log in
+  p
+    Do you have a developer account?
+    a.sign-in href="#sign-in"
+      Sign in
+    a.sign-up href="#sign-up"
+      or Sign up
+
+  .sign-in-form
+    = render "_sign_in.html", assigns
+  .sign-up-form
+    = render "_form.html", assigns

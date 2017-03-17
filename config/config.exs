@@ -22,8 +22,9 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
-# HAML
-config :phoenix, :template_engines, haml: PhoenixHaml.Engine
+# Slime
+config :phoenix, :template_engines,
+  slim: Phoenix.Slime.Engine, slime: PhoenixSlime.Engine
 
 # Authentication
 config :guardian, Guardian,

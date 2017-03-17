@@ -1,0 +1,7 @@
+link rel="stylesheet" href="#{static_path(@conn, "/css/app.css")}"
+
+#app
+  
+script src="#{static_path(@conn, "/js/app.js")}"
+
+

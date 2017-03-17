@@ -7,9 +7,15 @@ defmodule Agitate.UsersController do
   alias Agitate.Repo
 
   plug :scrub_params, "user" when action in [ :create, :update ]
+  plug Guardian.Plug.LoadResource, handler: AuthHandler
+
   
   def index(conn, _params, _user, _claims) do
-    conn |> render(:index)
+    conn
+    |> assign(:changeset, User.new_changeset())
+    |> assign(:action, users_path(conn, :create))
+    |> assign(:user, Guardian.Plug.current_resource(conn))
+    |> render(:index)
   end
 
   def new(conn, _params, _user, _claims) do

@@ -1,9 +1,9 @@
 - if @created do
-  %p.message
+  p.message
     Thanks for signing up, a confirmation email has been sent to
     = @user.email
 
-%h1 Agitate Applications
+h1 Agitate Applications
 
 
   

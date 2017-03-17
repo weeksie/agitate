@@ -20,7 +20,7 @@ defmodule Agitate.Mixfile do
     [mod: {Agitate, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex, :geo, :absinthe, :absinthe_plug, :absinthe_ecto,
-                    :phoenix_haml, :comeonin ]]
+                    :phoenix_slime, :comeonin ]]
   end
 
   # Specifies which paths to compile per environment.
@@ -42,7 +42,7 @@ defmodule Agitate.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:exrm, "~> 1.0"},
-      {:phoenix_haml, "~> 0.2.1"},
+      {:phoenix_slime, "~> 0.8.0"},
 
       # REST API
       {:cors_plug, "~> 1.2"},

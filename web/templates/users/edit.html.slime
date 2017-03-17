@@ -1,2 +1,2 @@
-%h1 Edit
+h1 Edit
 = render "_form.html", assigns

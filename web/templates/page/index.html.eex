@@ -1,7 +1,0 @@
-<link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-
-<div id="app"></div>
-  
-<script src="<%=static_path(@conn, "/js/app.js")%>"></script>
-
-

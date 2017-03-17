@@ -19,7 +19,7 @@ defmodule Agitate.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    resources "/users", UsersController
+    resources "/developers", UsersController, as: :users
     resources "/applications", ApplicationsController
     resources "/sessions", SessionsController, only: [ :create, :destroy ]
   end

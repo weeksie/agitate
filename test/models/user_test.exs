@@ -34,7 +34,7 @@ defmodule Agitate.UserTest do
   end
 
   test "update user changeset" do
-    user = insert :user
+    user      = insert :user
     changeset = User.registration_changeset user, %{ email: "tonguejack@shitbox.co" }
     assert changeset.valid?
   end
