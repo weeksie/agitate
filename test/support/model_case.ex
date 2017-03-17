@@ -22,6 +22,7 @@ defmodule Agitate.ModelCase do
       import Ecto.Changeset
       import Ecto.Query
       import Agitate.ModelCase
+      import Agitate.Factory
     end
   end
 

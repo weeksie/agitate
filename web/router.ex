@@ -7,6 +7,8 @@ defmodule Agitate.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug Guardian.Plug.VerifySession
+    plug Guardian.Plug.LoadResource
   end
 
   pipeline :api do
@@ -17,6 +19,9 @@ defmodule Agitate.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/users", UsersController
+    resources "/applications", ApplicationsController
+    resources "/sessions", SessionsController, only: [ :create, :destroy ]
   end
 
 

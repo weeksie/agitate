@@ -4,7 +4,7 @@ defmodule Agitate.ErrorHelpers do
   """
 
   use Phoenix.HTML
-
+  
   @doc """
   Generates tag for inlined form input errors.
   """

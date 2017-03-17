@@ -1,0 +1,8 @@
+
+- form_for @changeset, @action, fn f ->
+  = text_input f, :email, class: "input-email", placeholder: "Email Address"
+  = error_tag f, :email
+  = text_input f, :password, class: "input-email", placeholder: "Password"
+  = error_tag f, :password
+  = submit "Submit"
+  

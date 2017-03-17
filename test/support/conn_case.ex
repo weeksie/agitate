@@ -30,6 +30,18 @@ defmodule Agitate.ConnCase do
       
       # The default endpoint for testing
       @endpoint Agitate.Endpoint
+
+      @doc """
+      Helper for setting up a `conn` which logs in a user
+      """
+      def guardian_sign_in(user, token \\ :token, opts \\ []) do
+        build_conn()
+        |> bypass_through(Agitate.Router, [:browser])
+        |> get("/")
+        |> Guardian.Plug.sign_in(user, token, opts)
+        |> send_resp(200, "Flush the session")
+        |> recycle
+      end
     end
   end
 
@@ -42,4 +54,5 @@ defmodule Agitate.ConnCase do
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
+
 end

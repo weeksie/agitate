@@ -1,10 +1,15 @@
 defmodule Agitate.Factory do
   use ExMachina.Ecto, repo: Agitate.Repo
 
+  alias Comeonin.Bcrypt
+  
   alias Agitate.State
   alias Agitate.District
   alias Agitate.Representative
   alias Agitate.ZipCode
+  alias Agitate.User
+  alias Agitate.Application
+  alias Agitate.Session
   
   def state_factory do
     %State{
@@ -56,6 +61,28 @@ defmodule Agitate.Factory do
       lat: 74.004903,
       lon: 40.720103,
       # districts: [ build(:district) ]
+    }
+  end
+
+  def user_factory do
+    %User{
+      email: sequence(:user_email, &"hagbard#{&1}@example.com"),
+      password: "filthytoast",
+      password_hash: Bcrypt.hashpwsalt("filthytoast"),
+      applications: [ build(:application) ]
+    }
+  end
+
+  def application_factory do
+    %Application{
+      name: "Ratfucker",
+      token: "ABCDE"
+    }
+  end
+
+  def session_factory do
+    %Session{
+      token: "ZZZZZZ"
     }
   end
 end

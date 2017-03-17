@@ -1,10 +1,7 @@
 defmodule Agitate.DistrictQuery do
   alias Agitate.District
   alias Agitate.ZipCode
-  alias Agitate.State
   alias Agitate.Repo
-  alias Agitate.DistrictView
-
   
   import Ecto.Query
 

@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Agitate!</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Agitate!</title>
-
-    <!--link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /-->
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-    <!-- 
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet'>
-    -->
-
   </head>
   <body>
     <main role="main">
       <%= render @view_module, @view_template, assigns %>
-    </main>
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    </main>    
   </body>
 </html>

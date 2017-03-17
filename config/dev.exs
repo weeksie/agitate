@@ -42,3 +42,11 @@ config :agitate, Agitate.Repo,
   database: "agitate_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :guardian, Guardian,
+  secret_key: %{
+    "alg" => "HS512",
+    "k" => "LNuTcNjLGNupYhHumk9ADvN1afOh23lr81mKH8mT7DbOh1Xkk3JxcwVkTM1LotyxBiBcESeKoxywmYJr5UEy1Q",
+    "kty" => "oct",
+    "use" => "sig"
+  }

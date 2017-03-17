@@ -47,9 +47,11 @@ defmodule Agitate.Mixfile do
       # REST API
       {:cors_plug, "~> 1.2"},
       {:comeonin, "~> 3.0"},
+      {:secure_random, "~> 0.5"},
 
       # Application 
       {:geo, "~>1.3"},
+      {:guardian, "~> 0.14"},
 
       # Application API/GraphQL
       {:absinthe, "~> 1.2.0"},
