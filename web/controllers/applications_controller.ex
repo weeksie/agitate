@@ -15,9 +15,9 @@ defmodule Agitate.ApplicationsController do
     |> render("index.json", %{ applications: user.applications })
   end
 
-  def create(conn, %{ "application" => %{ "name" => name } }) do
+  def create(conn, %{ "application" => app }) do
     user      = Guardian.Plug.current_resource conn
-    changeset = Application.create_changeset %Application{}, %{ name: name, user_id: user.id }
+    changeset = Application.create_changeset %Application{}, %{ name: app["name"], user_id: user.id }
     case Repo.insert changeset do
       { :ok, application } ->
         conn
@@ -28,5 +28,13 @@ defmodule Agitate.ApplicationsController do
         |> put_status(:unprocessable_entity)
         |> render(ErrorView, "422.json", %{ changeset: changeset })
     end
+  end
+
+  def delete(conn, %{ "id" => id }) do
+    app = Repo.get! Application, id
+    Repo.delete! app
+    conn
+    |> put_status(:ok)
+    |> render("show.json", %{ application: app })
   end
 end

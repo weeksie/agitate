@@ -13,6 +13,7 @@ defmodule Agitate.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug Agitate.Plug.API
   end
 
   scope "/", Agitate do

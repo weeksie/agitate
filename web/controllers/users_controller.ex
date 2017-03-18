@@ -10,11 +10,15 @@ defmodule Agitate.UsersController do
   plug Guardian.Plug.LoadResource, handler: AuthHandler
 
   
-  def index(conn, _params, _user, _claims) do
+  def index(conn, _params, user, _claims) do
+    user = if user do
+      Repo.preload(user, :applications)
+    end
+    
     conn
     |> assign(:changeset, User.new_changeset())
     |> assign(:action, users_path(conn, :create))
-    |> assign(:user, Guardian.Plug.current_resource(conn))
+    |> assign(:user, user)
     |> render(:index)
   end
 

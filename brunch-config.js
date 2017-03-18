@@ -2,7 +2,15 @@ exports.config = {
   // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
-      joinTo: "js/app.js",
+      entryPoints: {
+        "web/static/js/agitate/app.js": "js/agitate/app.js",
+        "web/static/js/developer-api/app.js": "js/developer-api/app.js"
+      }
+      /* joinTo: {
+       *   "js/app.js": /^web\/static\/js\/agitate/,
+       *   "js/vendor.js": /^node_modules/,
+       *   "js/developer-api.js": /^web\/static\/js\/developer-api|^node_modules\/superagent/
+       * }*/
     },
     stylesheets: {
       joinTo: "css/app.css",
@@ -54,9 +62,8 @@ exports.config = {
 
   npm: {
     enabled: true,
-    ///whitelist: [ "phoenix", "phoenix_html", "react", "react-dom" ],
     styles: {
       leaflet: ['dist/leaflet.css']
     }
   }
-};
+}

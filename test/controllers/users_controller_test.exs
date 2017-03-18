@@ -8,7 +8,7 @@ defmodule Agitate.UsersControllerTest do
   test "POST /users", %{ conn: conn } do
     conn = post conn, users_path(conn, :create), user: @valid_new_attrs
     body = html_response conn, 201
-    assert body =~ @valid_new_attrs.email
+    assert body =~ "Applications"
   end
 
   test "POST /users INVALID", %{ conn: conn } do

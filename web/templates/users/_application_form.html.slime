@@ -1,0 +1,5 @@
+#add-application
+  = form_for @conn, applications_path(@conn, :create), [ as: :application ], fn f ->
+    = text_input f, :name, required: true, placeholder: "Application Name"
+    = error_tag f, :name
+    = submit "Register new app"

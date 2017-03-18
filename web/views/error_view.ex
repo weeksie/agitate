@@ -1,13 +1,22 @@
 defmodule Agitate.ErrorView do
   use Agitate.Web, :view
 
+  def render("unauthorized.json", message) do
+    %{ error: message }
+  end
+
+  def render("api-bad-token.json", _message) do
+    %{ error: "Sorry, youm must register for an API token to use the Agitate API." }
+  end
+  
+  # maybe change this to `unprocessable_entity.json`
   def render("422.json", %{ changeset: changeset }),
     do: %{ errors: translate_errors(changeset) }
   
   def render("404.html", _assigns) do
     "Page not found"
   end
-
+  
   def render("500.html", _assigns) do
     "Internal server error"
   end

@@ -5,8 +5,21 @@ defmodule Agitate.DistrictsControllerTest do
   alias Agitate.Endpoint
   alias Agitate.DistrictsView
 
-  test "GET /districts", %{ conn: conn } do
+  setup %{ conn: conn } do
+    app  = insert(:application)
+    conn = put_req_header conn, "authorization", "Token " <> app.token
+    { :ok, conn: conn, token: app.token }
+  end
+
+  test "GET /districts NO TOKEN" do
+    conn = build_conn()
     conn = get conn, districts_path(Endpoint, :index)
+    assert json_response(conn, 403)["error"]
+  end
+  
+  test "GET /districts", %{ conn: conn, token: token } do
+    conn = put_req_header conn, "authorization", ""
+    conn = get conn, districts_path(Endpoint, :index, token: token)
     assert json_response(conn, 200) == %{
       "__actions" => district_actions()
     }

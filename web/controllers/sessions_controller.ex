@@ -10,14 +10,13 @@ defmodule Agitate.SessionsController do
       { :ok, user } ->
         conn
         |> Guardian.Plug.sign_in(user)
-        |> put_status(:created)
-        |> render("show.json")
+        |> put_flash(:notice, "Thanks for logging in " <> email)
+        |> redirect(to: users_path(conn, :index))
 
-      { :error, message } ->
+      { :error, _message } ->
         conn
-        |> put_status(:unauthorized)
-        |> assign(:message, message)
-        |> render("error.json")
+        |> put_flash(:auth_error, "Sorry that email or password does not match our records")
+        |> redirect(to: users_path(conn, :index))
     end
   end
 

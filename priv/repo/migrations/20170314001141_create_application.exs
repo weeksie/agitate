@@ -6,7 +6,8 @@ defmodule Agitate.Repo.Migrations.CreateApplication do
       add :name, :string
       add :token, :string
       add :user_id, references(:users, on_delete: :nothing)
-
+      add :request_count, :integer
+      
       timestamps()
     end
     
