@@ -69,4 +69,4 @@ config :agitate, Agitate.Repo,
   ssl: true
 
 config :guardian, Guardian,
-  secret_key: System.get_env("GUARDIAN_SECRET_KEY") |> Poison.decode!
+  secret_key: [ Agitate.GuardianKey, :fetch ]
