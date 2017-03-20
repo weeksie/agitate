@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "apollo-client": "~0.10.1",
+    "classnames": "^2.2.5",
     "graphql-tag": "^1.2.4",
     "immutable": "^3.8.1",
     "leaflet": "^1.0.3",

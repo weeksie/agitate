@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { captureZip } from '../actions';
+import cx from 'classnames';
 
 class ZipPrompt extends React.Component {
   handleClick(e) {
@@ -10,8 +11,13 @@ class ZipPrompt extends React.Component {
   }
   
   render() {
+    const classNames = cx({
+      'zip-prompt': true,
+      'error': !!this.props.isError
+    });
+    
     return (
-      <div className="zip-prompt">
+      <div className={ classNames }>
           <div className="zip-prompt-form">
               <input type="text"
                      className="zip-prompt-input"

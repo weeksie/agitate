@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-
+import cx from 'classnames';
 import { connect } from 'react-redux';
 
 import { graphql, compose } from 'react-apollo';
@@ -75,10 +75,27 @@ class Agitate extends React.Component {
       />
     );
   }
+  renderContent() {
+    const { isLoading, districts, zipCodeError } = this.props;
+    
+    if(districts.length) {
+      return this.renderMap();
+    } else if(!isLoading) {
+      return (<ZipPrompt isError={zipCodeError} />);
+    }
+  }
   render() {
+    const { isLoading } = this.props;
+    const classNames    = cx({
+      'map-content': true,
+      'is-loading':  isLoading
+    });
+    
     return (
       <div className="agitate">
-          { this.props.districts.length ? this.renderMap() : <ZipPrompt /> }
+          <div className={classNames}>
+              { this.renderContent() }
+          </div>
           <div className="district-info">
               <DistrictLabel {...this.props} />
               <DistrictScore {...this.props} />
@@ -90,12 +107,13 @@ class Agitate extends React.Component {
 }
 
 function mapStateToProps(state) {
-  const { zipCode, queryLat, queryLon } = state.geo;
-
+  const { zipCode, zipCodeError, queryLat, queryLon, isLoading } = state.geo;
   return {
     geo: state.geo,
     districts: state.districts,
     zipCode,
+    zipCodeError,
+    isLoading,
     queryLat,
     queryLon
   }
@@ -109,16 +127,7 @@ const withData = compose(
   graphql(DistrictByCoords, {
     skip: ({ queryLat, queryLon }) => {
       return !(queryLat && queryLon);
-    }/*,
-    props: (props) => {
-      const { districtByCoords, loading } = props.data;
-      if(districtByCoords) {
-        const { id } = districtByCoords;
-        console.log(id);
-      }
-
-      return props;
-    }*/
+    }
   })
 );
 

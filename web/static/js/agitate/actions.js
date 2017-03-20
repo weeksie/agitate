@@ -16,7 +16,12 @@ export function promptForZipCode() {
 }
 
 export function captureZip(zipCode) {
-  return { type: RECEIVED_ZIP_CODE,  zipCode: zipCode };
+  const fiveOnly = zipCode.substring(0, 5);
+  if(!fiveOnly.match(/[0-9]{5}/)) {
+    return { type: MALFORMED_ZIP_CODE };
+  } else {
+    return { type: RECEIVED_ZIP_CODE,  zipCode: zipCode };
+  }
 }
 
 export function setQueryCoords(lat, lon) {

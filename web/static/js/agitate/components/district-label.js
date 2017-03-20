@@ -7,7 +7,7 @@ export default (props) => {
   if(!districts.length) {
     return (
       <div className="district-label">
-          <span className="district-label-waiting">Waiting for location</span>
+          <span className="district-label-waiting">Find your congressional district.</span>
       </div>
     );
   }

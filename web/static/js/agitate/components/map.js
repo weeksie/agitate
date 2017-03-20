@@ -15,11 +15,13 @@ const AMERICA_BOUNDS = [
 const TILE_URL = "https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?" +
                  "access_token={accessToken}";
 const COLORS   = [
-  '#F00',
-  '#0F0',
-  '#00F',
-  '#900',
+  '#043C63',
+  '#D8D8D8',
+  '#D8D8D8',
+  '#D8D8D8',
+  '#D8D8D8',
 ];
+
 
 function distKey(district, suffix) {
   return `${district.name}${district.state.short}-${suffix}`;
@@ -48,7 +50,7 @@ class MapView extends React.Component {
             style={ {color: COLORS[i], weight: 1 } }
         />
       );
-    });
+    }).reverse();
   }
   render() {
     const { loading, lat, lon, districts, onClick, onLayerAdd } = this.props;

@@ -1,23 +1,22 @@
 /* This file is for your main application css. */
+@import "reset";
 @import "variables";
 @import "mixins";
 @import "vendor/media-queries";
 
 html, body {
+  position: relative;
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 
 main {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
+  position: relative;
+  height: 100%;
 }
 
 #app {
@@ -25,16 +24,16 @@ main {
     text-align: center;
     margin: auto;
     width: 900px;
+    .agitate {
+      text-align: left;
+    }
   }
 }
 
-.agitate {
-  text-align: left;
-}
 
-
-.leaflet-container {
+.leaflet-container, .map-content {
   border-bottom: 1px solid $orange;
+  width: 100vw;
   height: 70vh;
   @include mobile-portrait {
     height: 45vh;
@@ -45,32 +44,49 @@ main {
 }
 
 .district-info {
+  box-sizing: border-box;
   padding-top: 1em;
-  @include gutters;
   p {
     margin-top: 0.25em;
     margin-bottom: 0.25em;
   }
 }
 
-.zip-prompt {
-  @include gutters;
-  text-align: center;
-  margin: auto;
-  width: 93.75%;
-  .zip-prompt-form {
-    text-align: left;
+.map-content {
+  background: url(/images/agitate-loading-background.jpg) center/cover no-repeat;
+  position: relative;
+  //display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  &.is-loading {
+    background: url(/images/loading.png) center no-repeat,
+                url(/images/agitate-loading-background.jpg) center/cover no-repeat;
+  }
+  &.error {
+    .zip-prompt-input {
+      border-color: #C00;
+    }
   }
 }
-
+.zip-prompt-form {
+  position: absolute;
+  top: 50%;
+  /* top: 50%; */
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+  max-width: 375px;
+}
 .zip-prompt-input {
-  border-radius: 4px;
+  border-radius: 2px;
   border: 1px solid $lt-grey;
   padding: 0.25em;
+  width: 130px;
 }
 .zip-prompt-button {
   display: inline-block;
-  border-radius: 4px;
+  border-radius: 2px;
   color: #FFFFFF;
   background-color: $orange;
   border: none;
@@ -83,6 +99,7 @@ main {
 }
 
 .district-label-state, .representative-name, .district-label-state, .district-label-name {
+  font-size: 18px;
   display: inline-block;
 }
 
