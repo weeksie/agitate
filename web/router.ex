@@ -22,7 +22,7 @@ defmodule Agitate.Router do
     get "/", PageController, :index
     resources "/developers", UsersController, as: :users
     resources "/applications", ApplicationsController
-    resources "/sessions", SessionsController, only: [ :create, :destroy ]
+    resources "/sessions", SessionsController, only: [ :create, :delete ]
   end
 
 

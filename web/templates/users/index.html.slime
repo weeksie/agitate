@@ -1,37 +1,41 @@
-.flash-messages
-  .notice
-    = get_flash(@conn, :notice)
-  .error
-    = get_flash(@conn, :auth_error)
+link rel="stylesheet" href="#{static_path(@conn, "/css/app.css")}"
+.developers
+  .flash-messages
+    .notice
+      = get_flash(@conn, :notice)
+    .error
+      = get_flash(@conn, :auth_error)
 
-= if @user do
+  = if @user do
+    nav
+      = link "Log out", to: sessions_path(@conn, :delete, "me"), method: :delete 
 
-  h1 Welcome #{@user.email}
+    h1 Welcome #{@user.email}
 
-  table.applications data-url="#{applications_url(@conn, :delete, "APP_ID")}"
-    = for app <- @user.applications do
-      tr class="app-row app-row-#{app.id}" data-app-id="#{app.id}"
-        td= app.name
-        td= app.token
-        td.actions
-          a.delete-app href="#delete" delete
+    table.applications data-url="#{applications_url(@conn, :delete, "APP_ID")}"
+      = for app <- @user.applications do
+        tr class="app-row app-row-#{app.id}" data-app-id="#{app.id}"
+          td= app.name
+          td= app.token
+          td.actions
+            a.delete-app href="#delete" delete
 
-  h2 Add a new application
-    = render "_application_form.html", assigns
+    h2 Add a new application
+      = render "_application_form.html", assigns
 
-- else
+  - else
 
-  h1 Sign up or log in
-  p Do you have a developer account?
-  p
-    a#sign-in href="#sign-in" Sign in
-    a#sign-up href="#sign-up" or Sign up
+    h1 Sign up or log in
+    p Do you have a developer account?
+    p
+      a#sign-in href="#sign-in" Sign in
+      a#sign-up href="#sign-up" or Sign up
 
-  #sign-in-form
-    = render "_sign_in.html", assigns
-  #sign-up-form
-    = render "_form.html", assigns
+    #sign-in-form
+      = render "_sign_in.html", assigns
+    #sign-up-form
+      = render "_form.html", assigns
 
-script src="#{static_path(@conn, "/js/developer-api/app.js")}"
-javascript:
-  require("web/static/js/developer-api/app");
+  script src="#{static_path(@conn, "/js/developer-api/app.js")}"
+  javascript:
+    require("web/static/js/developer-api/app");

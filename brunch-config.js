@@ -6,11 +6,6 @@ exports.config = {
         "web/static/js/agitate/app.js": "js/agitate/app.js",
         "web/static/js/developer-api/app.js": "js/developer-api/app.js"
       }
-      /* joinTo: {
-       *   "js/app.js": /^web\/static\/js\/agitate/,
-       *   "js/vendor.js": /^node_modules/,
-       *   "js/developer-api.js": /^web\/static\/js\/developer-api|^node_modules\/superagent/
-       * }*/
     },
     stylesheets: {
       joinTo: "css/app.css",

@@ -1,3 +1,4 @@
+import * from 'phoenix_html';
 // Brunch is missing `process` for some reason. Importing here to force it.
 import process from "process"; 
 import request from "superagent";
