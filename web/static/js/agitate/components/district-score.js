@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 
 export default (props) => {
   const { districts } = props;
@@ -7,10 +8,15 @@ export default (props) => {
   }
 
   const district = districts[0],
-        score    = grade(district);
+        score    = grade(district),
+        classNames = cx({
+          'district-score': true,
+          'gop': district.representative.party === 'R',
+          'dem': district.representative.party === 'D'
+        });
 
   return (
-    <div className="district-score" data-score={score}>
+    <div className={classNames} data-score={score}>
         {score}
     </div>
   );

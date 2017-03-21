@@ -12,6 +12,7 @@ html, body {
   padding: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
+  color: #4A4A4A;
 }
 
 main {
@@ -34,12 +35,12 @@ main {
 .leaflet-container, .map-content {
   border-bottom: 1px solid $orange;
   width: 100vw;
-  height: 70vh;
+  height: 60vh;
 }
 
 .district-info {
   box-sizing: border-box;
-  padding-top: 1em;
+  padding: 1em 2em 0;
   p {
     margin-top: 0.25em;
     margin-bottom: 0.25em;
@@ -86,7 +87,7 @@ main {
 }
 
 .district-label span {
-  font-weight: bold;
+
 }
 
 .district-label-state, .representative-name, .district-label-state, .district-label-name {
@@ -94,20 +95,71 @@ main {
   display: inline-block;
 }
 
+.district-label-state {
+  background: url(/images/congress-icon.png) left no-repeat;
+  padding-left: 1.2em;
+}
+
+
 .district-score {
   font-weight: bold;
   font-size: 2em;
   color: $orange;
   margin: 0;
+  padding-top: 18px;
+  padding-left: 85px;
+  min-height: 70px;
+  &.gop {
+    background: url(/images/gop-icon.png) left no-repeat;
+  }
 }
 
-.representative-phone, .representative-fb, .representative-twitter {
-  display: inline-block;
-  margin-right: 0.5em;
-  a {
+.representative-contact {
+  .representative-image {
+    float: left;
+    width: 65px;
+    height: 65px;
+    clip-path: circle(32.5px at center);
+    -webkit-clip-path: circle(32.5px at center);
+    -moz-clip-path: circle(32.5px at center);
+    margin-right: 18px;
+  }
+}
+
+.representative-information {
+  font-size: 14px;
+}
+
+.social {
+  clear: both;
+  padding-top: 1em;
+  display: flex;
+  flex: 1 1;
+  align-items: center;
+  .social-label {
+    display: inline-block;
+    font-size: 2em;
     color: $orange;
-    font-weight: bold;
-    text-decoration: none;
+    padding-left: 1em;
+    text-transform: lowercase;
+    font-weight: medium;
+    padding-right: 0.5em;
+  }
+  .icn {
+    display: inline-block;
+    text-indent: -2000em;
+    width: 43px;
+    height: 43px;
+    padding: 0.5em;
+  }
+  .representative-phone {
+    background: url(/images/phone-icon.png) center no-repeat;
+  }
+  .representative-twitter {
+    background: url(/images/twitter-icon.png) center no-repeat;
+  }
+  .representative-fb {
+    background: url(/images/fb-icon.png) center no-repeat;    
   }
 }
 

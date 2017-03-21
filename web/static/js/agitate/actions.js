@@ -1,3 +1,4 @@
+import request from 'superagent';
 
 export const PROMPT_FOR_ZIP_CODE  = 'PROMPT_FOR_ZIP_CODE';
 export const WAITING_FOR_ZIP_CODE = 'WAITING_FOR_ZIP_CODE';
@@ -9,7 +10,10 @@ export const PIN_COORDS           = 'PIN_COORDS';
 export const SET_DISTRICT         = 'SET_DISTRICT';
 export const SET_DISTRICTS        = 'SET_DISTRICTS';
 export const FLY_TO_DISTRICT      = 'FLY_TO_DISTRICT';
-export const SET_CURRENT_STATE = 'RENDER_INACTIVE_DISTRICT';
+export const SET_CURRENT_STATE    = 'SET_CURRENT_STATE';
+
+export const TWITTER_IMAGE_REQUEST = 'TWITTER_IMAGE_REQUEST';
+export const TWITTER_IMAGE_SUCCESS = 'TWITTER_IMAGE_SUCCESS';
 
 export function promptForZipCode() {
   return { type: PROMPT_FOR_ZIP_CODE };
@@ -43,4 +47,20 @@ export function flyToDistrict(districtLayer) {
 }
 export function setCurrentState(state) {
   return { type: SET_CURRENT_STATE, state };
+}
+
+// No luck here. CORS issues. Keeping for later ref.
+// iOS has a problem with Twitter's 302 redirect for profile image
+// urls
+export function fetchTwitterImage(url) {
+  return (dispatch) => {
+    dispatch({ type: TWITTER_IMAGE_REQUEST });
+    request.get(url).withCredentials().end((err, res) => {
+      dispatch(setTwitterImage(newURL));
+    })
+  }
+}
+
+export function setTwitterImage(url) {
+  return { type: TWITTER_IMAGE_SUCCESS, twitterURL: url };
 }

@@ -13,6 +13,7 @@ import ZipPrompt from './zip-prompt';
 import DistrictLabel from './district-label';
 import DistrictScore from './district-score';
 import Representative from './representative';
+import Social from './social';
 
 
 class Agitate extends React.Component {
@@ -90,7 +91,7 @@ class Agitate extends React.Component {
       'map-content': true,
       'is-loading':  isLoading
     });
-    
+
     return (
       <div className="agitate">
           <div className={classNames}>
@@ -101,6 +102,7 @@ class Agitate extends React.Component {
               <DistrictScore {...this.props} />
               <Representative {...this.props} />
           </div>
+          <Social {...this.props} />
       </div>
     );
   }
