@@ -14,15 +14,9 @@ export default (props) => {
   return (
     <div className="social">
         <div className="social-label">Agitate</div>
-        <div className="icn representative-phone"><a href={`tel:${phoneLink}`}>{phone}</a></div>
-        <div className="icn representative-fb">
-            <a href={`http://facebook.com/${facebook}`}>Facebook</a>
-        </div>
-        <div className="icn representative-twitter">
-            <a href={`https://twitter.com/${twitter}`}>
-                {`@${twitter}`}
-            </a>
-        </div>
+        <a className="icn representative-phone" href={`tel:${phoneLink}`}>{phone}</a>
+        <a className="icn representative-fb" href={`http://facebook.com/${facebook}`}>Facebook</a>
+        <a className="icn representative-twitter" href={`https://twitter.com/${twitter}`}>{`@${twitter}`}</a>
     </div>
    );
 }

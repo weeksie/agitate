@@ -35,7 +35,7 @@ main {
 .leaflet-container, .map-content {
   border-bottom: 1px solid $orange;
   width: 100vw;
-  height: 60vh;
+  height: 50vh;
 }
 
 .district-info {
@@ -146,7 +146,7 @@ main {
     padding-right: 0.5em;
   }
   .icn {
-    display: inline-block;
+    display: block;
     text-indent: -2000em;
     width: 43px;
     height: 43px;
