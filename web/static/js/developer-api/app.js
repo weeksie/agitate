@@ -4,8 +4,10 @@ import process from "process";
 import request from "superagent";
 import ApplicationRow from './application-row';
 
+// All this is a bit slop, but I didn't see a need for a framework to get involved in a documentation site.
+
 const signInButton = document.getElementById('sign-in');
-const signUpButton = document.getElementById('sign-in');
+const signUpButton = document.getElementById('sign-up');
 
 const signInForm   = getForm('sign-in-form');
 const signUpForm   = getForm('sign-up-form');
@@ -14,11 +16,12 @@ const appForm      = getForm('add-application');
 if(signUpButton) {
   signInButton.addEventListener('click', (e) => {
     e.preventDefault();
-    showHide(signInForm, signUpForm);
+    showHide(signInForm.parentElement, signUpForm.parentElement);
   });
+  
   signUpButton.addEventListener('click', (e) => {
     e.preventDefault();
-    showHide(signUpForm, signInForm);
+    showHide(signUpForm.parentElement, signInForm.parentElement);
   });
 }
 

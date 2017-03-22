@@ -12,7 +12,7 @@ html, body {
   padding: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #4A4A4A;
+  color: $text-color;
 }
 
 main {
@@ -23,9 +23,9 @@ main {
 #app {
   @media only screen and (min-width: 1024px) {
     text-align: center;
-    margin: auto;
-    width: 900px;
     .agitate {
+      width: 900px;
+      margin: auto;
       text-align: left;
     }
   }
@@ -36,6 +36,10 @@ main {
   border-bottom: 1px solid $orange;
   width: 100vw;
   height: 50vh;
+  @media only screen and (min-width: 1024px) {
+    width: 100%;
+    height: 65vh;
+  }
 }
 
 .district-info {

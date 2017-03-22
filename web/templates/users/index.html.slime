@@ -10,7 +10,7 @@ link rel="stylesheet" href="#{static_path(@conn, "/css/app.css")}"
     nav
       = link "Log out", to: sessions_path(@conn, :delete, "me"), method: :delete 
 
-    h1 Welcome #{@user.email}
+    h1 Welcome, #{@user.email}
 
     table.applications data-url="#{applications_url(@conn, :delete, "APP_ID")}"
       = for app <- @user.applications do
@@ -25,16 +25,27 @@ link rel="stylesheet" href="#{static_path(@conn, "/css/app.css")}"
 
   - else
 
-    h1 Sign up or log in
-    p Do you have a developer account?
+    h2 Do you have a developer account?
     p
-      a#sign-in href="#sign-in" Sign in
-      a#sign-up href="#sign-up" or Sign up
+      a.button#sign-in href="#sign-in" Sign in
+      a.button#sign-up href="#sign-up" or Sign up
 
     #sign-in-form
+      h2 Sign In
       = render "_sign_in.html", assigns
     #sign-up-form
+      h2 Register
       = render "_form.html", assigns
+
+  h1 Documentation
+  
+  p First create an account and register an application to get your access token. The Agitate REST API is read-only, meaning all of your requests will be GET based. You can either append the token to your request URL or you can add it in the authorization header.
+  code
+    pre /api/districts?zip_code=10013&amp;token=TOKEN
+  
+  p Or
+  code
+    pre Authorization: Token TOKEN
 
   script src="#{static_path(@conn, "/js/developer-api/app.js")}"
   javascript:

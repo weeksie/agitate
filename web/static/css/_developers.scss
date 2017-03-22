@@ -1,0 +1,46 @@
+.developers {
+  padding: 1em;
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto;
+  code pre {
+    whitespace: pre-wrap;
+    font-family: courier, monospace;
+    padding: 12px;
+    margin: 12px;
+    border: 2px solid $lt-grey;
+    background: #FFFFEF;
+  }
+  h1, h2, h3 {
+    color: $orange;
+    font-weight: bold;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  #sign-up-form, #sign-in-form {
+    display: none;
+  }
+  .button {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    border: 1px solid $text-color;
+    border-radius: 2px;
+    background: $lt-grey;
+    color: white;
+    text-decoration: none;
+    margin: 0.25em;
+  }
+  input[type=text], input[type=password] {
+    display: block;
+    border-radius: 2px;
+    border: 1px solid $lt-grey;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    padding: 0.25em;
+  }
+}

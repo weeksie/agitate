@@ -17,7 +17,7 @@ class InactiveDistricts extends React.Component {
     const districtGeoms = state.districts.map(d => JSON.parse(d.geom));
     return (      
       <GeoJSON
-          attribution="inactive-districts"
+          attribution="agitate"
           data={districtGeoms}
           style={{
             color: "#AAA",
