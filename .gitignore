@@ -26,16 +26,16 @@ erl_crash.dump
 
 # Data import / shapefiles
 /priv/data/districts114*.zip
-# *.cpg
-# *.dbf
-# *.prj
-# *.shp
-# *.shp.ea.iso.xml
-# *.shp.iso.xml
-# *.shp.xml
-# *.shx
-# *.zip
-# 
+*.cpg
+*.dbf
+*.prj
+*.shp
+*.shp.ea.iso.xml
+*.shp.iso.xml
+*.shp.xml
+*.shx
+*.zip
+
 # Emacs
 *~
 \#*\#
