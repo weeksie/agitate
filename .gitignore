@@ -24,6 +24,11 @@ erl_crash.dump
 # variables.
 /config/prod.secret.exs
 
+# removed so that people aren't stuck someone's dev env. 
+/config/dev.exs
+/config/test.exs
+
+
 # Data import / shapefiles
 /priv/data/districts114*.zip
 *.cpg

@@ -38,7 +38,7 @@ config :phoenix, :stacktrace_depth, 20
 config :agitate, Agitate.Repo,
   adapter: Ecto.Adapters.Postgres,
   types: Agitate.PostgresTypes,
-  username: "weeksie",
+  username: "postgres",
   database: "agitate_dev",
   hostname: "localhost",
   pool_size: 10

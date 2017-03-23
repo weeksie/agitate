@@ -1,6 +1,15 @@
 # Agitate
 
-First make sure your database is up to date
+First set up your development config files. For the default case this is:
+```
+cp config/dev.example.exs config/dev.exs
+cp config/test.example.exs config/test.exs
+```
+
+Edit as necessary to fit your local environment.
+
+Now make sure your database is up to date
+
 
 ```
 mix ecto.create
@@ -32,6 +41,12 @@ Now (from project root) run the sql scripts to seed your data:
 For non dev environments sub out the database name, e.g. `./priv/data/seeds.sh agitate_prod`
 
 et viola!
+
+# To do a quick reset of your db
+
+```
+dropdb agitate_dev && mix ecto.create && mix ecto.migrate && ./priv/data/seeds.sh agitate_dev
+```
 
 
 ## Acknowledgements

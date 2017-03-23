@@ -16,7 +16,7 @@ config :comeonin, :pbkdf2_rounds, 1
 config :agitate, Agitate.Repo,
   adapter: Ecto.Adapters.Postgres,
   types: Agitate.PostgresTypes,
-  username: "weeksie",
+  username: "postgres",
   database: "agitate_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
