@@ -3,7 +3,6 @@ defmodule Agitate.DistrictsController do
 
   alias Agitate.DistrictQuery
 
-  
   def index(conn, %{ "zip_code" => zip_code }) do
     case DistrictQuery.by_zip_code zip_code do
       { :ok, districts } ->
