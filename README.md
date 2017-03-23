@@ -8,6 +8,19 @@ cp config/test.example.exs config/test.exs
 
 Edit as necessary to fit your local environment.
 
+```elixir
+# Configure your database
+config :agitate, Agitate.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  types: Agitate.PostgresTypes,
+  username: "weeksie",
+  database: "agitate_test",
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox
+
+```
+
+
 Now make sure your database is up to date
 
 
