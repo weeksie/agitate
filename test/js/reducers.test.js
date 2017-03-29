@@ -1,5 +1,6 @@
-import { geo } from "../web/static/js/reducers";
-import { PIN_COORDS, QUERY_COORDS, RECEIVED_ZIP_CODE }  from "../web/static/js/actions";
+import { geo } from "../../web/static/js/agitate/reducers";
+import { PIN_COORDS, QUERY_COORDS, RECEIVED_ZIP_CODE }  from "../../web/static/js/agitate/actions";
+
 describe('agitate reducer', () => {
   it('should return the initial state', () => {
     expect(geo(undefined, {})).toEqual({ });
@@ -20,6 +21,8 @@ describe('agitate reducer', () => {
       type: QUERY_COORDS,
       queryLat: 19, queryLon: -20
     })).toEqual({
+      isLoading: true,
+      zipCode: undefined,
       pinnedLat: 20,
       pinnedLon: -20,
       queryLat: 19,
