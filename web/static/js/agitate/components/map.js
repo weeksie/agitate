@@ -45,6 +45,7 @@ class MapView extends React.Component {
     return districts.map( (district, i) => {
       return (
         <GeoJSON
+            attribution="agitate-district"
             key={distKey(district, 'outline')}
             data={JSON.parse(district.geom)}
             style={ {color: COLORS[i], weight: 1 } }

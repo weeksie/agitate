@@ -27,21 +27,12 @@ function grade(district) {
   const { name, score } = district;
   
   if(name == '00') {
-    return 'A';
+    return 'N/A';
   }
-
-  if(score < 0.1) {
-    return 'A';
-  }
-  if(score < 0.2) {
-    return 'B';
-  }
-  if(score < 0.25) {
-    return 'C';
-  }
-  if(score < 0.3) {
-    return 'D';
+  if(score > 0.5) {
+    return '10/10';
+  } else {
+    return `${Math.floor((score / 0.5) * 10)}/10`;
   }
   
-  return 'F';
 }

@@ -50,7 +50,7 @@ class Agitate extends React.Component {
     if(this.props.districts.length === 1 && map.layer.getBounds) {
       // TODO: wire this up with a redux call from _after_ the flyToBounds call to trigger
       // rendering for InactiveDistricts
-      if(map.layer.options.attribution !== "inactive-districts") {
+      if(map.layer.options.attribution === "agitate-district") {
         const { dispatch, districts } = this.props;
         const { state }               = districts[0];
         map.layer._map.flyToBounds(map.layer.getBounds());

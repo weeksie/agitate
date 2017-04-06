@@ -24,7 +24,7 @@ export function captureZip(zipCode) {
   if(!fiveOnly.match(/[0-9]{5}/)) {
     return { type: MALFORMED_ZIP_CODE };
   } else {
-    return { type: RECEIVED_ZIP_CODE,  zipCode: zipCode };
+    return { type: RECEIVED_ZIP_CODE,  zipCode: fiveOnly };
   }
 }
 
