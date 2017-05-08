@@ -15,7 +15,6 @@ import DistrictScore from './district-score';
 import Representative from './representative';
 import Social from './social';
 
-
 class Agitate extends React.Component {
   constructor(props) {
     super(props);
@@ -27,10 +26,10 @@ class Agitate extends React.Component {
     if(this.props === nextProps || !nextProps.data) {
       return;
     }
-    
+
     const { dispatch }                    = this.props;
     const { zipByCode, districtByCoords, loading } = nextProps.data;
-    
+
     if(zipByCode) {
       const { lat, lon, districts } = zipByCode;
       dispatch(setPinnedCoords(lat, lon));
@@ -78,7 +77,7 @@ class Agitate extends React.Component {
   }
   renderContent() {
     const { isLoading, districts, zipCodeError } = this.props;
-    
+
     if(districts.length) {
       return this.renderMap();
     } else if(!isLoading) {
@@ -108,6 +107,7 @@ class Agitate extends React.Component {
   }
 }
 
+// dunno, none of this is likely necessary.
 function mapStateToProps(state) {
   const { zipCode, zipCodeError, queryLat, queryLon, isLoading } = state.geo;
   return {
