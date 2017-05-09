@@ -5,8 +5,11 @@ import { connect } from 'react-redux';
 import { graphql, compose } from 'react-apollo';
 
 import { DistrictByCoords, DistrictsByZip } from '../queries';
-import { setQueryCoords, setPinnedCoords, setDistrict,
-         setDistricts, flyToDistrict, setCurrentState } from '../actions';
+
+import actions from '../actions';
+
+const { setQueryCoords, pinCoords, setDistrict,
+         setDistricts, flyToDistrict, setCurrentState } = actions;
 
 import Map from './map';
 import ZipPrompt from './zip-prompt';
@@ -27,12 +30,12 @@ class Agitate extends React.Component {
       return;
     }
 
-    const { dispatch }                    = this.props;
+    const { dispatch }                             = this.props;
     const { zipByCode, districtByCoords, loading } = nextProps.data;
 
     if(zipByCode) {
       const { lat, lon, districts } = zipByCode;
-      dispatch(setPinnedCoords(lat, lon));
+      dispatch(pinCoords(lat, lon));
       dispatch(setDistricts(districts));
     }
     if(districtByCoords) {
@@ -110,6 +113,7 @@ class Agitate extends React.Component {
 // dunno, none of this is likely necessary.
 function mapStateToProps(state) {
   const { zipCode, zipCodeError, queryLat, queryLon, isLoading } = state.geo;
+
   return {
     geo: state.geo,
     districts: state.districts,

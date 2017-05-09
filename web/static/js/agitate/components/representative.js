@@ -1,19 +1,20 @@
 import * as utils from '../utils';
 import moment from  'moment';
 import React from 'react';
+
 export default (props) => {
   const { districts } = props;
 
   if(!districts.length) {
     return (<div className="representative" />);
   }
-  
+
   const district                                = districts[0];
   const { phone, name, twitter, facebook,
           termCount, upForReelection, party   } = district.representative,
         phoneLink                               = phone.replace(/[^0-9]/g,''),
         reelectionFormatted                     = moment(upForReelection, 'YYYY-MM-DD').format('MMM Do, YYYY');
-  //             src={`https://twitter.com/${twitter}/profile_image?size=bigger`} />
+
   return (
     <div className="representative-contact">
         <img className="representative-image"
@@ -36,4 +37,3 @@ export default (props) => {
     </div>
   )
 }
-

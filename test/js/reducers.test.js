@@ -4,24 +4,24 @@ import { expect } from 'chai';
 
 
 describe('agitate reducer', () => {
-  xit('should return the initial state', () => {
+  it('should return the initial state', () => {
     expect(geo(undefined, {})).to.deep.equal({ });
   });
 
-  xit('should set the lat/lon of the map center', () => {
-    expect(geo(undefined, { type: PIN_COORDS, pinnedLat: 20, pinnedLon: -20 })).to.deep.equal({
+  it('should set the lat/lon of the map center', () => {
+    expect(geo(undefined, { type: "PIN_COORDS", payload: { pinnedLat: 20, pinnedLon: -20 } })).to.deep.equal({
       pinnedLat: 20,
       pinnedLon: -20
     });
   });
 
-  xit('should set the lat/lon of a district query', () => {
+  it('should set the lat/lon of a district query', () => {
     expect(geo({
       pinnedLat: 20,
       pinnedLon: -20
     }, {
-      type: QUERY_COORDS,
-      queryLat: 19, queryLon: -20
+      type: "SET_QUERY_COORDS",
+      payload: { queryLat: 19, queryLon: -20 },
     })).to.deep.equal({
       isLoading: true,
       zipCode: undefined,

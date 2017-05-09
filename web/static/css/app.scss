@@ -52,7 +52,7 @@ main {
 }
 
 .map-content {
-  background: url(/images/agitate-loading-background.jpg) center/cover no-repeat;
+  background: #FDFDFDF; /*url(/images/agitate-loading-background.jpg) center/cover no-repeat;*/
   position: relative;
   display: flex;
   flex-direction: column;
@@ -163,7 +163,7 @@ main {
     background: url(/images/twitter-icon.png) center no-repeat;
   }
   .representative-fb {
-    background: url(/images/fb-icon.png) center no-repeat;    
+    background: url(/images/fb-icon.png) center no-repeat;
   }
 }
 
