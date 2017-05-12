@@ -28,7 +28,7 @@ class ZipPrompt extends React.Component {
           <p>
             Political parties rig elections by gerrymandering, redrawing the congressional district maps to preserve their power. We calculate vote efficiency to determine how gerrymandered your district is.
           </p>
-          <p><small>Learn More</small></p>
+          <p className="learn-more"><small>Learn More</small></p>
         </div>
 
         <div className="zip-prompt-form">

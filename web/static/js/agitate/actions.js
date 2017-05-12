@@ -1,7 +1,6 @@
 import request from 'superagent';
 import { createActions } from 'redux-actions';
 
-
 const actions = createActions({
   PROMPT_FOR_ZIP_CODE: () => (null),
   CAPTURE_ZIP: (zipCode) => {
