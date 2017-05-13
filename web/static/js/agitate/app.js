@@ -8,7 +8,6 @@ import { ApolloProvider } from 'react-apollo';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { Router, browserHistory } from 'react-router';
 
 import reducers from './reducers';
 import Agitate from './components/agitate';
@@ -29,6 +28,6 @@ const store = createStore(
 
 render(<ApolloProvider client={client}>
     <Provider store={store}>
-        <Router routes={AppRoutes} history={browserHistory} />
+      <Agitate />
     </Provider>
 </ApolloProvider>, document.getElementById('app'));

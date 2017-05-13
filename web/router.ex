@@ -13,16 +13,8 @@ defmodule Agitate.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
-    plug Agitate.Plug.API
-  end
-
-  scope "/", Agitate do
-    pipe_through :browser # Use the default browser stack
-
-    get "/", PageController, :index
-    resources "/developers", UsersController, as: :users
-    resources "/applications", ApplicationsController
-    resources "/sessions", SessionsController, only: [ :create, :delete ]
+    # temp commented out until I can generate one time use tokens.
+    # plug Agitate.Plug.API
   end
 
 
@@ -30,6 +22,15 @@ defmodule Agitate.Router do
     pipe_through :api
 
     resources "/districts", DistrictsController, only: [ :index ]
+  end
+
+  scope "/", Agitate do
+    pipe_through :browser # Use the default browser stack
+
+    get "/*path", PageController, :index
+    resources "/developers", UsersController, as: :users
+    resources "/applications", ApplicationsController
+    resources "/sessions", SessionsController, only: [ :create, :delete ]
   end
 
   forward "/graphql", Absinthe.Plug.GraphiQL, schema: Agitate.Schema

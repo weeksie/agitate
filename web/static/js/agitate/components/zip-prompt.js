@@ -1,42 +1,54 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import actions from '../actions';
+import { actions } from '../actions';
 import cx from 'classnames';
 
-import Logo from './logo';
+import { withRouter } from 'react-router-dom';
 
 const { captureZip } = actions;
 
 class ZipPrompt extends React.Component {
+  handleKeyPress(e) {
+    e.preventDefault();
+    if(this.props.isReady && e.key === 'Enter') {
+      const { dispatch, zipCode, history } = this.props;
+      if(e.key === 'Enter') {
+        history.push(`/zip/${this.props.zipCode}`);
+      }
+    } else {
+      dispatch(captureZip(this.zipInput.value));
+    }
+  }
+
   handleClick(e) {
     e.preventDefault();
-    const { dispatch } = this.props;
-    dispatch(captureZip(this.zipInput.value));
+    if("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(position => {
+        const { latitude, longitude } = position.coords;
+        this.props.history.push(`/loc/${latitude},${longitude}`);
+      });
+    } else {
+      // alert (no pos avail)
+    }
   }
 
   render() {
     const classNames = cx({
       'zip-prompt': true,
-      'error': !!this.props.isError
+      'is-ready': this.props.isReady,
+      'is-error': !!this.props.error
     });
 
     return (
       <div className={ classNames }>
-        <Logo />
-        <div className="zip-prompt-blurb">
-          <h2>Does your vote count?</h2>
-          <p>
-            Political parties rig elections by gerrymandering, redrawing the congressional district maps to preserve their power. We calculate vote efficiency to determine how gerrymandered your district is.
-          </p>
-          <p className="learn-more"><small>Learn More</small></p>
-        </div>
-
         <div className="zip-prompt-form">
           <p>Enter Zip Code To Find District</p>
           <input type="text"
                  className="zip-prompt-input"
                  placeholder="Zip Code"
+                 onKeyPress={this.handleKeyPress}
                  ref={ (ref) => { this.zipInput = ref } } />
+
           <button className="zip-prompt-button"
                   onClick={this.handleClick.bind(this)}></button>
         </div>
@@ -45,5 +57,8 @@ class ZipPrompt extends React.Component {
   }
 }
 
+function mapPropsToZip({ zip }) {
+  return zip;
+}
 
-export default connect()(ZipPrompt);
+export default withRouter(connect(mapPropsToZip)(ZipPrompt));
