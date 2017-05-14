@@ -14,10 +14,7 @@
     ]
   },
   "dependencies": {
-    "apollo-client": "~0.10.1",
     "classnames": "^2.2.5",
-    "graphql-tag": "^1.2.4",
-    "immutable": "^3.8.1",
     "leaflet": "^1.0.3",
     "lodash": "^4.17.4",
     "moment": "^2.17.1",
@@ -45,7 +42,6 @@
     "chai": "^3.5.0",
     "clean-css-brunch": "~2.0.0",
     "css-brunch": "~2.0.0",
-    "graphql-tag-brunch": "0.1.0",
     "javascript-brunch": "~2.0.0",
     "jest": "^19.0.2",
     "json-brunch": "^1.5.4",

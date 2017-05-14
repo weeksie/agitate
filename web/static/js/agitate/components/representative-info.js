@@ -17,21 +17,16 @@ export default (props) => {
 
   return (
     <div className="representative-info">
-      <img className="representative-image"
-           src={`https://graph.facebook.com/v2.8/${facebook}/picture?type=square`} />
+      <div className="representative-image">
+        <img src={`https://graph.facebook.com/v2.8/${facebook}/picture?type=square`} />
+      </div>
       <div className="representative-information">
-        <p>
-          <span className="representative-name">{`${name} (${party})`}</span>
+        <p className="representative-name">{`${name} (${party})`}</p>
+        <p className="representative-term-count">
+          {`Serving their ${utils.ordinal(termCount)} term.`}
         </p>
-        <p>
-          <span className="representative-term-count">
-            {`Serving their ${utils.ordinal(termCount)} term.`}
-          </span>
-        </p>
-        <p>
-          <span className="representative-reelection">
-            {`Up for reelection on ${reelectionFormatted}`}
-          </span>
+        <p className="representative-reelection">
+          {`Up for reelection on ${reelectionFormatted}`}
         </p>
       </div>
     </div>

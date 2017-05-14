@@ -2,32 +2,15 @@ import "phoenix_html" // devvvvvv
 
 import React from 'react';
 import { render } from 'react-dom';
-
-import ApolloClient, { createNetworkInterface } from 'apollo-client';
-import { ApolloProvider } from 'react-apollo';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
 
-import reducers from './reducers';
+import store from './reducers';
 import Agitate from './components/agitate';
-
-const client = new ApolloClient({
-  networkInterface: createNetworkInterface({ uri: '/graphql' })
-});
 
 const AppRoutes = {
   path: '/',
   component: Agitate
 }
 
-const store = createStore(
-  reducers,
-  applyMiddleware(thunk)
-);
 
-render(<ApolloProvider client={client}>
-    <Provider store={store}>
-      <Agitate />
-    </Provider>
-</ApolloProvider>, document.getElementById('app'));
+render(<Provider store={store}><Agitate /></Provider>, document.getElementById('app'));

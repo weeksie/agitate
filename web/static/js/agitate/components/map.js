@@ -30,7 +30,7 @@ function distKey(district, suffix) {
 
 class MapView extends React.Component {
   renderInactiveDistricts(districts) {
-    /// set this up to take a flux call
+    /// set this up to take a redux call
     if(districts[0]) {
       const { id } = districts[0].state;
       return (
@@ -54,12 +54,10 @@ class MapView extends React.Component {
     }).reverse();
   }
   render() {
-    const { loading, lat, lon, districts, onClick, onLayerAdd } = this.props;
-    // TODO: add bounds here so that the first thing can fly to the bounds?
-    // maybe. ////// don't want to cause a map re-render . . . ????
+    const { lat, lon, districts, onClick, onLayerAdd } = this.props;
     return (
 
-          <Map center={[lat, lon]}
+          <Map center={[lon, lat]}
                animate={true}
                zoom={10}
                useFlyTo={true}
@@ -72,12 +70,13 @@ class MapView extends React.Component {
                   accessToken={MAP_TOKEN}
                   id="light-v9"
               />
-              { this.renderInactiveDistricts(districts) }
+
               { this.renderDistricts(districts) }
           </Map>
 
     );
   }
 }
+// TODO              { this.renderInactiveDistricts(districts) }
 
 export default MapView;

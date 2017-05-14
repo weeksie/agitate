@@ -6,7 +6,9 @@ import DistrictScore from './district-score';
 export default (props) => (
   <div className="district-info">
     <DistrictLabel { ...props } />
-    <DistrictChart { ...props } />
-    <DistrictScore { ...props } />
+    <div className="district-scoring">
+      <DistrictChart { ...props } />
+      <DistrictScore { ...props } />
+    </div>
   </div>
 );

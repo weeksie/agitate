@@ -1,42 +1,8 @@
 import request from 'superagent';
-import { camelCase, isFunction, isError } from 'lodash';
+import { camelKeys, createActions } from './action-utils';
 
-// TODO migrate this into its own stupid file and write tests against it.
-function createActions(mapping) {
-  let types = { },
-      actions   = { },
-      rest      = Array.prototype.slice.call(arguments, 1);
-
-  Object.keys(mapping).forEach((property) => {
-    types[property] = property;
-    actions[camelCase(property)] = function() {
-      const result = mapping[property].apply(mapping[property], arguments);
-      if(isFunction(result)) {
-        return result;
-      } else {
-        const { payload, meta } = result;
-        return {
-          payload,
-          meta,
-          type: property,
-          error: isError(payload)
-        }
-      }
-    }
-  });
-
-  rest.forEach((property) => {
-    types[property]               = property;
-    actions[camelCase(property)] = x => ({
-      type: property,
-      payload: x
-    });
-  });
-
-  return {
-    types,
-    actions
-  }
+function mapToAgitate(response) {
+  return response.json().then(json => Promise.resolve(camelKeys(json)));
 }
 
 export const { actions, types } = createActions({
@@ -92,7 +58,7 @@ export const { actions, types } = createActions({
       });
 
       return fetch(`/api/districts?lat=${lat}&lon=${lon}`)
-        .then(response => response.json())
+        .then(mapToAgitate)
         .then(district => dispatch({
           type: 'FETCH_DISTRICT_BY_LAT_LON',
           payload: {

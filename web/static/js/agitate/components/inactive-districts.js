@@ -1,11 +1,10 @@
 import React, { PropTypes } from 'react';
 import { GeoJSON }          from 'react-leaflet';
-import { connect }          from 'react-redux';
-import { graphql, compose } from 'react-apollo';
-import { StateById }        from '../queries';
-
 
 class InactiveDistricts extends React.Component {
+  componentWillReceiveProps({ id }) {
+
+  }
   render()  {
     if(!this.props.data) {
       return <div />;
@@ -15,7 +14,7 @@ class InactiveDistricts extends React.Component {
       return <div />;
     }
     const districtGeoms = state.districts.map(d => JSON.parse(d.geom));
-    return (      
+    return (
       <GeoJSON
           attribution="agitate"
           data={districtGeoms}
@@ -30,19 +29,5 @@ class InactiveDistricts extends React.Component {
   }
 }
 
-function mapStateToProps(componentState){
-  const { state } = componentState.geo;
-  const id        = state && state.id;
-  return {
-    id: parseInt(id)
-  }
-}
-// NO Data is coming through. TODO: troubleshoot this.
-// query works fine, it's a fucking state thing (of course)
-const withData = compose(
-  connect(mapStateToProps),
-  graphql(StateById, { skip: ({id}) => !id })
-);
 
-export default withData(InactiveDistricts)
-
+export default InactiveDistricts;

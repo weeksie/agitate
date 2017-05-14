@@ -1,5 +1,6 @@
-import { combineReducers } from 'redux';
+import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import { types } from './actions';
+import thunk from 'redux-thunk';
 
 const {
   CAPTURE_ZIP,
@@ -58,8 +59,17 @@ function s(state, nextState) {
 }
 
 
-export default combineReducers({
+const reducers = combineReducers({
   zip,
   geo,
 //  districts
 });
+
+const hasTools            = typeof __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ !== 'undefined';
+const composeWithDevTools =
+  hasTools? __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : compose;
+
+export default createStore(
+  reducers,
+  composeWithDevTools(applyMiddleware(thunk))
+);

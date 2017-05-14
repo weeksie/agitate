@@ -122,7 +122,6 @@ main {
   }
 }
 
-
 .leaflet-container {
   border-bottom: 1px solid $lt-grey;
   width: 100vw;
@@ -130,97 +129,107 @@ main {
   margin-top: 0.5rem;
 }
 
-/* .district-info { */
-/*   box-sizing: border-box; */
-/*   padding: 1em 2em 0; */
-/*   p { */
-/*     margin-top: 0.25em; */
-/*     margin-bottom: 0.25em; */
-/*   } */
-/* } */
+.district-info {
+  padding: 0 1rem .5rem;
+  border-bottom: 1px solid $lt-grey;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
 
-/* .map-content { */
-/*   background: #FDFDFDF; /\*url(/images/agitate-loading-background.jpg) center/cover no-repeat;*\/ */
-/*   position: relative; */
-/*   display: flex; */
-/*   flex-direction: column; */
-/*   justify-content: center; */
-/*   align-items: center; */
-/*   &.is-loading { */
-/*     background: url(/images/loading.png) center no-repeat, */
-/*                 url(/images/agitate-loading-background.jpg) center/cover no-repeat; */
-/*   } */
-/*   &.error { */
-/*     .zip-prompt-input { */
-/*       border-color: #C00; */
-/*     } */
-/*   } */
-/* } */
-/* .zip-prompt-form { */
-/*   padding: 0; */
-/*   margin: 0; */
-/*   max-width: 375px; */
-/* } */
-/* .zip-prompt-input { */
-/*   border-radius: 2px; */
-/*   border: 1px solid $lt-grey; */
-/*   padding: 0.25em; */
-/*   width: 130px; */
-/* } */
-/* .zip-prompt-button { */
-/*   display: inline-block; */
-/*   border-radius: 2px; */
-/*   font-size: 18px; */
-/*   color: #FFFFFF; */
-/*   background-color: $orange; */
-/*   border: none; */
-/*   margin-left: 0.5em; */
-/*   padding: 0.25em; */
-/* } */
+.district-label {
+  h2 {
+    margin-top: 0.5rem;
+    color: black;
+  }
+}
 
-/* .district-label span { */
+.district-scoring {
+  margin-top: 0.5rem;
+  display: flex;
+}
 
-/* } */
+.district-chart {
+  flex: 0 1;
+  svg {
+    transform: rotate(90deg);
+    fill: none;
+    stroke: $text-color;
+    stroke-width: 15;
+    stroke-dasharray: 80 157;
+  }
+}
+.district-chart-caption {
+  text-align: center;
+  font-size: 0.75rem;
+}
 
-/* .district-label-state, .representative-name, .district-label-state, .district-label-name { */
-/*   font-size: 18px; */
-/*   display: inline-block; */
-/* } */
+.district-score {
+  flex: 1 1;
+  font-size: 1rem;
+  margin: 0;
+  min-height: 70px;
+  span {
+    display: inline-block;
+    margin-right: 0.25rem;
+  }
+}
 
-/* .district-label-state { */
-/*   background: url(/images/congress-icon.png) left no-repeat; */
-/*   padding-left: 1.2em; */
-/* } */
+.district-score-values {
+  height: 75px;
+}
 
+.district-score-number {
+  color: black;
+}
 
-/* .district-score { */
-/*   font-weight: bold; */
-/*   font-size: 2em; */
-/*   color: $orange; */
-/*   margin: 0; */
-/*   padding-top: 18px; */
-/*   padding-left: 85px; */
-/*   min-height: 70px; */
-/*   &.gop { */
-/*     background: url(/images/gop-icon.png) left no-repeat; */
-/*   } */
-/* } */
+.district-share {
+  padding-left: 2rem;
+  a {
+    color: $text-color;
+  }
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.25rem;
+  }
+}
 
-/* .representative-contact { */
-/*   .representative-image { */
-/*     float: left; */
-/*     width: 65px; */
-/*     height: 65px; */
-/*     clip-path: circle(32.5px at center); */
-/*     -webkit-clip-path: circle(32.5px at center); */
-/*     -moz-clip-path: circle(32.5px at center); */
-/*     margin-right: 18px; */
-/*   } */
-/* } */
+.loading-content {
+  height: 100vh;
+  background: url(/images/loading.png) center no-repeat,
+              url(/images/agitate-loading-background.jpg) center/cover no-repeat;
+}
 
-/* .representative-information { */
-/*   font-size: 14px; */
-/* } */
+.representative-info {
+  margin: 1rem 1rem;
+  .representative-image {
+    float: left;
+    width: 67px;
+    height: 67px;
+    clip-path: circle(33.5px at center);
+    -webkit-clip-path: circle(33.5px at center);
+    -moz-clip-path: circle(3.53px at center);
+    margin-right: 18px;
+    background-color: $text-color;
+    img {
+      margin-top: 1px;
+      margin-left: 1px;
+      width: 65px;
+      height: 65px;
+      clip-path: circle(32.5px at center);
+      -webkit-clip-path: circle(32.5px at center);
+      -moz-clip-path: circle(32.5px at center);
+    }
+  }
+  p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+}
+
+p.representative-name {
+  font-size: 1rem;
+  color: black;
+}
 
 /* .social { */
 /*   clear: both; */
