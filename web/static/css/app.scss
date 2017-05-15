@@ -91,7 +91,7 @@ main {
   input[type=text] {
     font-size: 1.2rem;
     margin-top: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.25rem;
     text-align: center;
     border: 1px solid $text-color;
     border-radius: 8px;
@@ -104,7 +104,7 @@ main {
     border: 0;
     height: 22px;
     width: 22px;
-    margin-top: 16px;
+    margin-top: 13px;
     background: url(/images/location-icon.png) center no-repeat;
   }
 }
@@ -185,6 +185,7 @@ main {
   padding-left: 2rem;
   a {
     color: $text-color;
+    text-transform: capitalize;
   }
   img {
     display: inline-block;
@@ -193,10 +194,16 @@ main {
   }
 }
 
-.loading-content {
-  height: 100vh;
-  background: url(/images/loading.png) center no-repeat,
-              url(/images/agitate-loading-background.jpg) center/cover no-repeat;
+.loader.is-fetching {
+  position: absolute;
+  z-index: 1024;
+  pointer-events: none;
+  // see map
+  height: 45vh;
+  width: 100vw;
+  margin-top: 0.5rem;
+  background: url(/images/loading.png) center no-repeat;/*,
+              url(/images/agitate-loading-background.jpg) center/cover no-repeat;*/
 }
 
 .representative-info {
@@ -231,38 +238,33 @@ p.representative-name {
   color: black;
 }
 
-/* .social { */
-/*   clear: both; */
-/*   padding-top: 1em; */
-/*   display: flex; */
-/*   flex: 1 1; */
-/*   align-items: center; */
-/*   .social-label { */
-/*     display: inline-block; */
-/*     font-size: 2em; */
-/*     color: $orange; */
-/*     padding-left: 1em; */
-/*     text-transform: lowercase; */
-/*     font-weight: medium; */
-/*     padding-right: 0.5em; */
-/*   } */
-/*   .icn { */
-/*     display: block; */
-/*     text-indent: -2000em; */
-/*     width: 43px; */
-/*     height: 43px; */
-/*     padding: 0.5em; */
-/*   } */
-/*   .representative-phone { */
-/*     background: url(/images/phone-icon.png) center no-repeat; */
-/*   } */
-/*   .representative-twitter { */
-/*     background: url(/images/twitter-icon.png) center no-repeat; */
-/*   } */
-/*   .representative-fb { */
-/*     background: url(/images/fb-icon.png) center no-repeat; */
-/*   } */
-/* } */
+.social {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  display: flex;
+  flex: 1 1;
+  align-items: center;
+  .social-label {
+    display: inline-block;
+    font-weight: bold;
+  }
+  .icn {
+    display: block;
+    text-indent: -2000em;
+    width: 25px;
+    height: 25x;
+    padding: 0.5em;
+  }
+  .representative-phone {
+    background: url(/images/phone-icon.png) center no-repeat;
+  }
+  .representative-twitter {
+    background: url(/images/twitter-icon.png) center no-repeat;
+  }
+  .representative-fb {
+    background: url(/images/fb-icon.png) center no-repeat;
+  }
+}
 
 /* // responsive */
 /* @media only screen and (min-width: 1024px) { */

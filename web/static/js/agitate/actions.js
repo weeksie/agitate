@@ -23,27 +23,28 @@ export const { actions, types } = createActions({
     return (dispatch) => {
       dispatch({
         type: 'FETCH_DISTRICTS_BY_ZIP_CODE',
+        payload: { },
         meta: {
           isFetching: true
         }
       });
       return fetch(`/api/districts?zip_code=${zipCode}`)
-        .then(response => response.json())
-        .then(districts => dispatch({
+        .then(mapToAgitate)
+        .then(({ districts }) => dispatch({
           type: 'FETCH_DISTRICTS_BY_ZIP_CODE',
           payload: {
-            lat: district[0].lat,
-            lon: district[0].lon,
+            lat: districts[0].lat,
+            lon: districts[0].lon,
             districts
           }
         }))
-        .catch(error => dispatch(
+        .catch(error =>console.log(error)&& dispatch({
           type: 'FETCH_DISTRICTS_BY_ZIP_CODE',
           error: true,
           payload: {
             errorMessage: "Couldn't find districts for the zip code"
           }
-        ));
+        }));
     }
   },
 
@@ -67,16 +68,37 @@ export const { actions, types } = createActions({
             districts: [ district ]
           }
         }))
-        .catch(error => dispatch({
-          type: 'FETCH_DISTRICT_BY_LAT_LON',
-          error: true,
-          payload: {
-            errorMessage: error
-          }
-        }));
+      /* .catch(error => dispatch({
+       *   type: 'FETCH_DISTRICT_BY_LAT_LON',
+       *   error: true,
+       *   payload: {
+       *     errorMessage: error
+       *   }
+       * }));*/
     }
   },
 
-  SET_QUERY_COORDS: (queryLat, queryLon) => ({ queryLat, queryLon }),
-  PIN_COORDS: (pinnedLat, pinnedLon) => ({ pinnedLat, pinnedLon })
+  FETCH_STATE: (id) => {
+    return (dispatch) => {
+      dispatch({
+        type: 'FETCH_STATE',
+        payload: { },
+        meta: {
+          isFetching: true
+        }
+      });
+
+      return fetch(`/api/states/${id}`)
+        .then(mapToAgitate)
+        .then(({ districts }) => dispatch({
+          type: 'FETCH_STATE',
+          payload: { districts }
+        }))
+        .catch(error => dispatch({
+          type: 'FETCH_STATE',
+          error: true,
+          payload: { errorMessage: error }
+        }));
+    }
+  }
 });

@@ -3,6 +3,7 @@ defmodule Agitate.StateQuery do
   alias Agitate.Repo
 
   def by_id(id) do
-    Repo.get(State, id) |> Repo.preload(:districts)
+    state = Repo.get(State, id) |> Repo.preload(:districts)
+    { :ok, state }
   end
 end

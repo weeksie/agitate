@@ -1,6 +1,8 @@
 import React from 'react';
-import * as utils from '../utils';
 import moment from  'moment';
+
+import * as utils from '../utils';
+import Social from './social';
 
 export default (props) => {
   const { districts } = props;
@@ -9,9 +11,9 @@ export default (props) => {
     return (<div className="representative-info" />);
   }
 
-  const district                                = districts[0];
+  const { representative }                      = districts[0];
   const { phone, name, twitter, facebook,
-          termCount, upForReelection, party   } = district.representative,
+          termCount, upForReelection, party   } = representative,
         phoneLink                               = phone.replace(/[^0-9]/g,''),
         reelectionFormatted                     = moment(upForReelection, 'YYYY-MM-DD').format('MMM Do, YYYY');
 
@@ -28,6 +30,7 @@ export default (props) => {
         <p className="representative-reelection">
           {`Up for reelection on ${reelectionFormatted}`}
         </p>
+        <Social representative={representative} />
       </div>
     </div>
   );

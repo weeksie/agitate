@@ -38,15 +38,17 @@ export function createActions(mapping) {
 }
 
 export function camelKeys(object) {
-  return Object.entries(object).reduce(descend, { });
+  if(!isObject(object)) { return object; }
 
-  function descend(obj, [k, v]) {
+  return Object.entries(object).reduce(mapValue, { });
+
+  function mapValue(obj, [k, v]) {
     obj[camelCase(k)] = toValue(v);
     return obj;
   }
 
   function toValue(v) {
-    if (isArray(v)) {
+    if(isArray(v)) {
       return v.map(toValue);
     } else if(isObject(v)) {
       return camelKeys(v);

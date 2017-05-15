@@ -1,12 +1,14 @@
 import React, { PropTypes } from 'react';
-
-import { MAP_TOKEN, MAP_STYLE } from '../config';
-
 import { Map, TileLayer, GeoJSON } from 'react-leaflet';
 
+import { isTouch } from '../utils';
+import { MAP_TOKEN, MAP_STYLE } from '../config';
 import InactiveDistricts from './inactive-districts';
+import withStateProvider from './state-provider';
 
-const AMERICA_CENTER = [ 37.0902, -95.7129 ];
+const ShowInactiveDistricts = withStateProvider(InactiveDistricts);
+
+
 const AMERICA_BOUNDS = [
   [5.499550, -167.276413], //Southwest
   [83.162102, -52.233040]  //Northeast
@@ -22,25 +24,11 @@ const COLORS   = [
   '#D8D8D8',
 ];
 
-
 function distKey(district, suffix) {
   return `${district.name}${district.state.short}-${suffix}`;
 }
 
-
 class MapView extends React.Component {
-  renderInactiveDistricts(districts) {
-    /// set this up to take a redux call
-    if(districts[0]) {
-      const { id } = districts[0].state;
-      return (
-        <InactiveDistricts key={`inactive-${id}`} id={-1}/>
-      );
-    } else {
-      return <div />
-    }
-
-  }
   renderDistricts(districts) {
     return districts.map( (district, i) => {
       return (
@@ -55,28 +43,31 @@ class MapView extends React.Component {
   }
   render() {
     const { lat, lon, districts, onClick, onLayerAdd } = this.props;
-    return (
 
+    const stateId = districts[0] ? districts[0].state.id : null;
+
+    return (
           <Map center={[lon, lat]}
                animate={true}
                zoom={10}
                useFlyTo={true}
+               attributionControl={false}
+               zoomControl={!isTouch()}
                maxBounds={AMERICA_BOUNDS}
                onClick={onClick}
                onLayerAdd={onLayerAdd}>
-              />
+
               <TileLayer
                   url={TILE_URL}
                   accessToken={MAP_TOKEN}
-                  id="light-v9"
-              />
+                  id="light-v9" />
 
+              <ShowInactiveDistricts id={stateId} />
               { this.renderDistricts(districts) }
           </Map>
 
     );
   }
 }
-// TODO              { this.renderInactiveDistricts(districts) }
 
 export default MapView;

@@ -1,15 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { debounce } from 'lodash';
 
 import { actions } from '../actions';
 
-import LoadingScreen from './loading-screen';
+import Loader from './loader';
 import SmallLogo from './small-logo';
 import Map from './map';
 import DistrictInfo from './district-info';
 import RepresentativeInfo from './representative-info';
+import ZipPrompt from './zip-prompt';
 
+// TODO move this stuff to another higher order comp
 const {
   fetchDistrictsByZipCode,
   fetchDistrictByLatLon,
@@ -46,35 +49,36 @@ class MapScreen extends React.Component {
     }
   }
 
-  render() {
-    const { isFetching, districts } = this.props;
-    if(isFetching || !districts) {
-      return this.renderLoadingScreen();
-    } else {
-      return this.renderMapScreen();
+  onDistrictAdd({ layer }) {
+    if(layer.getBounds && layer.options.attribution !== 'inactive-district') {
+      const { districts } = this.props;
+      layer._map.flyToBounds(layer.getBounds());
     }
   }
 
-  renderLoadingScreen() {
-    return (
-      <LoadingScreen />
-    );
+  onMapClick({ originalEvent, latlng }) {
+    originalEvent.preventDefault();
+    const { lat, lng } = latlng;
+    this.props.dispatch(fetchDistrictByLatLon(lat, lng));
   }
 
-  renderMapScreen() {
-    const { districts, lat, lon } = this.props;
+  render() {
+    const { districts, lat, lon, isFetching } = this.props;
+
     return (
       <div className="map-screen">
         <SmallLogo />
+        <Loader isFetching={isFetching} />
         <Map
+            isFetching={isFetching}
             lat={lat}
             lon={lon}
             districts={districts}
-            onClick={() => { }}
-            onLayerAdd={() => { }}
-        />
+            onClick={this.onMapClick.bind(this)}
+            onLayerAdd={debounce(this.onDistrictAdd.bind(this))} />
         <DistrictInfo districts={districts} />
         <RepresentativeInfo districts={districts} />
+        <ZipPrompt />
       </div>
     );
   }

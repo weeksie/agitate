@@ -9,12 +9,10 @@ const { captureZip } = actions;
 
 class ZipPrompt extends React.Component {
   handleKeyPress(e) {
-    e.preventDefault();
-    if(this.props.isReady && e.key === 'Enter') {
-      const { dispatch, zipCode, history } = this.props;
-      if(e.key === 'Enter') {
-        history.push(`/zip/${this.props.zipCode}`);
-      }
+    const { dispatch, isReady, history } = this.props;
+    if(isReady && e.key === 'Enter') {
+      e.preventDefault();
+      history.push(`/zip/${this.props.zipCode}`);
     } else {
       dispatch(captureZip(this.zipInput.value));
     }
@@ -46,7 +44,7 @@ class ZipPrompt extends React.Component {
           <input type="text"
                  className="zip-prompt-input"
                  placeholder="Zip Code"
-                 onKeyPress={this.handleKeyPress}
+                 onKeyUp={this.handleKeyPress.bind(this)}
                  ref={ (ref) => { this.zipInput = ref } } />
 
           <button className="zip-prompt-button"

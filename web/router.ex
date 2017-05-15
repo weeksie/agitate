@@ -22,6 +22,7 @@ defmodule Agitate.Router do
     pipe_through :api
 
     resources "/districts", DistrictsController, only: [ :index ]
+    resources "/states", StatesController, only: [ :show ]
   end
 
   scope "/", Agitate do
