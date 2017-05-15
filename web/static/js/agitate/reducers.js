@@ -13,7 +13,10 @@ export const zip = function(state = { }, { type, error, payload }) {
   switch(type) {
     case CAPTURE_ZIP:
       if(error) {
-        return { zipCodeError: "Must enter a valid US Zip Code" };
+        return s(state, {
+          error: true,
+          zipCodeError: "Must enter a valid US Zip Code"
+        });
       } else {
         return  {
           zipCode: payload,

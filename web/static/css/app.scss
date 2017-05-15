@@ -82,6 +82,16 @@ main {
   margin: 1rem 1.5rem;
   font-size: 0.8rem;
   text-align: center;
+  &.is-ready {
+    input[type=text] {
+      border-color: green;
+    }
+  }
+  &.is-error {
+    input[type=text] {
+      border-color: red;
+    }
+  }
 }
 
 .zip-prompt-form {
@@ -89,6 +99,7 @@ main {
   width: 260px;
   margin: auto;
   input[type=text] {
+    outline: none;
     font-size: 1.2rem;
     margin-top: 0.5rem;
     padding: 0.25rem;

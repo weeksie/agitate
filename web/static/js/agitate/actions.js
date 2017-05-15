@@ -7,6 +7,8 @@ function mapToAgitate(response) {
 
 export const { actions, types } = createActions({
   CAPTURE_ZIP: (zipCode) => {
+    if(zipCode === "") { return { payload: " "} }
+
     const maxFive = zipCode.substring(0, 5);
     if(!maxFive.match(/^[0-9]+$/)) {
       return {
