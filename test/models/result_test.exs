@@ -1,7 +1,7 @@
-defmodule Agitate.ResultTest do
-  use Agitate.ModelCase
+defmodule Agitate.Web.ResultTest do
+  use Agitate.Web.ModelCase
 
-  alias Agitate.Result
+  alias Agitate.Web.Result
 
   @valid_attrs %{election_id: 42, party: "some content", total_votes: 42, wasted_votes: 42}
   @invalid_attrs %{}

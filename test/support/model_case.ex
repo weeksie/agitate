@@ -1,4 +1,4 @@
-defmodule Agitate.ModelCase do
+defmodule Agitate.Web.ModelCase do
   @moduledoc """
   This module defines the test case to be used by
   model tests.
@@ -21,8 +21,8 @@ defmodule Agitate.ModelCase do
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Agitate.ModelCase
-      import Agitate.Factory
+      import Agitate.Web.ModelCase
+      import Agitate.Web.Factory
     end
   end
 
@@ -60,7 +60,7 @@ defmodule Agitate.ModelCase do
   """
   def errors_on(struct, data) do
     struct.__struct__.changeset(struct, data)
-    |> Ecto.Changeset.traverse_errors(&Agitate.ErrorHelpers.translate_error/1)
+    |> Ecto.Changeset.traverse_errors(&Agitate.Web.ErrorHelpers.translate_error/1)
     |> Enum.flat_map(fn {key, errors} -> for msg <- errors, do: {key, msg} end)
   end
 end

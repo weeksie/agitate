@@ -10,10 +10,10 @@ config :agitate,
   ecto_repos: [Agitate.Repo]
 
 # Configures the endpoint
-config :agitate, Agitate.Endpoint,
+config :agitate, Agitate.Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "qwQ2vKsHBvZgNfYEIU/2YBkgSJTcrbSyE5UnKs59ZjUjxPJqn8RChB6DQXR+xstx",
-  render_errors: [view: Agitate.ErrorView, accepts: ~w(html json)],
+  render_errors: [view: Agitate.Web.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Agitate.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

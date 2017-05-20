@@ -1,7 +1,7 @@
-defmodule Agitate.ElectionTest do
-  use Agitate.ModelCase
+defmodule Agitate.Web.ElectionTest do
+  use Agitate.Web.ModelCase
 
-  alias Agitate.Election
+  alias Agitate.Web.Election
 
   @valid_attrs %{district_id: 42, total_votes: 42, year: 42}
   @invalid_attrs %{}

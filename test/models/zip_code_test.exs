@@ -1,7 +1,7 @@
-defmodule Agitate.ZipCodeTest do
-  use Agitate.ModelCase
+defmodule Agitate.Web.ZipCodeTest do
+  use Agitate.Web.ModelCase
 
-  alias Agitate.ZipCode
+  alias Agitate.Web.ZipCode
 
   @valid_attrs %{code: "some content", lat: "120.5", lon: "120.5", zip_geom_id: 42}
   @invalid_attrs %{}

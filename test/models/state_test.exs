@@ -1,7 +1,7 @@
-defmodule Agitate.StateTest do
-  use Agitate.ModelCase
+defmodule Agitate.Web.StateTest do
+  use Agitate.Web.ModelCase
 
-  alias Agitate.State
+  alias Agitate.Web.State
 
   @valid_attrs %{name: "some content", short: "some content"}
   @invalid_attrs %{}

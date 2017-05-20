@@ -1,3 +1,3 @@
-defmodule Agitate.LayoutViewTest do
-  use Agitate.ConnCase, async: true
+defmodule Agitate.Web.LayoutViewTest do
+  use Agitate.Web.ConnCase, async: true
 end

@@ -1,7 +1,7 @@
-defmodule Agitate.UserTest do
-  use Agitate.ModelCase
+defmodule Agitate.Web.UserTest do
+  use Agitate.Web.ModelCase
 
-  alias Agitate.User
+  alias Agitate.Web.User
 
   @valid_attrs %{email: "hagbard@example.com"}
   @valid_pwd_attrs %{email: "hagbard@example.com", password: "filthytoast"}

@@ -1,5 +1,5 @@
-defmodule Agitate.SessionsControllerTest do
-  use Agitate.ConnCase
+defmodule Agitate.Web.SessionsControllerTest do
+  use Agitate.Web.ConnCase
 
   test "POST /sessions/create", %{ conn: conn } do
     user = insert :user
@@ -9,5 +9,5 @@ defmodule Agitate.SessionsControllerTest do
     assert loc == users_path(conn, :index)
     assert flash["notice"]
   end
-  
+
 end

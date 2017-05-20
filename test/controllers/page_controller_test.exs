@@ -1,5 +1,5 @@
-defmodule Agitate.PageControllerTest do
-  use Agitate.ConnCase
+defmodule Agitate.Web.PageControllerTest do
+  use Agitate.Web.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

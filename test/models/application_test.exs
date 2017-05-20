@@ -1,7 +1,7 @@
-defmodule Agitate.ApplicationTest do
-  use Agitate.ModelCase
+defmodule Agitate.Web.ApplicationTest do
+  use Agitate.Web.ModelCase
 
-  alias Agitate.Application
+  alias Agitate.Web.Application
 
   @valid_attrs %{name: "some content", token: "some content"}
   @invalid_attrs %{}

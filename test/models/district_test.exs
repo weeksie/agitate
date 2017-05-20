@@ -1,3 +1,3 @@
-defmodule Agitate.DistrictTest do
-  use Agitate.ModelCase
+defmodule Agitate.Web.DistrictTest do
+  use Agitate.Web.ModelCase
 end

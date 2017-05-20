@@ -1,4 +1,4 @@
-defmodule Agitate.ConnCase do
+defmodule Agitate.Web.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -24,19 +24,19 @@ defmodule Agitate.ConnCase do
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      
-      import Agitate.Router.Helpers
-      import Agitate.Factory
-      
+
+      import Agitate.Web.Router.Helpers
+      import Agitate.Web.Factory
+
       # The default endpoint for testing
-      @endpoint Agitate.Endpoint
+      @endpoint Agitate.Web.Endpoint
 
       @doc """
       Helper for setting up a `conn` which logs in a user
       """
       def guardian_sign_in(user, token \\ :token, opts \\ []) do
         build_conn()
-        |> bypass_through(Agitate.Router, [:browser])
+        |> bypass_through(Agitate.Web.Router, [:browser])
         |> get("/")
         |> Guardian.Plug.sign_in(user, token, opts)
         |> send_resp(200, "Flush the session")

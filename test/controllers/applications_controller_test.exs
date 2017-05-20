@@ -1,5 +1,5 @@
-defmodule Agitate.ApplicationsControllerTest do
-  use Agitate.ConnCase
+defmodule Agitate.Web.ApplicationsControllerTest do
+  use Agitate.Web.ConnCase
 
   test "POST /applications", _ignored_conn do
     user = insert :user
@@ -28,4 +28,4 @@ defmodule Agitate.ApplicationsControllerTest do
     # check factory.ex default stub user has one application
     assert 1 == Enum.count(body["applications"])
   end
-end  
+end

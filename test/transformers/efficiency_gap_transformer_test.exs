@@ -1,7 +1,7 @@
-defmodule Agitate.EfficiencyGapTransformerTest do
-  use Agitate.TransformerCase
+defmodule Agitate.Web.EfficiencyGapTransformerTest do
+  use Agitate.Web.TransformerCase
 
-  alias Agitate.EfficiencyGapTransformer
+  alias Agitate.Web.EfficiencyGapTransformer
   @csv "priv/data/election-results/2014-house.csv"
   @party_rows [
       [ district: "1", party: "R", general_votes: 103758 ],

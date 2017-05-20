@@ -1,3 +1,3 @@
-defmodule Agitate.RepresentativeTest do
-  use Agitate.ModelCase
+defmodule Agitate.Web.RepresentativeTest do
+  use Agitate.Web.ModelCase
 end

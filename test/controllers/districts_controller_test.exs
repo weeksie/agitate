@@ -1,9 +1,9 @@
-defmodule Agitate.DistrictsControllerTest do
-  use Agitate.ConnCase
+defmodule Agitate.Web.DistrictsControllerTest do
+  use Agitate.Web.ConnCase
 
-  alias Agitate.District
-  alias Agitate.Endpoint
-  alias Agitate.DistrictsView
+  alias Agitate.Web.District
+  alias Agitate.Web.Endpoint
+  alias Agitate.Web.DistrictsView
 
   setup %{ conn: conn } do
     :ets.new :tmp_api_tokens, [ :set, :named_table ]
