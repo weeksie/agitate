@@ -162,10 +162,13 @@ main {
   flex: 0 1;
   svg {
     transform: rotate(90deg);
-    fill: none;
-    stroke: $text-color;
-    stroke-width: 15;
-    stroke-dasharray: 80 157;
+    circle {
+      transform: rotate(45deg);
+      fill: none;
+      stroke: $text-color;
+      stroke-width: 15;
+      stroke-dasharray: 80 157;
+    }
   }
 }
 .district-chart-caption {

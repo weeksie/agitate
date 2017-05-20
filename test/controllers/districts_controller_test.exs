@@ -1,11 +1,12 @@
 defmodule Agitate.DistrictsControllerTest do
   use Agitate.ConnCase
-  
+
   alias Agitate.District
   alias Agitate.Endpoint
   alias Agitate.DistrictsView
 
   setup %{ conn: conn } do
+    :ets.new :tmp_api_tokens, [ :set, :named_table ]
     app  = insert(:application)
     conn = put_req_header conn, "authorization", "Token " <> app.token
     { :ok, conn: conn, token: app.token }
@@ -16,7 +17,18 @@ defmodule Agitate.DistrictsControllerTest do
     conn = get conn, districts_path(Endpoint, :index)
     assert json_response(conn, 403)["error"]
   end
-  
+
+  test "GET /districts ONE TIME TOKEN" do
+    temp  = "TMP_TOKENTOKENTOKEN"
+    :ets.insert :tmp_api_tokens, { temp, true }
+    conn  = build_conn()
+    conn  = put_req_header conn, "authorization", "Token " <> temp
+    conn  = get conn, districts_path(Endpoint, :index)
+    assert json_response(conn, 200) == %{
+      "__actions" => district_actions()
+    }
+  end
+
   test "GET /districts", %{ conn: conn, token: token } do
     conn = put_req_header conn, "authorization", ""
     conn = get conn, districts_path(Endpoint, :index, token: token)
@@ -24,14 +36,14 @@ defmodule Agitate.DistrictsControllerTest do
       "__actions" => district_actions()
     }
   end
-  
+
   test "GET /districts?zip_code=XXXXX", %{ conn: conn } do
     district = insert :district
     [ zip ]  = district.zip_codes
-    
+
     path     = districts_path Endpoint, :index, zip_code: zip.code
     conn     = get conn, path
-    
+
     assert json_response(conn, 200) == %{
       "districts" => [ district_json(district) ]
     }
@@ -43,7 +55,7 @@ defmodule Agitate.DistrictsControllerTest do
     conn     = get conn, path
     assert json_response(conn, 200) == district_json(district)
   end
-  
+
   def district_json(district = %{ state: state, representative: rep }) do
     %{
       "id" => district.id,
@@ -70,9 +82,9 @@ defmodule Agitate.DistrictsControllerTest do
         "up_for_reelection" => rep.up_for_reelection,
         "years_in_office" => rep.years_in_office
       }
-    }    
+    }
   end
-  
+
   def district_actions() do
     %{
       "by_zip_code" => URI.decode(districts_url(Endpoint, :index, zip_code: "${zip_code}")),

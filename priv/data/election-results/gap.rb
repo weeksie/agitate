@@ -2,7 +2,7 @@
 
 # All data from http://www.fec.gov/pubrec/electionresults.shtml
 #
-# SHTML??? Fucking hell. What year is this? All of my web apps 
+# SHTML??? Fucking hell. What year is this? All of my web apps
 # are handwritten C Apache modules :/
 
 require 'csv'
@@ -12,7 +12,7 @@ current = :start
 
 class Election
   include AASM
-  
+
   attr_accessor :state, :district, :current_party, :vote_count, :votes, :gaps
 
   aasm do
@@ -33,7 +33,7 @@ class Election
     end
   end
 
-  
+
   def initialize
     @vote_count = 0
     @votes      = {
@@ -78,7 +78,7 @@ WHERE d.name = eg.district AND d.state_id = s.id AND party = 'D';
 
 EOUPDATE
   end
-  
+
   def process(row)
     return unless active? row
     if uninitialized?
@@ -93,17 +93,17 @@ EOUPDATE
       calculate_district
       set_variables row
     end
-    
+
     if row[:party] != current_party
       set_variables row
     end
-    
+
     add_votes row
   end
 
   # Based on  Gershenson, Kraft, and Lau "Comparing Metrics of Gerrymandering"
-  # 
-  #   http://www.benkraft.org/files/gerrymandering.pdf 
+  #
+  #   http://www.benkraft.org/files/gerrymandering.pdf
   def calculate_district
     total_votes = votes[key].inject 0 do |count, (k, v)|
       count + v
@@ -114,32 +114,32 @@ EOUPDATE
       gap = nil
       pct = votes / total_votes
 
-      if pct > 0.5
-        gap = pct - 0.5
+      if pct > 0.51
+        gap = pct - 0.51
       else
         gap = pct
       end
-      
+
       gaps[key][party] ||= [ ]
       gaps[key][party] << gap
     end
   end
-  
+
   def add_votes(row)
     votes[key][current_party] ||= 0
     votes[key][current_party]  += to_f row[:general_votes]
   end
-  
+
   def set_variables(row)
     self.state         = row[:state_abbreviation]
     self.district      = row[:d]
     self.current_party = row[:party]
     self.vote_count    = to_f row[:general_votes]
-    
+
     self.votes[key]   ||= { }
     self.gaps[key]    ||= { }
   end
-  
+
   def init(row)
     if row[:general_votes]
       set_variables row
@@ -150,11 +150,11 @@ EOUPDATE
   def active?(row)
     !!row[:general_votes]
   end
-  
+
   def key
     [ state, district ].join '-'
   end
-  
+
   # clean commas out of e.g. 193,000
   def to_f(general_votes_cell)
     general_votes_cell.gsub(/[^0-9]/, '').to_f
@@ -172,4 +172,3 @@ CSV.foreach '2010-house-and-senate.csv', headers: true, header_converters: :symb
 end
 
 election.average!
-

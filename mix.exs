@@ -24,8 +24,8 @@ defmodule Agitate.Mixfile do
   end
 
   # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
-  defp elixirc_paths(_),     do: ["lib", "web"]
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_),     do: ["lib"]
 
   # Specifies your project dependencies.
   #
@@ -33,7 +33,7 @@ defmodule Agitate.Mixfile do
   defp deps do
     [
       # Base deps
-      {:phoenix, "~> 1.2.1"},
+      {:phoenix, "~> 1.3.0-rc", override: true},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.0"},
       {:postgrex, ">= 0.0.0"},
@@ -49,9 +49,11 @@ defmodule Agitate.Mixfile do
       {:comeonin, "~> 3.0"},
       {:secure_random, "~> 0.5"},
 
-      # Application 
+      # Application
       {:geo, "~>1.3"},
       {:guardian, "~> 0.14"},
+      {:flow, "~> 0.11"},
+      {:csv, "~> 1.4.2"},
 
       # Application API/GraphQL
       {:absinthe, "~> 1.2.0"},
@@ -59,7 +61,8 @@ defmodule Agitate.Mixfile do
       {:absinthe_ecto, git: "https://github.com/absinthe-graphql/absinthe_ecto.git"},
 
       # Testing
-      {:ex_machina, "~> 2.0", only: :test }
+      {:ex_machina, "~> 2.0", only: :test},
+      {:mix_test_watch, "~> 0.3", only: [:test, :dev], runtime: false}
     ]
   end
 

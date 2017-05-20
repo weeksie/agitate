@@ -9,6 +9,23 @@ const {
   FETCH_STATE
 } = types;
 
+const elections = [
+  {
+    totalVotes: 1000,
+    results: [
+      { party: "R", wasted_votes: 300, total_votes: 5301 },
+      { party: "D", wasted_votes: 4699, total_votes: 4699 },
+    ]
+  },
+  {
+    totalVotes: 1000,
+    results: [
+      { party: "R", wasted_votes: 300, total_votes: 5301 },
+      { party: "D", wasted_votes: 4699, total_votes: 4699 },
+    ]
+  }
+];
+
 export const zip = function(state = { }, { type, error, payload }) {
   switch(type) {
     case CAPTURE_ZIP:
@@ -29,7 +46,8 @@ export const zip = function(state = { }, { type, error, payload }) {
 }
 
 const DEFAULT_GEO = {
-  lat: -95.7129, // Geographic Center of America
+  // Geographic Center of America
+  lat: -95.7129,
   lon: 37.0902,
   districts: [ ]
 };
@@ -46,7 +64,11 @@ export const geo = function(state  = DEFAULT_GEO,
       } else if(errorMessage) {
         return s(state, { isFetching: false, error, errorMessage });
       } else if(lat) {
-        return s(state, { isFetching: false, districts, lat, lon });
+        const withElections = districts.map(district => ({
+          ...district,
+          elections
+        }));
+        return s(state, { isFetching: false, districts: withElections, lat, lon });
       }
     default:
       return state;
@@ -84,5 +106,7 @@ const composeWithDevTools =
 
 export default createStore(
   reducers,
-  composeWithDevTools(applyMiddleware(thunk))
+  composeWithDevTools(
+    applyMiddleware(thunk)
+  )
 );
